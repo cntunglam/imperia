@@ -2,7 +2,7 @@
     "product": {
         "1": {
             "name": "Reconstructed T-Shirt",
-            "price": "200",
+            "price": "200.00",
             "img": "/img/products/t-shirt-2.webp",
             "img_2": "/img/products/t-shirt-1.jpg",
             "inStock": true,
@@ -10,7 +10,7 @@
         },
         "2": {
             "name": "Long Sleeve Sweatshirt",
-            "price": "50",
+            "price": "50.00",
             "img": "/img/products/Sweatshirts-1.webp",
             "img_2": "/img/products/Sweatshirts-2.webp",
             "inStock": true,
@@ -18,7 +18,7 @@
         },
         "3": {
             "name": "Imperia Hoodie",
-            "price": "200",
+            "price": "200.00",
             "img": "/img/products/hoodie-1.webp",
             "img_2": "/img/products/hoodie-2.webp",
             "inStock": false,
@@ -26,7 +26,7 @@
         },
         "4": {
             "name": "Imperia Cap",
-            "price": "50",
+            "price": "50.00",
             "img": "/img/products/cap.jpeg",
             "inStock": false,
             "permalink": "/productOrder"

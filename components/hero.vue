@@ -1,16 +1,9 @@
 <template>
-    <header class="relative z-0 flex items-center md:h-[600px] w-full aspect-square md:aspect-video justify-center overflow-hidden">
-        <video
-            autoplay
-            loop
-            muted
-            class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
-        >
-            <source
-            src="https://imperia.store/cdn/shop/t/26/assets/imperia_hardware_wide.mov?v=167117665659712184821660065711"
-            type="video/mp4"
-            />
-            Your browser does not support the video tag.
-        </video>
+    <header class="">
+        <section class="relative h-[600px] flex flex-col items-center justify-center text-center text-white py-0 px-3">
+            <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+                <video class="min-w-full min-h-full absolute object-cover" src="https://imperia.store/cdn/shop/t/26/assets/imperia_hardware_wide.mov" type="video/mp4" autoplay muted loop></video>
+            </div>
+        </section>
     </header>
 </template> 

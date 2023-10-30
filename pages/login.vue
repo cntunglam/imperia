@@ -11,7 +11,7 @@
                 <span class="label-text">Password</span>
             </label>
             <input type="password" placeholder="Type here" class="input input-bordered w-full max-w-md" />
-            <button class="btn btn-primary my-4">Submit</button>
+            <button class="btn btn-primary my-4">Sign In</button>
         </div>
         </div>
         <div class="hover:filter hover:grayscale duration-100 min-h-screen shadow-lg flex justify-center lg:row-span-2 lg:col-span-1 col-span-2 bg-top bg-fixed bg-[url('/img/hoodie.webp')]">

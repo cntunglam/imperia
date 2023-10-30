@@ -13,7 +13,7 @@
         </div>  
         <div class="md:m-auto md:px-20 px-2">
             <h1 class="text-xl uppercase"> Imperia Hoodie </h1>
-            <p class=" text-xl py-2 ">$200</p>
+            <p class=" text-xl py-2 ">$200.00</p>
             <div class="form-control w-full max-w-xl">
                 <label class="label">
                     <span class="label-text">Size</span>

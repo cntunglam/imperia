@@ -13,7 +13,7 @@
         </div>  
         <div class="md:m-auto md:px-20 px-2">
             <h1 class="text-xl uppercase"> Imperia Sweat Shirts </h1>
-            <p class=" text-xl py-2 ">$200</p>
+            <p class=" text-xl py-2 ">$200.00</p>
             <div  class="form-control disabled w-full max-w-xl">
                 <label class="label">
                     <span class="label-text">Size</span>
@@ -26,7 +26,7 @@
                     <option>L</option>
                     <option>XL</option>
                 </select>
-                <div onclick="my_modal_4.showModal()" class="btn btn-secondary w-full mt-4 top-90 border-1 border-black bg-white text-black hover:bg-black hover:text-white text-md p-4 uppercase"><p class="text-center">I Want To Get Information</p></div>
+                <div onclick="my_modal_4.showModal()" class="btn btn-secondary w-full mt-4 top-90 border-1 border-black bg-white text-black hover:bg-black hover:text-white text-md p-4 uppercase"><p class="text-center">notify me when available</p></div>
                 <Payment/>
             </div>
             <p class="py-2">
@@ -41,7 +41,7 @@
         </div>
     </div>
     <section class="mx-auto md:my-20">
-            <h2 class="md:text-5xl text-4xl text-center py-8">Related Products</h2>
+            <h2 class="md:text-5xl text-4xl text-center uppercase py-8">Style With</h2>
             <div class="grid md:grid-cols-4 grid-cols-2 px-2 py-10 gap-2 md:gap-8">
                 <div v-for="item in product">
                     <ProductCard :link="item.permalink" :inStock="item.inStock" :productName="item.name" :Image="item.img" :price="item.price"/>
@@ -50,8 +50,20 @@
         </section>
     <dialog id="my_modal_4" class="modal">
         <div class="modal-box max-w-3xl">
-            <h3 class="font-bold text-lg text-center">Lorem Ipsum</h3>
+            <h3 class="font-bold text-xl text-center">Imperia Sweat Shirts</h3>
             <div class="form-control py-2 w-full max-w-md mx-auto">
+                <label class="label">
+                    <span class="label-text">Size</span>
+                </label>
+                <select class="select select-bordered">
+                    <option disabled selected>Pick one</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
             <label class="label py-0 mt-4">
                 <span class="label-text">Full Name</span>
             </label>
