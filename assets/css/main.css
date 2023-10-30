@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-family: "GTZirkon-Regular";
+    scroll-behavior: smooth;
+    font-size: 14px;
+    color: #181818 !important;
+}
+
+h1, h2, h3 ,h4 ,h5 ,h6 {
+    font-family: "GTZirkon-Bold";
+    color: #181818;
+}   
+
+a:hover {
+    background: transparent !important;
+}
