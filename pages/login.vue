@@ -4,13 +4,13 @@
             <h2 class="text-4xl text-center">Login</h2>
             <div class="form-control py-2 w-full max-w-md mx-auto">
             <label class="label py-0 mt-4">
-                <span class="label-text">Email</span>
+                <span class="label-text uppercase">Email</span>
             </label>
-            <input type="email" placeholder="Type here" class="input input-bordered w-full max-w-md" />
+            <input type="email" placeholder="email" class="input input-bordered w-full max-w-md" />
             <label class="label py-0 mt-4">
-                <span class="label-text">Password</span>
+                <span class="label-text uppercase">Password</span>
             </label>
-            <input type="password" placeholder="Type here" class="input input-bordered w-full max-w-md" />
+            <input type="password" placeholder="password" class="input input-bordered w-full max-w-md" />
             <button class="btn btn-primary my-4">Sign In</button>
         </div>
         </div>
