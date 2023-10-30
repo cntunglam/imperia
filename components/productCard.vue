@@ -17,7 +17,7 @@
                 <button v-else="!inStock" class="border-2 py-2 absolute w-full top-90 border-black text-sm  uppercase"><p class="text-center">Buy Now</p></button>
             </div>
             <div class="md:p-4 my-12 md:my-10 py-2 px-0">
-                <h3 class="text-sm md:text-base font-bold uppercase leading-4 text-center">{{ productName }}</h3>
+                <h3 class="text-sm md:text-base uppercase leading-4 text-center">{{ productName }}</h3>
                 <p class="text-lg text-center"><span>$ </span>{{ price }}</p>
             </div>
         </div>
