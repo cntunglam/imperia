@@ -2,12 +2,15 @@
     <nav>
         <div class="drawer-content flex flex-col">
             <!-- Navbar -->
-            <div class="    xl:px-36 md:px-4 navbar mx-auto">
+            <div class="xl:px-36 md:px-4 navbar mx-auto">
                 <div class="flex-none lg:hidden">
-                        <Icon name="pajamas:hamburger" class="text-2xl"/>
+                    <IconDrawer icon="pajamas:hamburger" labelFor="left-drawer" >
+                    </IconDrawer>
                 </div> 
                 <div class="flex-none px-2 lg:hidden">
-                    <Icon name="ph:magnifying-glass-light" class="text-2xl"/>
+                    <IconDrawer icon="ph:magnifying-glass-light" labelFor="left-drawer" >
+                    </IconDrawer>
+
                 </div> 
                 <div class="flex-none hidden lg:block">
                     <ul class="menu menu-horizontal uppercase">
@@ -26,12 +29,10 @@
                 </div>
                 <div class="flex-none hidden lg:block uppercase">
                     <ul class="menu menu-horizontal">
-                    <!-- Navbar menu content here -->
-                        <Icon name="material-symbols:search-rounded" class="text-2xl my-1 mx-2"/>
-
+                    <!-- Navbar menu content here -->                       
                     <li><a href="/login">Login</a></li>
                     <li><a href="/login">Assistance</a></li>
-                        <li><a>Shopping Bag</a></li>
+                    <li><a>Shopping Bag</a></li>
                     </ul>
                 </div>
                 <div class="flex-none lg:hidden">
@@ -42,4 +43,5 @@
             <!-- Page content here -->
         </div>
     </nav>
+
 </template> 

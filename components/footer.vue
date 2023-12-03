@@ -1,17 +1,29 @@
 <template>
-    <Newsletter/>
-    <footer class="footer p-10 md:block justify-evenly">
-        <div class="flex flex-col mx-auto md:p-8">
+    <footer class="footer md:block space-y-4">
+        <div class="justify-center space-y-4 mx-auto">
+            <div class="mx-auto">
+                <a href="/">
+                    <img class="md:h-10 h-8 w-auto" src="/img/logo.svg">
+                </a>
+            </div>
+            <SocialIcon/>
+        </div>
+        <div class="py-4">
+            <Newsletter/>
+        </div>
+        <div class="py-4 mx-auto space-y-4">
             <div class="mx-auto">
                 <Payment/>
-                <ul class="w-full text-center py-2 text-base uppercase">
-                    <li><a href="">Customer Assistance</a></li>
-                    <li><a href="">Term Of Service</a></li>
+            </div>
+            <div class=" mx-auto">
+                <ul class="max-w-xl flex flex-col md:flex-row text-center py-2 text-xl md:text-base md:space-x-24 uppercase">
+                    <li><a href="">Client Service</a></li>
+                    <li><a href="">Terms Of Service</a></li>
                     <li><a href="">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
-        <div class="md:w-1/2 mx-auto">
+        <div class="mx-auto">
             <div class="mx-auto">
                 <div class="dropdown dropdown-top mx-auto">
                     <label tabindex="0" class="text-center mx-auto">
@@ -23,8 +35,7 @@
                         </div>
                     </div>
                 </div>  
-                <p class="text-center">Registered company in Atlanta GA.</p>
             </div>
-            </div>
+        </div>
     </footer>
 </template> 

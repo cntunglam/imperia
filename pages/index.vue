@@ -15,5 +15,6 @@
                 </div> 
             </div>
         </section>
+        <Collection/>
     </main>
 </template>

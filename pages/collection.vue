@@ -23,7 +23,6 @@
                     <ProductCard :link="item.permalink" :inStock="item.inStock" :productName="item.name" :Image="item.img" :price="item.price"/>
                 </div> 
             </div>
-
         </div>
     </div>
 </template>
