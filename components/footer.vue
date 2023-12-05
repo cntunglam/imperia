@@ -25,16 +25,7 @@
         </div>
         <div class="mx-auto">
             <div class="mx-auto">
-                <div class="dropdown dropdown-top mx-auto">
-                    <label tabindex="0" class="text-center mx-auto">
-                        <p class="text-center">© 2023 Imperia </p>
-                    </label>
-                    <div tabindex="0" class="card compact dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
-                        <div class="card-body">
-                        <p>All contents of this website are property of Imperia. No part of this site, including all text and images, maybe reproduced in any form without prior written consent of Imperia</p>
-                        </div>
-                    </div>
-                </div>  
+                <Modal/>
             </div>
         </div>
     </footer>
