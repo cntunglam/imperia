@@ -25,7 +25,9 @@
         </div>
         <div class="mx-auto">
             <div class="mx-auto">
-                <Modal/>
+                <Modal buttonText="© 2023 Imperia" buttonStyle="btn-ghost hover:bg-transparent" boxHeader="Copyright Information">
+                    <p class="py-12 text-base">All contents of this website are property of Imperia. No part of this site, including all text and images, maybe reproduced in any form without prior written consent of Imperia</p>
+                </Modal>
             </div>
         </div>
     </footer>
