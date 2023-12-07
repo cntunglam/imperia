@@ -7,7 +7,7 @@
                     <IconDrawer icon="pajamas:hamburger" labelFor="left-drawer" >
                     </IconDrawer>
                 </div> 
-                <div class="flex-none px-2 lg:hidden">
+                <div class="flex-none px-4 lg:hidden">
                     <IconDrawer icon="ph:magnifying-glass-light" labelFor="left-drawer" >
                     </IconDrawer>
 
@@ -29,9 +29,10 @@
                 </div>
                 <div class="flex-none hidden lg:block uppercase">
                     <ul class="menu menu-horizontal">
-                    <!-- Navbar menu content here -->                       
+                    <!-- Navbar menu content here --> 
+                    <li><a href="/">Search</a></li>                      
                     <li><a href="/login">Login</a></li>
-                    <li><a href="/login">Assistance</a></li>
+                    <li><a href="">Assistance</a></li>
                     <li><a>Shopping Bag</a></li>
                     </ul>
                 </div>

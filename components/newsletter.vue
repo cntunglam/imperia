@@ -1,7 +1,7 @@
 <template>
     <div class="px-4 w-full md:w-2/3 mx-auto">
         <div class="py-4">
-            <h2 class="text-4xl md:text-[36px] text-center uppercase py-2">sign up for exclusive access</h2>
+            <h2 class="text-[22px] md:text-[36px] text-center uppercase py-2">sign up for exclusive access</h2>
             <p class="text-center text-[14px] uppercase">receive 10% off your first purchase plus communications about imperia products, services, stores and events.</p>
         </div>
         <div class="form-control py-4 w-full max-w-4xl mx-auto space-y-6">
