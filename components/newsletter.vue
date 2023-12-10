@@ -4,7 +4,7 @@
             <h2 class="text-[23px] md:text-[36px] leading-8 text-center uppercase py-4 md:px-5">sign up for exclusive access</h2>
             <p class="text-center text-[12px] uppercase">receive 10% off your first purchase plus communications about imperia products, services, stores and events.</p>
         </div>
-        <div class="form-control py-4 w-full space-y-6">
+        <div class="form-control py-4 w-full space-y-4 md:space-y-6">
             <div class="flex flex-col space-y-4 md:space-x-8 md:flex-row md:space-y-0">
                 <input type="text" placeholder="First Name" class="w-full input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black" />
                 <input type="text" placeholder="Last Name" class="w-full input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black" />
