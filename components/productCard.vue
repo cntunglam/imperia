@@ -18,7 +18,7 @@
             </div>
             <div class="md:p-4 my-12 md:my-10 py-2 px-0">
                 <h3 class="text-sm md:text-base uppercase leading-4 text-center">{{ productName }}</h3>
-                <p class="text-lg text-center"><span>$ </span>{{ price }}</p>
+                <p class="text-lg text-center font-semibold"><span>$</span>{{ price }}</p>
             </div>
         </div>
     </a>    
