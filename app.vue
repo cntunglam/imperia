@@ -1,6 +1,5 @@
 
 <template>
-  <Announcement/>
   <DrawerNav/>
     <NuxtPage/>
   <Footer/>

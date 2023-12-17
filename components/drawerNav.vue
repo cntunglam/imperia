@@ -1,48 +1,21 @@
+<script setup>
+    import { MainMenu } from "assets/menu.json"
+</script>
 <template>
-    <nav>
-        <div class="drawer-content flex flex-col">
-            <!-- Navbar -->
-            <div class="xl:px-36 md:px-4 navbar mx-auto">
-                <div class="flex-none lg:hidden">
-                    <IconDrawer icon="pajamas:hamburger" labelFor="left-drawer" >
-                    </IconDrawer>
-                </div> 
-                <div class="flex-none px-4 lg:hidden">
-                    <IconDrawer icon="ph:magnifying-glass-light" labelFor="left-drawer" >
-                    </IconDrawer>
-
-                </div> 
-                <div class="flex-none hidden lg:block">
-                    <ul class="menu menu-horizontal uppercase">
-                    <!-- Navbar menu content here -->
-                    <li><a href="/collection">Shop</a></li>
-                    <li><a>Company</a></li>
-                    <li><a>Design</a></li>
-                    <li><a>Couture</a></li>
-                    <li><a>Audio</a></li>
-                    </ul>
-                </div>
-                <div class="flex-1 justify-center px-2 mx-2">
-                    <a href="/">
-                        <img class="h-3 mx-auto w-auto" src="/img/logo.svg">
-                    </a>
-                </div>
-                <div class="flex-none hidden lg:block uppercase">
-                    <ul class="menu menu-horizontal">
-                    <!-- Navbar menu content here --> 
-                    <li><a href="/">Search</a></li>                      
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="">Assistance</a></li>
-                    <li><a>Shopping Bag</a></li>
-                    </ul>
-                </div>
-                <div class="flex-none lg:hidden">
-                        <img src="/icon/bag.png" />
-                </div> 
-
-            </div>
-            <!-- Page content here -->
+    <nav class="w-full grid grid-cols-3 ">
+        <div class="py-2 order-1 md:order-2 md:px-12 px-2 ">
+            <IconDrawer labelFor="leftSidebar" icon="quill:hamburger" class="block md:hidden"/>
+            <ul class="md:flex space-x-4 text-lg uppercase hidden">    
+                <a v-for="item in MainMenu" :href="item.link">
+                    <li> {{ item.name }}</li>
+                </a>
+            </ul>
+        </div>
+        <div class="py-2 order-1 md:order-2 mx-auto">
+            <img src="/img/logo.svg" class="h-4 my-1">
+        </div>
+        <div class="py-2 order-3 hidden md:block">
+            Bonjour
         </div>
     </nav>
-
 </template> 

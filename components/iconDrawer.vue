@@ -1,12 +1,12 @@
 <script setup>
     defineProps({
         labelFor: String,
-        position:String,
+        class:String,
         icon:String,
     })
 </script>
 <template>
-    <div class="drawer" :class="position">
+    <div class="drawer" :class="class">
         <input :id="labelFor" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
                 <!-- Page content here -->
