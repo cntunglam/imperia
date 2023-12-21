@@ -44,3 +44,10 @@ a:hover {
   .video-content {
     z-index: 2;
   }
+
+  .tabs-boxed .tab {
+    border-radius: 0;
+    border: 1px solid black;
+    margin: 0 4px;
+    color: black;
+  }
