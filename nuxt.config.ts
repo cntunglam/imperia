@@ -6,8 +6,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@nuxtjs/device',
-
   ],
   colorMode: {
     preference: 'system', // default theme

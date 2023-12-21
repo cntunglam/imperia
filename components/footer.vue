@@ -25,7 +25,7 @@
         </div>
         <div class="mx-auto">
             <div class="mx-auto">
-                <Modal icon="" modalStyle="modal-box w-full min-h-screen md:w-fit md:min-h-fit rounded-none" buttonText="© 2023 Imperia" buttonStyle="btn-ghost hover:bg-transparent" boxHeader="Copyright Information">
+                <Modal name="footerModal" action="footerModal.showModal()" icon="" modalStyle="modal-box w-full min-h-screen md:w-fit md:min-h-fit rounded-none" buttonText="© 2023 Imperia" buttonStyle="hover:cursor-help hover:bg-transparent" boxHeader="Copyright Information">
                     <p class="py-12 text-base uppercase">All contents of this website are property of Imperia. No part of this site, including all text and images, may be reproduced in any form without prior written consent of Imperia. </p>
                 </Modal>
             </div>
