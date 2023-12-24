@@ -41,7 +41,7 @@
         </div>
     </div>
     <section class="mx-auto md:my-20">
-            <h2 class="md:text-5xl text-4xl text-center py-8">Related Products</h2>
+            <h2 class="md:text-5xl text-4xl text-center py-8 uppercase">Style With</h2>
             <div class="grid md:grid-cols-4 grid-cols-2 px-2 py-10 gap-2 md:gap-8">
                 <div v-for="item in product">
                     <ProductCard :link="item.permalink" :inStock="item.inStock" :productName="item.name" :Image="item.img" :price="item.price"/>
