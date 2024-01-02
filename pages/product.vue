@@ -5,11 +5,42 @@
     <div class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20">
         <div class="carousel md:carousel-vertical">
             <div class=" carousel-item w-full h-fit ">
-                <img src="/img/products/hoodie-1.webp"/>
+                <img src="/img/products/short/closeupshorts.jpg"/>
             </div>
             <div class=" carousel-item h-fit w-full ">
-                <img src="/img/products/hoodie-2.webp"/>
+                <img src="/img/products/short/modelfront.jpg"/>
             </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/modelmain.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/1.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/2.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/3.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/flatback.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/flatfront.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/macroshotmesh.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/macroshotsatin.jpg"/>
+            </div>
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/pantsontheground.jpg"/>
+            </div>
+
+
+
+
         </div>  
         <div class="md:m-auto md:px-20 px-2">
             <h1 class="text-xl uppercase"> Imperia Hoodie </h1>

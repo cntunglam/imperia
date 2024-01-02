@@ -1,10 +1,9 @@
 {
     "product": {
         "1": {
-            "name": "Reconstructed T-Shirt",
+            "name": "imperia short",
             "price": "200",
-            "img": "/img/products/t-shirt-2.webp",
-            "img_2": "/img/products/t-shirt-1.jpg",
+            "img": "/img/products/short/flatfront.jpg",
             "inStock": true,
             "permalink": "/product"
         },

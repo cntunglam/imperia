@@ -5,12 +5,15 @@
     <div class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20">
         <div class="carousel md:carousel-vertical">
             <div class=" carousel-item w-full h-fit ">
-                <img src="/img/products/sweatshirts-1.webp"/>
+                <img src="/img/products/short/closeupshorts.jpg"/>
             </div>
             <div class=" carousel-item h-fit w-full ">
-                <img src="/img/products/sweatshirts-2.webp"/>
+                <img src="/img/products/short/modelfront.jpg"/>
             </div>
-        </div>  
+            <div class=" carousel-item h-fit w-full ">
+                <img src="/img/products/short/modelmain.jpg"/>
+            </div>
+        </div>          
         <div class="md:m-auto md:px-20 px-2">
             <h1 class="text-xl uppercase"> Imperia Sweat Shirts </h1>
             <p class=" text-xl py-2 ">$200.00</p>

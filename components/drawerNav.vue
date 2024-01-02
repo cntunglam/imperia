@@ -11,7 +11,7 @@
             </a>
         </div>
         <div class="py-2 order-3 hidden md:block">
-            Bonjour
+            
         </div>
     </nav>
     <Teleport to="#left-navbar">
