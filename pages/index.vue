@@ -7,6 +7,7 @@
 <template>  
     <main>
         <Hero/>
+        <LatestNews/>
         <section class="mx-auto py-4 flex flex-col">
             <h2 class="md:text-[36px] text-[32px] text-center uppercase py-4">New Arrivals</h2>
             <tab/>
