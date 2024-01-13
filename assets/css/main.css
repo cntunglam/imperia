@@ -51,3 +51,9 @@ a:hover {
     margin: 0 4px;
     color: black;
   }
+
+div .navbar {
+  padding: 0;
+  min-height: 2rem;
+  max-height: 3rem;
+}
