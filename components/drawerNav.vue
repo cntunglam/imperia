@@ -36,6 +36,6 @@
 </div>
 <div class="relative">
         <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-3 md:bottom-2"/>
-        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none max-h-12 md:max-h-10 w-full max-w-full px-12" />
+        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none max-h-12 md:max-h-10 w-full max-w-full px-12" />
     </div>
 </template>
