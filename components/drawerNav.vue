@@ -1,4 +1,7 @@
 <template>
+  <div class="h-6 bg-black flex align-center justify-center ">
+    <p class="text-sm text-white text-center">Lorem Ipsum</p>
+  </div>
   <div class="navbar bg-base-100">
     <div class="navbar-start flex md:hidden ">
       <div class="dropdown">
@@ -8,7 +11,7 @@
       </div>
     </div>
     <div class="navbar-start hidden md:flex">
-      <ul class="menu menu-horizontal text-[11px] uppercase">
+      <ul class="menu menu-horizontal text-sm uppercase">
         <li><a>Shop</a></li>
         <li><a>Company</a></li>
         <li><a>Design</a></li>
@@ -22,7 +25,7 @@
       </a>
     </div>
     <div class="navbar-end hidden md:flex">
-      <ul class="menu menu-horizontal text-[11px] uppercase">
+      <ul class="menu menu-horizontal text-sm upercase">
         <li><a>Client Services</a></li>
         <li><a>Login</a></li>
         <img src="/icon/bag.svg" width="18" height="18" alt="shopping bag" />
@@ -35,7 +38,7 @@
     </div>
 </div>
 <div class="relative">
-        <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-3 md:bottom-2"/>
-        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12" />
+        <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-2 md:bottom-3"/>
+        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12 text-[11px]" />
     </div>
 </template>
