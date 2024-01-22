@@ -9,7 +9,7 @@
         <Hero/>
         <LatestNews/>
         <section class="mx-auto py-4 flex flex-col">
-            <h2 class="md:text-[36px] text-[32px] text-center uppercase py-4">New Arrivals</h2>
+            <h2 class="md:text-[32px] text-[28px] text-center uppercase py-4">New Arrivals</h2>
             <tab/>
             <div class="grid md:grid-cols-4 grid-cols-2 px-2 py-10 gap-2 md:gap-8">
                 <div v-for="item in product">
