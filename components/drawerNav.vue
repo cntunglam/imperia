@@ -1,5 +1,5 @@
 <template>
-  <div class="h-6 bg-black flex align-center justify-center ">
+  <div class="h-7 bg-black flex align-center justify-center ">
     <p class="text-sm text-white text-center">Lorem Ipsum</p>
   </div>
   <div class="navbar bg-base-100">
@@ -25,7 +25,7 @@
       </a>
     </div>
     <div class="navbar-end hidden md:flex">
-      <ul class="menu menu-horizontal text-sm upercase">
+      <ul class="menu menu-horizontal text-sm uppercase">
         <li><a>Client Services</a></li>
         <li><a>Login</a></li>
         <img src="/icon/bag.svg" width="18" height="18" alt="shopping bag" />
