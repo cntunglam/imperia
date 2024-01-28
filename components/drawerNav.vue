@@ -38,7 +38,7 @@
     </div>
 </div>
 <div class="relative">
-        <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-2 md:bottom-3"/>
+        <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-3 md:bottom-3"/>
         <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12 text-[11px]" />
     </div>
 </template>

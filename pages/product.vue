@@ -42,9 +42,14 @@
 
 
         </div>  
-        <div class="md:m-auto md:px-20 px-2">
-            <h1 class="text-xl uppercase"> Imperia Hoodie </h1>
-            <p class=" text-xl py-2 ">$200.00</p>
+        <div class="md:m-auto py-4 md:px-20 px-2">
+            <h1 class="text-lg uppercase text-center md:text-left"> Imperia Hoodie </h1>
+            <p class=" text-base text-gray-600 uppercase text-center md:text-left ">black</p>
+            <p class=" text-lg py-4 text-center md:text-left ">$200.00</p>
+            <p class="py-2 uppercase text-center md:text-left text-sm">
+                black short sleeve t-shirt in a lightweight jersey cotton
+            </p>
+
             <div class="form-control w-full max-w-xl">
                 <label class="label">
                     <span class="label-text">Size</span>
@@ -58,16 +63,24 @@
                     <option>XL</option>
                 </select>
                 <div class="btn btn-primary w-full mt-4 top-90 bg-black text-white text-md p-4 uppercase"><p class="text-center">Add To Bag</p></div>
-                <Payment/>
             </div>
-            <p class="py-2">
-                black short sleeve t-shirt in a lightweight jersey cotton
-            </p>
-            <ul class="px-6 list-disc">
+            <div class="py-10 space-y-6 px-2">
+                <ul class="px-6 list-disc uppercase text-sm">
                 <li>Laser printed script logo on front</li>
                 <li>150 GSM 100% french terry cotton</li>
                 <li>slightly oversized fit</li>
-            </ul>
+                </ul>
+                <p class=" uppercase text-sm">
+                    Balenciaga Skiwear is a line consisting of technically advanced thermal separates, comfortable and protective outerwear, accessories, and winter sport equipment. Each Skiwear product’s sophisticated design is engineered to withstand the elements.
+            </p>
+            <p class=" uppercase text-sm">
+            Material: 99% cotton, 1% elastane
+            </p>
+            <p class=" uppercase text-sm">
+                Product ID: 773668TPVQ21000 
+            </p>
+
+            </div>
             <Accordion/>
         </div>
     </div>
