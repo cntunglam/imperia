@@ -37,10 +37,6 @@
             <div class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/pantsontheground.jpg"/>
             </div>
-
-
-
-
         </div>  
         <div class="md:m-auto py-4 md:px-20 px-2">
             <h1 class="text-lg uppercase text-center md:text-left"> Imperia Hoodie </h1>

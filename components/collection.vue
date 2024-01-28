@@ -31,7 +31,7 @@
         <div class=" hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-[url('/img/shorts.webp')]">
             <div class=" mx-auto justify-center self-end flex ">
                 <a href="/collection">
-                    <h2 class="text-md md:text-3xl text-white py-2 px-10 uppercase">Shorts</h2>
+                    <h2 class="text-md md:text-3xl text-white py-1 px-10 uppercase">Shorts</h2>
                 </a>
             </div>
         </div>

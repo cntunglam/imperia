@@ -5,7 +5,7 @@
     })
 </script>
 <template>  
-    <main>
+    <main class="">
         <Hero/>
         <LatestNews/>
         <section class="mx-auto py-4 flex flex-col">
