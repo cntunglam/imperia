@@ -1,7 +1,7 @@
 <template>
   <div
     role="tablist"
-    class="tabs tabs-boxed tabs-sm space-x-2 flex flex-nowrap overflow-y-hidden overflow-x-scroll max-w-full no-scrollbar justify-start md:justify-center px-2 md:px-0 bg-transparent uppercase font-sans">
+    class="tabs py-2 tabs-boxed tabs-sm space-x-2 flex flex-nowrap overflow-y-hidden overflow-x-scroll max-w-full no-scrollbar justify-start md:justify-center px-2 md:px-0 bg-transparent uppercase font-sans">
         <a role="tab" class="tab">T-Shirts</a>
         <a role="tab" class="tab">Hoodies</a>
         <a role="tab" class="tab">Shorts</a>

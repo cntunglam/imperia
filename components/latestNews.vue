@@ -4,7 +4,7 @@
   <div class="hero-content text-center self-end">
     <div class="max-w-md pb-6 font-thin">
       <h1 class="mb-2 text-[28px] text-white uppercase">IA Lookbook</h1>
-      <button class="btn border-1 border-black px-12 rounded-none text-sm hover:translate-y-1">Discover</button>
+      <button class="btn btn-outline bg-white hover:bg-white hover:text-black border-1 border-black px-12 rounded-none text-sm hover:scale-100">Discover</button>
     </div>
   </div>
 </div>

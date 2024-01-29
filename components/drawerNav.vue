@@ -65,4 +65,4 @@ import 'animate.css';
   .header-text {
     --animate-duration: 15s;
   }
-</style>
+</style>  
