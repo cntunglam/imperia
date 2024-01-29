@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-flow-col gap-4 mx-auto space-x-4 px-10 md:px-48">
+    <div class="grid grid-flow-col gap-4 mx-auto space-x-1 md:space-x-4 px-10 md:px-48">
         <a href="/">
             <icon name="fa6-brands:facebook-f" class="text-lg hover:text-gray-700"/>
         </a>
