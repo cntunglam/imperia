@@ -4,7 +4,7 @@ import 'animate.css';
 <template>
   <header class="sticky top-0 w-full z-10">
     <div class="bg-black flex align-middle justify-center ">
-    <p class=" header-text text-sm w-full text-right text-white py-1  animate__slideInLeft animate__animated animate__infinite">Lorem Ipsum</p>
+    <p class=" header-text text-sm w-full text-right text-white py-1 animate__slideInLeft animate__animated animate__infinite">Lorem Ipsum</p>
   </div>
   <div class="navbar bg-base-100">
     <div class="navbar-start flex xl:hidden ">
@@ -16,14 +16,14 @@ import 'animate.css';
         </div> 
         <div class="drawer-side z-10">
           <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <ul class="menu p-4 w-80 md:w-96 min-h-full bg-base-200 text-3xl py-20 text-base-content">
+          <div class="menu p-4 w-[90%] md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
             <!-- Sidebar content here -->
             <li><a href="/">Shop</a></li>
             <li><a href="/">Company</a></li>
             <li><a href="/">Design</a></li>
             <li><a href="/">Couture</a></li>
             <li><a href="/">Audio</a></li>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -34,6 +34,9 @@ import 'animate.css';
         <li><a href="/">Design</a></li>
         <li><a href="/">Couture</a></li>
         <li><a href="/">Audio</a></li>
+        <li><a>Client Services</a></li>
+        <li><a>Login</a></li>
+
       </ul>
     </div>
     <div class="navbar-center">
@@ -55,7 +58,7 @@ import 'animate.css';
     </div>
   </div>
     <div id="hidden--onscroll" class="relative">
-      <Icon name="ic:outline-search" class="text-2xl text-black absolute left-4 bottom-3 md:bottom-3"/>
+      <Icon name="ic:outline-search" class="text-2xl text-black absolute left-2 bottom-3 md:bottom-3"/>
       <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12 text-[11px]" />
     </div>
 
@@ -64,5 +67,6 @@ import 'animate.css';
 <style>
   .header-text {
     --animate-duration: 15s;
+    
   }
 </style>  
