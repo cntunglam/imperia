@@ -18,7 +18,7 @@
             <div class="md:p-2 my-6 md:my-4 py-2 px-0">
                 <h3 class="text-[12px] uppercase leading-4 text-center">{{ productName }}</h3>
                 <p class="text-[11px] md:text-[12px]  uppercase text-center text-gray-600">Product Color</p>
-                <p class="text-lg text-center py-1"><span>$</span>{{ price }}</p>
+                <p class="text-[12px] text-center py-1"><span>$</span>{{ price }}</p>
             </div>
         </div>
     </a>    
