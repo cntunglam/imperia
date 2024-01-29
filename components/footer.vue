@@ -3,7 +3,7 @@
         <div class="justify-center space-y-4 mx-auto py-2">
             <div class="mx-auto">
                 <a href="/">
-                    <img class="md:h-10 h-8 w-auto" src="/img/logo.svg">
+                    <img class="md:h-[28px] h-[22px] w-auto" src="/img/logo.svg">
                 </a>
             </div>
             <SocialIcon/>
