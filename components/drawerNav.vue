@@ -23,6 +23,8 @@ import 'animate.css';
             <li><a href="/">Design</a></li>
             <li><a href="/">Couture</a></li>
             <li><a href="/">Audio</a></li>
+            <li><a>Client Services</a></li>
+            <li><a>Login</a></li>
           </div>
         </div>
       </div>
@@ -34,8 +36,6 @@ import 'animate.css';
         <li><a href="/">Design</a></li>
         <li><a href="/">Couture</a></li>
         <li><a href="/">Audio</a></li>
-        <li><a>Client Services</a></li>
-        <li><a>Login</a></li>
 
       </ul>
     </div>
