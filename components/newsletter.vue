@@ -6,12 +6,12 @@
         </div>
         <div class="form-control py-4 w-full space-y-4 md:space-y-6">
             <div class="flex flex-col space-y-4 md:space-x-8 md:flex-row md:space-y-0">
-                <input type="text" placeholder="First Name" class="w-full text-[11px] input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600" />
-                <input type="text" placeholder="Last Name" class="w-full text-[11px] input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600" />
+                <input type="text" placeholder="First Name" class="w-full md:text-[11px] text-lg input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600" />
+                <input type="text" placeholder="Last Name" class="w-full md:text-[11px] text-lg input uppercase input-bordered rounded-none  border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600" />
             </div>
             <div class="flex flex-col space-y-4 md:space-x-8 md:flex-row md:space-y-0">
-                <input type="email" placeholder="Email Address" class="w-full text-[11px] input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600 " />
-                <input type="tel" placeholder="Phone Number" class="w-full text-[11px] input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600 " />
+                <input type="email" placeholder="Email Address" class="w-full md:text-[11px] text-lg input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600 " />
+                <input type="tel" placeholder="Phone Number" class="w-full md:text-[11px] text-lg input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600 " />
             </div>
             <p class="text-[12px] uppercase">By clicking <strong>SIGN UP</strong>, you agree to receive marketing communications from <strong>imperia</strong>  at the number and email address provided. Consent is not a condition of any purchase. message and data rates may apply. message frequency varies. view our <a href="/"  class="underline">privacy policy</a>  and <a href="/" class="underline">terms of service</a> </p>
             <button class="btn btn-primary my-4 font-normal rounded-none">Sign Up</button>
