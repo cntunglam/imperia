@@ -59,7 +59,7 @@
                     <option>L</option>
                     <option>XL</option>
                 </select>
-                <div class="btn btn-primary w-full mt-4 top-90 bg-black text-white text-md p-4 uppercase rounded-none"><p class="text-center">Add To Bag</p></div>
+                <div class="btn btn-primary w-full mt-4 top-90 bg-black font-normal text-white text-md p-4 uppercase rounded-none"><p class="text-center">Add To Bag</p></div>
             </div>
             <div class="py-10 space-y-6 px-2">
                 <ul class=" space-y-2 list-none uppercase text-sm">

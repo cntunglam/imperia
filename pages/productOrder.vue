@@ -47,7 +47,7 @@
             </p>
 
             <div class="form-control w-full max-w-xl">
-                <div onclick="my_modal_4.showModal()" class="btn btn-primary rounded-none w-full mt-4 top-90 border-1 border-black bg-black text-white text-md p-4 uppercase"><p class="text-center">notify me when available</p></div>
+                <div onclick="my_modal_4.showModal()" class="btn btn-primary  font-normal rounded-none w-full mt-4 top-90 border-1 border-black bg-black text-white text-md p-4 uppercase"><p class="text-center">notify me when available</p></div>
 
             </div>
             <div class="py-10 space-y-6 px-2">
