@@ -3,6 +3,7 @@ import 'animate.css';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isHidden = ref(false);
+const isShow = ref(false);
 const lastScrollTop = ref(0);
 
 const handleScroll = () => {
@@ -34,7 +35,7 @@ window.removeEventListener("scroll", handleScroll);
   <div class="navbar bg-base-100">
     <div class="navbar-start flex xl:hidden ">
       <div class="drawer">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" v-modal="isChecked"/>
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" v-model="isShow"/>
         <div class="drawer-content">
           <!-- Page content here -->
           <label for="my-drawer" class="btn-button px-2"><Icon name="quill:hamburger" class="text-2xl"/></label>
@@ -43,7 +44,7 @@ window.removeEventListener("scroll", handleScroll);
           <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
           <div class="menu p-4 flex-col flex justify-between py-20 w-full md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
             <!-- Sidebar content here -->
-            <button for="my-drawer" class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute left-2 top-2" @click="isChecked === false">✕</button>
+            <button for="my-drawer" class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute left-2 top-2" @click="isShow = false">✕</button>
             <ul>
               <li><a href="/">Shop</a></li>
               <li><a href="/">Company</a></li>
