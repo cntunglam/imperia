@@ -39,7 +39,7 @@
             </div>
         </div>  
         <div class="flex justify-center w-full py-2 gap-2 md:hidden">
-            <a href="#item1" class="btn btn-xs">-   </a> 
+            <a href="#item1" class="btn btn-xs">-</a> 
             <a href="#item2" class="btn btn-xs">-</a> 
             <a href="#item3" class="btn btn-xs">-</a> 
             <a href="#item4" class="btn btn-xs">-</a>

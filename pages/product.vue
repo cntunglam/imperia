@@ -4,16 +4,16 @@
 <template>
     <div class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20">
         <div class="carousel md:carousel-vertical">
-            <div class=" carousel-item w-full h-fit ">
+            <div id="item1" class=" carousel-item w-full h-fit ">
                 <img src="/img/products/short/closeupshorts.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item2" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/modelfront.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item3" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/modelmain.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item4" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/1.jpg"/>
             </div>
             <div class=" carousel-item h-fit w-full ">
@@ -38,6 +38,12 @@
                 <img src="/img/products/short/pantsontheground.jpg"/>
             </div>
         </div>  
+        <div class="flex justify-center w-full py-2 gap-2 md:hidden">
+            <a href="#item1" class="btn btn-xs">-   </a> 
+            <a href="#item2" class="btn btn-xs">-</a> 
+            <a href="#item3" class="btn btn-xs">-</a> 
+            <a href="#item4" class="btn btn-xs">-</a>
+        </div>
         <div class="md:m-auto py-4 md:px-20 px-2">
             <h1 class="text-lg uppercase text-center md:text-left"> Imperia Hoodie </h1>
             <p class=" text-base text-gray-600 uppercase text-center md:text-left ">black</p>
