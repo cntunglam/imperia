@@ -76,15 +76,15 @@ window.removeEventListener("scroll", handleScroll);
     </div>
     <div class="navbar-end hidden md:flex">
       <ul class="menu menu-horizontal text-sm uppercase space-x-2">
-        <li><Icon name="material-symbols:search-rounded" class="text-2xl" :class="[!isHidden ?'invisible' : 'visible', 'relative']"/></li>
         <li><a>Client Services</a></li>
         <li><a>Login</a></li>
+        <Icon name="material-symbols:search-rounded" class="text-2xl my-auto" :class="[!isHidden ?'invisible' : 'visible', 'relative']" @click="isHidden = false"/>
         <img src="/icon/bag.svg" width="18" height="18" alt="shopping bag" />
       </ul>
     </div>
     <div class="navbar-end flex md:hidden">
       <ul class="menu menu-horizontal text-base uppercase">
-        <li><Icon name="material-symbols:search-rounded" class="text-2xl" :class="[!isHidden ? 'invisible' : 'visible', 'relative']" /></li>
+        <Icon name="material-symbols:search-rounded" class="text-2xl mx-2" :class="[!isHidden ? 'invisible' : 'visible', 'relative']" @click="isHidden = false" />
         <img src="/icon/bag.svg" width="20" height="20" alt="shopping bag" />
       </ul>
     </div>
