@@ -1,5 +1,29 @@
 <script setup>
 import 'animate.css';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const isHidden = ref(false);
+const lastScrollTop = ref(0);
+
+const handleScroll = () => {
+const scrollTop = window.scrollY || document.documentElement.scrollTop;
+if (scrollTop > lastScrollTop.value) {
+  // Scrolling down
+  isHidden.value = true;
+} else {
+  // Scrolling up
+  isHidden.value = false;
+}
+lastScrollTop.value = scrollTop;
+};
+
+onMounted(() => {
+window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+window.removeEventListener("scroll", handleScroll);
+});
 
 </script>
 <template>
@@ -10,15 +34,16 @@ import 'animate.css';
   <div class="navbar bg-base-100">
     <div class="navbar-start flex xl:hidden ">
       <div class="drawer">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" v-modal="isChecked"/>
         <div class="drawer-content">
           <!-- Page content here -->
           <label for="my-drawer" class="btn-button px-2"><Icon name="quill:hamburger" class="text-2xl"/></label>
         </div> 
         <div class="drawer-side z-10">
           <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <div class="menu p-4 flex-col flex justify-between py-20 mt-20 w-full md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
+          <div class="menu p-4 flex-col flex justify-between py-20 w-full md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
             <!-- Sidebar content here -->
+            <button for="my-drawer" class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute left-2 top-2" @click="isChecked === false">✕</button>
             <ul>
               <li><a href="/">Shop</a></li>
               <li><a href="/">Company</a></li>
@@ -50,7 +75,8 @@ import 'animate.css';
       </a>
     </div>
     <div class="navbar-end hidden md:flex">
-      <ul class="menu menu-horizontal text-sm uppercase">
+      <ul class="menu menu-horizontal text-sm uppercase space-x-2">
+        <li><Icon name="material-symbols:search-rounded" class="text-2xl" :class="[!isHidden ?'invisible' : 'visible', 'relative']"/></li>
         <li><a>Client Services</a></li>
         <li><a>Login</a></li>
         <img src="/icon/bag.svg" width="18" height="18" alt="shopping bag" />
@@ -58,15 +84,15 @@ import 'animate.css';
     </div>
     <div class="navbar-end flex md:hidden">
       <ul class="menu menu-horizontal text-base uppercase">
+        <li><Icon name="material-symbols:search-rounded" class="text-2xl" :class="[!isHidden ? 'invisible' : 'visible', 'relative']" /></li>
         <img src="/icon/bag.svg" width="20" height="20" alt="shopping bag" />
       </ul>
     </div>
   </div>
-      <div id="hidden--onscroll" class="relative" @scroll="">
+      <div :class="[isHidden ? 'invisible' : 'visible', 'relative']">
         <Icon name="ic:outline-search" class="text-2xl text-black absolute left-2 md:left-5 bottom-3 md:bottom-3"/>
         <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12 md:px-16 text-lg md:text-[11px]" />
       </div>
-
   </header>
 </template>
 <style>
