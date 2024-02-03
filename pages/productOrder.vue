@@ -4,16 +4,16 @@
 <template>
         <div class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20">
         <div class="carousel md:carousel-vertical">
-            <div class=" carousel-item w-full h-fit ">
+            <div id="item1" class=" carousel-item w-full h-fit ">
                 <img src="/img/products/short/closeupshorts.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item2" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/modelfront.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item3" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/modelmain.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item4" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/1.jpg"/>
             </div>
             <div class=" carousel-item h-fit w-full ">
@@ -38,6 +38,13 @@
                 <img src="/img/products/short/pantsontheground.jpg"/>
             </div>
         </div>  
+        <div class="flex justify-center w-full py-2 gap-2 md:hidden">
+            <a href="#item1" class="btn btn-xs">-</a> 
+            <a href="#item2" class="btn btn-xs">-</a> 
+            <a href="#item3" class="btn btn-xs">-</a> 
+            <a href="#item4" class="btn btn-xs">-</a>
+        </div>
+
         <div class="md:m-auto py-4 md:px-20 px-2">
             <h1 class="text-lg uppercase text-center md:text-left"> Imperia Hoodie </h1>
             <p class=" text-base text-gray-600 uppercase text-center md:text-left ">black</p>
@@ -79,9 +86,12 @@
 
 
     <dialog id="my_modal_4" class="modal">
-        <div class="modal-box max-w-3xl">
-            <h3 class="font-bold text-xl text-center py-6">Imperia Sweat Shirts</h3>
-            <div class="form-control py-2 w-full max-w-md mx-auto space-y-6">
+        <div class="modal-box max-w-xl">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="font-bold text-[12px] text-center uppercase">Imperia Sweat Shirts</h3>
+            <div class="form-control py-4 w-full max-w-md mx-auto space-y-6">
                 <select class="select md:text-[11px] text-xl select-bordered text-gray-400">
                     <option disabled selected>SELECT A SIZE</option>
                     <option>XS</option>
@@ -95,8 +105,8 @@
                 <input type="text" placeholder="LAST NAME" class="input input-bordered w-full max-w-md md:text-[11px] text-xl uppercase" />
                 <input type="email" placeholder="EMAIL ADDRESS" class="input input-bordered w-full max-w-md md:text-[11px] text-xl uppercase" />
                 <input type="tel" placeholder="PHONE NUMBER" class="input input-bordered w-full max-w-md md:text-[11px] text-xl uppercase" />
-                <p>BY CLICKING SIGN UP, YOU AGREE TO RECEIVE MARKETING COMMUNICATIONS FROM IMPERIA AT THE NUMBER AND EMAIL ADDRESS PROVIDED. CONSENT IS NOT A CONDITION OF ANY PURCHASE. MESSAGE AND DATA RATES MAY APPLY. MESSAGE FREQUENCY VARIES. VIEW OUR PRIVACY POLICY AND TERMS OF SERVICE</p>
-                <button class="btn btn-primary my-4">Submit</button>
+                <p class="text-[12px]">BY CLICKING SIGN UP, YOU AGREE TO RECEIVE MARKETING COMMUNICATIONS FROM IMPERIA AT THE NUMBER AND EMAIL ADDRESS PROVIDED. CONSENT IS NOT A CONDITION OF ANY PURCHASE. MESSAGE AND DATA RATES MAY APPLY. MESSAGE FREQUENCY VARIES. VIEW OUR PRIVACY POLICY AND TERMS OF SERVICE</p>
+                <button class="btn btn-primary my-4 font-thin">notify me when available</button>
             </div>
         </div>
         <form method="dialog" class="modal-backdrop">

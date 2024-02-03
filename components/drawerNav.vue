@@ -17,15 +17,19 @@ import 'animate.css';
         </div> 
         <div class="drawer-side z-10">
           <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <div class="menu p-4 w-[90%] md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
+          <div class="menu p-4 flex-col flex justify-between py-20 mt-20 w-full md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
             <!-- Sidebar content here -->
-            <li><a href="/">Shop</a></li>
-            <li><a href="/">Company</a></li>
-            <li><a href="/">Design</a></li>
-            <li><a href="/">Couture</a></li>
-            <li><a href="/">Audio</a></li>
-            <li><a>Client Services</a></li>
-            <li><a>Login</a></li>
+            <ul>
+              <li><a href="/">Shop</a></li>
+              <li><a href="/">Company</a></li>
+              <li><a href="/">Design</a></li>
+              <li><a href="/">Couture</a></li>
+              <li><a href="/">Audio</a></li>
+            </ul>
+            <ul>
+              <li><a>Client Services</a></li>
+              <li><a>Login</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -58,7 +62,7 @@ import 'animate.css';
       </ul>
     </div>
   </div>
-      <div id="hidden--onscroll" class="relative" @scroll="handleScroll">
+      <div id="hidden--onscroll" class="relative" @scroll="">
         <Icon name="ic:outline-search" class="text-2xl text-black absolute left-2 md:left-5 bottom-3 md:bottom-3"/>
         <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none min-h-14 w-full max-w-full px-12 md:px-16 text-lg md:text-[11px]" />
       </div>
