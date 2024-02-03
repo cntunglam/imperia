@@ -1,5 +1,4 @@
 <script setup>
-import 'animate.css';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isHidden = ref(false);
@@ -30,7 +29,7 @@ window.removeEventListener("scroll", handleScroll);
 <template>
   <header class="sticky top-0 w-full z-10">
     <div class="bg-black flex align-middle justify-center ">
-    <p class=" header-text text-sm w-full text-right text-white py-1 animate__slideInLeft animate__animated animate__infinite">Lorem Ipsum</p>
+    <p class=" header-text text-sm w-full text-right text-white py-1">Lorem Ipsum</p>
   </div>
   <div class="navbar bg-base-100">
     <div class="navbar-start flex xl:hidden ">
@@ -98,7 +97,19 @@ window.removeEventListener("scroll", handleScroll);
 </template>
 <style>
   .header-text {
-    --animate-duration: 15s;
+    animation: slideInLeft 15s infinite linear;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
     
   }
+
 </style>  
