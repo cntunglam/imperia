@@ -93,7 +93,7 @@
             </form>
             <h3 class="font-bold text-[12px] text-center uppercase">Imperia Sweat Shirts</h3>
             <div class="form-control py-4 w-full max-w-md mx-auto space-y-6">
-                <select class="select md:text-[11px] text-xl select-bordered text-gray-400 rounded-none border-black">
+                <select class="select md:text-[11px] text-xl select-bordered text-black rounded-none border-black">
                     <option disabled selected>SELECT A SIZE</option>
                     <option>XS</option>
                     <option>S</option>
