@@ -69,3 +69,7 @@ div .navbar {
       scrollbar-width: none;  /* Firefox */
 }
 }
+
+.btn {
+  @apply rounded-none
+}
