@@ -91,7 +91,7 @@ window.removeEventListener("scroll", handleScroll);
   </div>
       <div :class="[isHidden ? 'invisible' : 'visible', 'relative']">
         <Icon name="ic:outline-search" class="text-2xl text-black absolute left-2 md:left-5 bottom-3 md:bottom-3"/>
-        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-16 text-lg md:text-[11px]" />
+        <input type="text" placeholder="WHAT ARE YOU LOOKING FOR ?" class="input input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-16 text-[12px] md:text-[11px]" />
       </div>
   </header>
 </template>
