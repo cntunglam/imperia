@@ -3,17 +3,17 @@
         "1": {
             "name": "imperia short",
             "price": "200",
-            "img": "/img/products/short/flatfront.jpg",
+            "img": "/img/products/short/flatfront.png",
             "inStock": true,
             "permalink": "/product"
         },
         "2": {
-            "name": "Long Sleeve Sweatshirt",
+            "name": "IA Shirts",
             "price": "50",
-            "img": "/img/products/Sweatshirts-1.webp",
-            "img_2": "/img/products/Sweatshirts-2.webp",
+            "img": "/img/products/shirts/flattshirtfront2.png",
+            "img_2": "/img/products/shirts/flattshirtback.png",
             "inStock": true,
-            "permalink": "/product"
+            "permalink": "/shirts"
         },
         "3": {
             "name": "Imperia Hoodie",

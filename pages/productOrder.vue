@@ -16,7 +16,7 @@
             <div id="item4" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/1.jpg"/>
             </div>
-            <div class=" carousel-item h-fit w-full ">
+            <div id="item5" class=" carousel-item h-fit w-full ">
                 <img src="/img/products/short/2.jpg"/>
             </div>
             <div class=" carousel-item h-fit w-full ">
@@ -43,6 +43,7 @@
             <a href="#item2" class="btn btn-xs">-</a> 
             <a href="#item3" class="btn btn-xs">-</a> 
             <a href="#item4" class="btn btn-xs">-</a>
+            <a href="#item5" class="btn btn-xs">-</a>
         </div>
 
         <div class="md:m-auto py-4 md:px-20 px-2">

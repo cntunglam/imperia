@@ -70,7 +70,7 @@ window.removeEventListener("scroll", handleScroll);
       </ul>
     </div>
     <div class="navbar-center">
-      <a href="" class="btn btn-ghost text-xl">
+      <a href="/" class="btn btn-ghost text-xl">
         <img src="/img/logo.svg" width="150" height="130" alt="Imperia" />
       </a>
     </div>
