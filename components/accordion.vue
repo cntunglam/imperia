@@ -10,7 +10,7 @@
     <div class="border-b-[1px] border-black">
         <div class="collapse collapse-arrow">
         <input type="radio" name="accordion-1" /> 
-        <div class="collapse-title text-xl font-medium border-t-[1px] border-black">
+        <div class="collapse-title text-[12px] font-medium border-t-[1px] border-black">
             PRODUCT SUSTAINABILITY        
         </div>
         <div class="collapse-content"> 
@@ -19,7 +19,7 @@
         </div>
         <div class="collapse collapse-arrow">
         <input type="radio" name="accordion-2" /> 
-        <div class="collapse-title text-xl font-medium uppercase border-t-[1px] border-black">
+        <div class="collapse-title text-[12px] font-medium uppercase border-t-[1px] border-black">
             Free Shipping, Free Return        </div>
         <div class="collapse-content"> 
             <p>hello</p>
@@ -27,7 +27,7 @@
         </div>
         <div class="collapse collapse-arrow">
         <input type="radio" name="accordion-3" /> 
-        <div class="collapse-title text-xl font-medium border-t-[1px] border-black">
+        <div class="collapse-title text-[12px] font-medium border-t-[1px] border-black">
             PAYMENT        </div>
         <div class="collapse-content"> 
             <p>hello</p>
