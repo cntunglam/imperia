@@ -2,8 +2,9 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isHidden = ref(false);
-const isShow = ref(false);
+const isOpen = ref(false);
 const lastScrollTop = ref(0);
+console.log(isOpen.value)
 
 const handleScroll = () => {
 const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -17,9 +18,13 @@ if (scrollTop >= lastScrollTop.value) {
 lastScrollTop.value = scrollTop;
 };
 
+
 onMounted(() => {
 window.addEventListener("scroll", handleScroll);
-});
+const dropdownMenu = document.getElementById("dropdown-menu");
+dropdownMenu.addEventListener("toggle", () => {
+  isOpen.value = dropdownMenu.open; 
+});});
 
 onBeforeUnmount(() => {
 window.removeEventListener("scroll", handleScroll);
@@ -31,33 +36,26 @@ window.removeEventListener("scroll", handleScroll);
     <div class="bg-black flex align-middle justify-center ">
     <p class=" header-text text-sm w-full text-right text-white py-1">Lorem Ipsum</p>
   </div>
-  <div class="navbar bg-base-100">
-    <div class="navbar-start flex xl:hidden ">
-      <div class="drawer">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" v-model="isShow"/>
-        <div class="drawer-content">
-          <!-- Page content here -->
-          <label for="my-drawer" class="btn-button px-2"><Icon name="quill:hamburger" class="text-2xl"/></label>
-        </div> 
-        <div class="drawer-side z-10">
-          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <div class="menu p-4 flex-col flex justify-between py-20 w-full md:w-96 min-h-full bg-white text-[14px] uppercase text-base-content">
-            <!-- Sidebar content here -->
-            <button for="my-drawer" class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute left-2 top-2" @click="isShow = false">✕</button>
-            <ul>
-              <li><a href="/">Shop</a></li>
-              <li><a href="/">Company</a></li>
-              <li><a href="/">Design</a></li>
-              <li><a href="/">Couture</a></li>
-              <li><a href="/">Audio</a></li>
-            </ul>
-            <ul>
-              <li><a>Client Services</a></li>
-              <li><a>Login</a></li>
-            </ul>
+  <div class="navbar bg-white">
+    <div class="navbar-start lg:hidden flex">
+      <details id="dropdown-menu" class="dropdown dropdown-bottom">
+        <summary role="button" class="btn btn-circle bg-transparent border-none">
+          <Icon :name="isOpen ? 'material-symbols-light:close' : 'quill:hamburger'" class="text-2xl" />
+        </summary>
+        <ul class="flex flex-col justify-between dropdown-content z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen">
+          <div>
+            <li><a href="/">Shop</a></li>
+            <li><a href="/">Company</a></li>
+            <li><a href="/">Design</a></li>
+            <li><a href="/">Couture</a></li>
+            <li><a href="/">Audio</a></li>
           </div>
-        </div>
-      </div>
+          <div class="py-20">
+            <li><a href="/">Client Services</a></li>
+            <li><a href="/">Login</a></li>
+          </div>
+        </ul>
+      </details>
     </div>
     <div class="navbar-start hidden xl:flex">
       <ul class="menu menu-horizontal text-sm uppercase">
@@ -96,9 +94,16 @@ window.removeEventListener("scroll", handleScroll);
   </header>
 </template>
 <style>
-  .header-text {
+
+.header-text {
     animation: slideInLeft 15s infinite linear;
+}
+
+@media (min-width: 768px) {
+  .header-text {
+    animation-duration: 45s;
   }
+}
 
   @keyframes slideInLeft {
     from {
