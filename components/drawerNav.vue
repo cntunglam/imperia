@@ -8,7 +8,7 @@ console.log(isOpen.value)
 
 const handleScroll = () => {
 const scrollTop = window.scrollY || document.documentElement.scrollTop;
-if (scrollTop >= lastScrollTop.value) {
+if (scrollTop >= lastScrollTop.value || scrollTop < 10) {
   // Scrolling down
   isHidden.value = true;
 } else {
