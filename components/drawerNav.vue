@@ -39,7 +39,7 @@ window.removeEventListener("scroll", handleScroll);
   <div class="navbar bg-white">
     <div class="navbar-start lg:hidden flex">
       <details id="dropdown-menu" class="dropdown dropdown-bottom">
-        <summary role="button" class="btn btn-circle bg-transparent border-none">
+        <summary role="button" class="btn btn-circle bg-transparent border-none hover:bg-transparent">
           <Icon :name="isOpen ? 'material-symbols-light:close' : 'quill:hamburger'" class="text-2xl" />
         </summary>
         <ul class="flex flex-col justify-between dropdown-content z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen">
