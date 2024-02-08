@@ -1,8 +1,6 @@
-
 <template>
-  <DrawerNav/>
-  <SearchBar/>
-    <NuxtPage/>
-  <Footer/>
+  <DrawerNav />
+  <SearchBar />
+  <NuxtPage />
+  <Footer />
 </template>
-  

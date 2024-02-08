@@ -1,24 +1,24 @@
 {
-        "MainMenu": {
-            "Item 1" : {
-                "name": "Shop",
-                "link": "/shop"
-            },
-            "Item 2" : {
-                "name": "Company",
-                "link": "/"
-            },
-            "Item 3": {
-                "name": "Design",
-                "link": "/"
-            },
-            "Item 4": {
-                "name": "Couture",
-                "link": "/"
-            },
-            "Item 5": {
-                "name": "Audio",
-                "link": "/"
-            }
-        }    
+  "MainMenu": {
+    "Item 1": {
+      "name": "Shop",
+      "link": "/shop"
+    },
+    "Item 2": {
+      "name": "Company",
+      "link": "/"
+    },
+    "Item 3": {
+      "name": "Design",
+      "link": "/"
+    },
+    "Item 4": {
+      "name": "Couture",
+      "link": "/"
+    },
+    "Item 5": {
+      "name": "Audio",
+      "link": "/"
+    }
+  }
 }

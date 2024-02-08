@@ -11,15 +11,12 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        '5xl' : '2rem'
-      }
+        "5xl": "2rem",
+      },
     },
   },
-  plugins: [
-    require("daisyui")
-  ],
+  plugins: [require("daisyui")],
   daisyui: {
     themes: ["lofi"],
-  }
-}
-
+  },
+};
