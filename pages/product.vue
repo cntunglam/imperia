@@ -3,51 +3,10 @@ import { product } from "/assets/product.json";
 </script>
 <template>
   <div
-    class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20"
+    class="grid md:grid-cols-2 grid-cols-1 md:h-[800px] container mb-10 md:mb-20"
   >
-    <div class="carousel md:carousel-vertical">
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/flatback.png" />
-      </div>
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/flatfront.png" />
-      </div>
-      <div id="item1" class="carousel-item h-fit w-full">
-        <img src="/img/products/short/closeupshorts.jpg" />
-      </div>
-      <div id="item2" class="carousel-item h-fit w-full">
-        <img src="/img/products/short/modelfront.jpg" />
-      </div>
-      <div id="item3" class="carousel-item h-fit w-full">
-        <img src="/img/products/short/modelmain.jpg" />
-      </div>
-      <div id="item4" class="carousel-item h-fit w-full">
-        <img src="/img/products/short/1.jpg" />
-      </div>
-      <div id="item5" class="carousel-item h-fit w-full">
-        <img src="/img/products/short/2.jpg" />
-      </div>
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/3.jpg" />
-      </div>
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/macroshotmesh.jpg" />
-      </div>
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/macroshotsatin.jpg" />
-      </div>
-      <div class="carousel-item h-fit w-full">
-        <img src="/img/products/short/pantsontheground.jpg" />
-      </div>
-    </div>
-    <div class="flex justify-center w-full py-2 gap-2 md:hidden">
-      <a href="#item1" class="btn btn-xs btn-ghost">- </a>
-      <a href="#item2" class="btn btn-xs btn-ghost">-</a>
-      <a href="#item3" class="btn btn-xs btn-ghost">-</a>
-      <a href="#item4" class="btn btn-xs btn-ghost">-</a>
-      <a href="#item5" class="btn btn-xs btn-ghost">-</a>
-    </div>
-    <div class="md:m-auto py-4 md:px-20 px-2">
+    <Carousel />
+  <div class="md:m-auto py-4 md:px-20 px-2">
       <h1 class="text-lg uppercase text-center">Imperia Hoodie</h1>
       <p class="text-base text-gray-600 uppercase text-center">black</p>
       <p class="text-lg py-4 text-center">$200</p>
@@ -76,7 +35,7 @@ import { product } from "/assets/product.json";
           <p class="text-center">Add To Bag</p>
         </div>
       </div>
-      <div class="py-10 space-y-6 px-2">
+      <div class="py-10 space-y-6 px-2 text-left">
         <ul class="space-y-2 list-none uppercase text-sm">
           <li>- Laser printed script logo on front</li>
           <li>- 150 GSM 100% french terry cotton</li>
@@ -96,18 +55,5 @@ import { product } from "/assets/product.json";
       <Accordion />
     </div>
   </div>
-  <section class="mx-auto md:my-20">
-    <h2 class="text-[28px] text-center py-8 uppercase">Style With</h2>
-    <div class="grid md:grid-cols-4 grid-cols-2 px-2 py-10 gap-2 md:gap-8">
-      <div v-for="item in product">
-        <ProductCard
-          :link="item.permalink"
-          :inStock="item.inStock"
-          :productName="item.name"
-          :Image="item.img"
-          :price="item.price"
-        />
-      </div>
-    </div>
-  </section>
+  <StyleWith />
 </template>
