@@ -6,7 +6,7 @@ const accordion_2 = ref(false);
 const accordion_3 = ref(false);
 </script>
 <template>
-  <div class="border-b-[1px] border-black px-2">
+  <div class="border-b-[1px] border-black px-1">
     <div class="collapse collapse-arrow">
       <input type="radio" name="accordion-1" v-model="accordion_1" />
       <div
