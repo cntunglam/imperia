@@ -2,7 +2,7 @@
   "MainMenu": {
     "Item 1": {
       "name": "Shop",
-      "link": "/shop"
+      "link": "/collection"
     },
     "Item 2": {
       "name": "Company",

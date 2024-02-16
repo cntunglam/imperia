@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
             class="flex flex-col justify-between dropdown-content z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen"
           >
             <div>
-              <li><a href="/">Shop</a></li>
+              <li><a href="/collection">Shop</a></li>
               <li><a href="/">Company</a></li>
               <li><a href="/">Design</a></li>
               <li><a href="/">Couture</a></li>
@@ -70,7 +70,7 @@ onBeforeUnmount(() => {
       </div>
       <div class="navbar-start hidden xl:flex">
         <ul class="menu menu-horizontal text-sm uppercase">
-          <li><a href="/">Shop</a></li>
+          <li><a href="/collection">Shop</a></li>
           <li><a href="/">Company</a></li>
           <li><a href="/">Design</a></li>
           <li><a href="/">Couture</a></li>
