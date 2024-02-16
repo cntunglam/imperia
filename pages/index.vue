@@ -19,7 +19,7 @@ useSeoMeta({
             :link="item.permalink"
             :inStock="item.inStock"
             :productName="item.name"
-            :Image="item.img"
+            :Image="item.featureImg"
             :price="item.price"
           />
         </div>

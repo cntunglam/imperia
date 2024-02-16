@@ -1,48 +1,11 @@
 <script setup>
-import { product } from "/assets/product.json";
 </script>
 <template>
   <div
-    class="grid md:grid-cols-2 grid-cols-1 md:h-screen container mb-10 md:mb-20"
+    class="grid md:grid-cols-2 grid-cols-1 mx-auto mb-10 md:mb-20"
   >
-    <Carousel />
-    <div class="md:m-auto py-4 md:px-20 px-2">
-      <h1 class="text-lg uppercase text-center md:text-left">Imperia Hoodie</h1>
-      <p class="text-base text-gray-600 uppercase text-center md:text-left">
-        black
-      </p>
-      <p class="text-lg py-4 text-center md:text-left">$200</p>
-      <p class="py-2 uppercase text-center md:text-left text-sm">
-        black short sleeve t-shirt in a lightweight jersey cotton
-      </p>
-
-      <div class="form-control w-full max-w-xl">
-        <div
-          onclick="my_modal_4.showModal()"
-          class="btn btn-primary font-normal rounded-none w-full mt-4 top-90 border-1 border-black bg-black text-white text-md p-4 uppercase"
-        >
-          <p class="text-center">notify me when available</p>
-        </div>
-      </div>
-      <div class="py-10 space-y-6 px-2">
-        <ul class="space-y-2 uppercase text-sm">
-          <li>- Laser printed script logo on front</li>
-          <li>- 150 GSM 100% french terry cotton</li>
-          <li>- slightly oversized fit</li>
-        </ul>
-        <p class="uppercase text-sm">
-          Balenciaga Skiwear is a line consisting of technically advanced
-          thermal separates, comfortable and protective outerwear, accessories,
-          and winter sport equipment. Each Skiwear product’s sophisticated
-          design is engineered to withstand the elements.
-        </p>
-        <p class="uppercase text-sm">
-          Material: 99% cotton, 1% elastane <br />
-          Product ID: 773668TPVQ21000
-        </p>
-      </div>
-      <Accordion />
-    </div>
+    <ProductSwiper/>
+    <ProductInfo/>
   </div>
   <StyleWith />
   <dialog id="my_modal_4" class="modal">

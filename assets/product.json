@@ -3,30 +3,36 @@
     "1": {
       "name": "imperia short",
       "price": "200",
-      "img": "/img/products/short/flatfront.png",
+      "featureImg": "/img/products/short/flatfront.png",
+      "images": [
+        "/img/products/short/flatfront.png",
+        "/img/products/short/flatback.png"
+      ],
       "inStock": true,
       "permalink": "/product"
     },
     "2": {
       "name": "IA Shirts",
       "price": "50",
-      "img": "/img/products/shirts/flattshirtfront2.png",
-      "img_2": "/img/products/shirts/flattshirtback.png",
+      "featureImg": "/img/products/shirts/flattshirtfront2.png",
+      "images": [
+        "/img/products/shirts/flattshirtfront2.png",
+        "/img/products/shirts/flattshirtback2.png"
+      ],
       "inStock": true,
       "permalink": "/shirts"
     },
     "3": {
       "name": "Imperia Hoodie",
       "price": "200",
-      "img": "/img/products/hoodie-1.webp",
-      "img_2": "/img/products/hoodie-2.webp",
+      "featureImg": "/img/products/hoodie-1.webp",
       "inStock": false,
       "permalink": "/productOrder"
     },
     "4": {
       "name": "Imperia Cap",
       "price": "50",
-      "img": "/img/products/cap.jpeg",
+      "featureImg": "/img/products/cap.jpeg",
       "inStock": false,
       "permalink": "/productOrder"
     }

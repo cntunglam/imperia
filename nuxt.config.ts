@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "nuxt-icon"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "nuxt-icon", "nuxt-swiper", '@nuxtjs/device'],
   colorMode: {
     preference: "system", // default theme
     dataValue: "theme", // activate data-theme in <html> tag
@@ -22,4 +22,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  device: {
+    refreshOnResize: true
+  }
 });
