@@ -78,3 +78,9 @@ div .navbar {
 .btn {
   @apply rounded-none;
 }
+
+ td {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0 !important;
+}

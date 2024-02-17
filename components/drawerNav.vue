@@ -20,10 +20,6 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
-  const dropdownMenu = document.getElementById("dropdown-menu");
-  dropdownMenu.addEventListener("toggle", () => {
-    isOpen.value = dropdownMenu.open;
-  });
 });
 
 onBeforeUnmount(() => {
@@ -38,72 +34,36 @@ onBeforeUnmount(() => {
       </p>
     </div>
     <div class="navbar bg-white">
-      <div class="navbar-start lg:hidden flex">
-        <details id="dropdown-menu" class="dropdown dropdown-bottom">
-          <summary
-            role="button"
-            class="btn btn-circle bg-transparent border-none hover:bg-transparent"
-          >
-            <Icon
-              :name="
-                isOpen ? 'material-symbols-light:close' : 'quill:hamburger'
-              "
-              class="text-2xl"
-            />
-          </summary>
-          <ul
-            class="flex flex-col justify-between dropdown-content z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen"
-          >
-            <div>
-              <li><a href="/collection">Shop</a></li>
-              <li><a href="/">Company</a></li>
-              <li><a href="/">Design</a></li>
-              <li><a href="/">Couture</a></li>
-              <li><a href="/">Audio</a></li>
-            </div>
-            <div class="py-32 ">
-              <li><a href="/">Client Services</a></li>
-              <li><a href="/">Login</a></li>
-            </div>
-          </ul>
-        </details>
-      </div>
-      <div class="navbar-start hidden xl:flex">
-        <ul class="menu menu-horizontal text-sm uppercase">
+      <div class="navbar-start">
+        <ul class="menu menu-horizontal text-sm uppercase hidden xl:flex">
           <li><a href="/collection">Shop</a></li>
           <li><a href="/">Company</a></li>
           <li><a href="/">Design</a></li>
           <li><a href="/">Couture</a></li>
           <li><a href="/">Audio</a></li>
         </ul>
+        <MobileMenu />
       </div>
       <div class="navbar-center">
         <a href="/" class="btn btn-ghost text-xl">
           <img src="/img/logo.svg" width="150" height="130" alt="Imperia" />
         </a>
       </div>
-      <div class="navbar-end hidden md:flex">
+      <div class="navbar-end">
         <ul class="menu menu-horizontal text-sm uppercase space-x-2">
-          <li><a>Client Services</a></li>
-          <li><a>Login</a></li>
+          <div class="hidden md:flex "> 
+            <li><a>Client Services</a></li>
+            <li><a>Login</a></li>
+          </div>
           <Icon
             name="material-symbols:search-rounded"
             class="text-2xl my-auto"
             v-if="isHidden"
             @click="isHidden = false"
           />
-          <img src="/icon/bag.svg" width="18" height="18" alt="shopping bag" />
-        </ul>
-      </div>
-      <div class="navbar-end flex md:hidden">
-        <ul class="menu menu-horizontal text-base uppercase">
-          <Icon
-            name="material-symbols:search-rounded"
-            class="text-2xl mx-2"
-            v-if="isHidden"
-            @click="isHidden = false"
-          />
-          <img src="/icon/bag.svg" width="20" height="20" alt="shopping bag" />
+          <a href="/bag" class="my-auto">
+            <img src="/icon/bag.svg" alt="bag" class="w-6 h-6 my-auto" />
+          </a>
         </ul>
       </div>
     </div>
