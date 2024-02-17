@@ -1,39 +1,42 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="md:my-auto px-2 py-20 md:py-48">
-      <h2 class="text-4xl text-center">Login</h2>
-      <div class="form-control py-2 w-full max-w-md mx-auto">
-        <label class="label py-0 mt-4">
-          <span class="label-text uppercase">Email</span>
-        </label>
-        <input
-          type="email"
-          placeholder="email"
-          class="input input-bordered w-full max-w-md"
+  <div class="grid py-12">
+    <div class="px-2 ">
+      <h2 class="text-[28px] py-8 uppercase text-center">Login</h2>
+      <div class="form-control py-2 w-full max-w-lg mx-auto uppercase">
+        <div class="space-y-4">
+          <input
+          type="text"
+          placeholder="First Name"
+          class="w-full md:text-[11px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
-        <label class="label py-0 mt-4">
-          <span class="label-text uppercase">Password</span>
-        </label>
         <input
           type="password"
-          placeholder="password"
-          class="input input-bordered w-full max-w-md"
+          placeholder="First Name"
+          class="w-full md:text-[11px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
-        <button class="btn btn-primary my-4">Sign In</button>
+        <div class="flex justify-between">
+          <div>
+            <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
+            <label for="remember" class="text-[12px] px-2">Remember me</label>
+          </div>
+          <div>
+            <a href="/" class="text-[12px] underline uppercase">Forgot password?</a>
+          </div>
+        </div>
+        </div>
+        <button class="btn btn-primary my-4">Login</button>
+        <p class="text-center underline"><a href="">Create An Account</a></p>
+        <hr class="border-black mt-8"/>
       </div>
     </div>
-    <div
-      class="hover:filter hover:grayscale duration-100 min-h-screen shadow-lg flex justify-center lg:row-span-2 lg:col-span-1 col-span-2 bg-top bg-fixed bg-[url('/img/hoodie.webp')]"
-    >
-      <div class="my-auto p-4 bg-black text-white">
-        <h2 class="md:text-6xl text-3xl text-white uppercase">
-          EXCLUSIVE ACCESS
-        </h2>
-        <p class="py-2">
-          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit
-        </p>
-      </div>
+    <div class="text-[12px] max-w-xl mx-auto space-y-4">
+      <p>ENJOY AN ELEVATED SHOPPING EXPERIENCE WITH YOUR EXCLUSIVE ACCESS</p>
+      <ul class="space-y-2">
+        <li>- CHECK THE DETAILS AND MONITOR THE STATUS OF YOUR ORDERS</li>
+        <li>- VIEW YOUR PRIVATE APPOINTMENTS</li>
+        <li>- RECEIVE TAILORED ASSISTANCE FROM OUR CLIENT SERVICES</li>
+        <li>- RECEIVE COMMUNICATIONS ABOUT PRODUCTS, STORES AND EVENTS</li>
+      </ul>
     </div>
   </div>
 </template>
