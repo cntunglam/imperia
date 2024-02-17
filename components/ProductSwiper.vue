@@ -64,6 +64,9 @@
       <SwiperSlide class="xl:h-screen">
         <img src="/img/products/short/1.jpg"/>
       </SwiperSlide>
+      <SwiperSlide class="xl:h-screen">
+        <img src="/img/products/short/2.jpg"/>
+      </SwiperSlide>
     </Swiper>
   </div>
 </template>
