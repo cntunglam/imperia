@@ -7,12 +7,12 @@
           <input
           type="text"
           placeholder="First Name"
-          class="w-full md:text-[11px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
         <input
           type="password"
           placeholder="First Name"
-          class="w-full md:text-[11px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
         <div class="flex justify-between">
           <div>
@@ -24,7 +24,7 @@
           </div>
         </div>
         </div>
-        <button class="btn btn-primary my-4">Login</button>
+        <button class="btn btn-primary my-4 text-[10px]">Login</button>
         <p class="text-center underline"><a href="">Create An Account</a></p>
         <hr class="border-black mt-8"/>
       </div>
