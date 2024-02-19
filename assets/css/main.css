@@ -140,3 +140,9 @@ input[type="checkbox"] + label::after {
 input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+
+.collapse-arrow8 > .collapse-title:after {
+  height: 8px;
+  width: 8px;
+  vertical-align: middle;
+}

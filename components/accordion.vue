@@ -20,10 +20,3 @@
   </details>
   </div>
 </template>
-<style>
-.collapse-arrow8 > .collapse-title:after {
-  height: 8px;
-  width: 8px;
-  vertical-align: middle;
-}
-</style>
