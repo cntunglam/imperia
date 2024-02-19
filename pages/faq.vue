@@ -1,10 +1,10 @@
 <template>
-    <div class="space-y-12 py-8">
+    <div class="space-y-12 py-8 px-2">
         <div class="flex flex-col text-center justify-center gap-8">
         <h1 class="text-[28px]">FAQs</h1>
         <p class="text-[12px]">SELECT A CATEGORY BELOW TO SEE ANSWERS TO FREQUENTLY ASKED QUESTIONS</p>
     </div>
-    <div class="flex flex-col max-w-xl mx-auto justify-center my-8">
+    <div class="flex flex-col max-w-xl mx-auto justify-center my-8 text-[10px]">
         <select
           class="select select-bordered uppercase max-w-xl border-black rounded-none"
         >
@@ -15,7 +15,7 @@
           <option>Lorem Ipsum</option>
         </select>
     </div>
-      <div class="flex flex-col max-w-xl mx-auto justify-center my-4">
+      <div class="flex flex-col max-w-xl mx-auto justify-center my-4 text-[12px]">
         <div class="border-b-[1px] border-black px-1">
           <details class="collapse collapse-arrow uppercase">
           <summary class="collapse-title text-[12px] font-medium border-t-[1px] border-black">WHAT FORMS OF PAYMENT DO YOU ACCEPT?</summary>
