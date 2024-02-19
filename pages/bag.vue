@@ -69,7 +69,7 @@
                     </tbody>
                     <!-- foot -->                    
                 </table>
-                <div class="flex justify-between text-[10px] py-8">
+                <div class="flex justify-between text-[10px] py-8 uppercase">
                     <div>
                         <p class="text-sm">Subtotal</p>
                         <p class="text-sm">Shipping</p>
@@ -81,7 +81,7 @@
                         <p class="text-sm font-bold">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full my-4">Checkout</button>
+                <button class="btn btn-primary w-full my-4 font-thin">Checkout</button>
             </div>
         </div>
     </div>
