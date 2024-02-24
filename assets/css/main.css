@@ -102,7 +102,7 @@ input[type="checkbox"] {
 /* Style the custom checkbox */
 input[type="checkbox"] + label {
   position: relative;
-  padding-left: 25px; /* Adjust as needed */
+  padding-left: 20px; /* Adjust as needed */
   cursor: pointer;
 }
 
@@ -112,8 +112,8 @@ input[type="checkbox"] + label::before {
   position: absolute;
   left: 0;
   top: 0;
-  width: 14px; /* Adjust the size of the checkbox */
-  height: 14px; /* Adjust the size of the checkbox */
+  width: 13px; /* Adjust the size of the checkbox */
+  height: 13px; /* Adjust the size of the checkbox */
   border: 1px solid #000; /* Border color */
   background-color: #fff; /* Background color */
 }
@@ -128,11 +128,11 @@ input[type="checkbox"]:checked + label::before {
 input[type="checkbox"] + label::after {
   content: '\2713'; /* Unicode checkmark symbol */
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 6%;
   transform: translate(-50%, -50%);
   color: #000; /* Color of the checkmark */
-  font-size: 10px; /* Size of the checkmark */
+  font-size: 8px; /* Size of the checkmark */
   opacity: 0; /* Hide the checkmark by default */
 }
 
