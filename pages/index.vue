@@ -9,8 +9,10 @@ useSeoMeta({
     <Hero />
     <LatestNews />
     <section class="mx-auto py-4 flex flex-col">
-      <h2 class="text-[28px] text-center uppercase py-2">New Arrivals</h2>
-      <tab />
+      <div class="py-4">
+        <h2 class="text-[28px] text-center uppercase">New Arrivals</h2>
+        <tab />
+      </div>
       <div
         class="grid md:grid-cols-4 grid-cols-2 px-2 pt-3 py-4 gap-2 font-thin md:gap-8"
       >

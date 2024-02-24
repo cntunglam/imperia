@@ -1,13 +1,20 @@
-<template>
-        <div class="md:m-auto py-4 md:px-20 px-2">
-      <h1 class="text-lg uppercase text-center">Imperia Hoodie</h1>
-      <p class="text-base text-gray-600 uppercase text-center">black</p>
-      <p class="text-lg py-4 text-center">$200</p>
-      <p class="py-2 uppercase text-center text-sm">
-        black short sleeve t-shirt in a lightweight jersey cotton
-      </p>
+<script setup>
+  defineProps({
+    isOutOfStock: Boolean,
+  });
 
-      <div class="form-control w-full max-w-xl text-xl">
+</script>
+<template>
+      <div class="py-4 px-2 grid place-content-center">
+        <div class="text-center">
+          <h1 class="text-lg uppercase">Imperia Hoodie</h1>
+          <p class="text-base text-gray-600 uppercase">black</p>
+          <p class="text-lg py-4">$200</p>
+          <p class="py-2 uppercase text-sm">
+            black short sleeve t-shirt in a lightweight jersey cotton
+          </p>
+        </div>
+        <div v-if="!!isOutOfStock" class="form-control w-full text-xl">
         <label class="label">
           <span class="label-text uppercase">Size: (US)</span>
           <span class="label-text uppercase underline">Size Guide</span>
@@ -27,7 +34,8 @@
         >
           <p class="text-center">Add To Bag</p>
         </div>
-      </div>
+        </div>
+      <OrderModal v-else/>
       <div class="py-10 space-y-6 px-2 text-left">
         <ul class="space-y-2 list-none uppercase text-sm">
           <li>- Laser printed script logo on front</li>

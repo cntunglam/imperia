@@ -146,3 +146,16 @@ input[type="checkbox"]:checked + label::after {
   width: 8px;
   vertical-align: middle;
 }
+
+._accordion details {
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+._accordion details:first-child {
+  border-top: 1px solid black;
+}
+
+._accordion details summary {
+  padding-left: 10px;
+}

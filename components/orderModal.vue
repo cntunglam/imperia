@@ -1,14 +1,13 @@
-<script setup>
-</script>
 <template>
-  <div
-    class="grid md:grid-cols-2 grid-cols-1 mx-auto mb-10 md:mb-20"
-  >
-    <ProductSwiper/>
-    <ProductInfo isOutOfStock = "false"/>
-  </div>
-  <StyleWith />
-  <dialog id="my_modal_4" class="modal">
+    <div class="form-control w-full px-2">
+        <div
+          onclick="my_modal_4.showModal()"
+          class="btn btn-primary font-normal rounded-none w-full mt-4 top-90 border-1 border-black bg-black text-white text-md p-4 uppercase"
+        >
+          <p class="text-center">notify me when available</p>
+        </div>
+      </div>
+      <dialog id="my_modal_4" class="modal">
     <div class="modal-box max-w-xl rounded-none">
       <form method="dialog">
         <button
@@ -66,5 +65,7 @@
     <form method="dialog" class="modal-backdrop">
       <button>close</button>
     </form>
-  </dialog>
+    </dialog>
+
+
 </template>
