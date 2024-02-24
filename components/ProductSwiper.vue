@@ -9,7 +9,7 @@
   .swiper-pagination-bullet {
     background-color: #7a7474;
     border-radius: 0px;
-    height: 3px;
+    height: 1px;
     width: 20px;
   }
 
