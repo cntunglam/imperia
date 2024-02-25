@@ -5,7 +5,7 @@
     class="grid md:grid-cols-2 grid-cols-1 mx-auto mb-10 md:mb-20"
   >
     <ProductSwiper/>
-    <ProductInfo isOutOfStock = "false"/>
+    <ProductInfo :isOutOfStock = "true"/>
   </div>
   <StyleWith />
   <dialog id="my_modal_4" class="modal">

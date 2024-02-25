@@ -5,7 +5,7 @@
 
 </script>
 <template>
-      <div class="py-4 px-2 grid place-content-center">
+      <div class="py-4 px-2 grid place-content-center md:w-3/4 mx-auto">
         <div class="text-center">
           <h1 class="text-lg uppercase">Imperia Hoodie</h1>
           <p class="text-base text-gray-600 uppercase">black</p>
@@ -14,7 +14,7 @@
             black short sleeve t-shirt in a lightweight jersey cotton
           </p>
         </div>
-        <div v-if="!!isOutOfStock" class="form-control w-full text-xl">
+        <div v-if="!isOutOfStock" class="form-control w-full text-xl">
         <label class="label">
           <span class="label-text uppercase">Size: (US)</span>
           <span class="label-text uppercase underline">Size Guide</span>
