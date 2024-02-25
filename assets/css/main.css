@@ -76,7 +76,7 @@ div .navbar {
 }
 
 .btn {
-  @apply rounded-none;
+  @apply rounded-none font-thin;
 }
 
  td {
