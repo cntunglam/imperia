@@ -1,5 +1,5 @@
 <template>
-    <div class="my-4 xl:flex justify-center">
+<div class="my-8 xl:flex justify-center">
         <div class="xl:w-1/2 px-6 ">
             <h1 class="text-center uppercase text-[28px]">Bag</h1>
             <div class="overflow-x-auto">
@@ -71,18 +71,18 @@
                 </table>
                 <div class="flex justify-between text-[10px] py-8 uppercase">
                     <div>
-                        <p class="text-sm">Subtotal</p>
+                        <p class="text-sm">Total</p>
                         <p class="text-sm">Shipping</p>
-                        <p class="text-sm font-bold">Order Total</p>
+                        <p class="text-sm font-bold my-2">Order Total</p>
                     </div>
                     <div class="text-right">
                         <p class="text-sm">$400 USD</p>
                         <p class="text-sm">Calculated At Checkout</p>
-                        <p class="text-sm font-bold">$400 USD</p>
+                        <p class="text-sm font-bold my-2">$400 USD</p>
                     </div>
                 </div>
                 <button class="btn btn-primary w-full my-4 font-thin">Checkout</button>
             </div>
         </div>
-    </div>
+</div>
 </template>

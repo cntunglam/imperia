@@ -1,8 +1,8 @@
 <template>
-  <div class="grid">
+  <div class="grid my-8">
     <div class="px-2 ">
-      <h2 class="text-[28px] py-8 uppercase text-center">Login</h2>
-      <div class="form-control py-2 w-full max-w-lg mx-auto uppercase">
+      <h2 class="text-[28px] uppercase text-center">Login</h2>
+      <div class="form-control py-8 w-full max-w-3xl mx-auto uppercase">
         <div class="space-y-4">
           <input
           type="text"
@@ -24,7 +24,7 @@
           </div>
         </div>
         </div>
-        <button class="btn btn-primary text-[10px]">Login</button>
+        <button class="btn btn-primary text-[10px] mt-8">Login</button>
         <p class="text-center underline py-8"><a href="">Create An Account</a></p>
         <hr class="border-black"/>
       </div>
