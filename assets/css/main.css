@@ -21,8 +21,13 @@ h3,
 h4,
 h5,
 h6 {
+  @apply uppercase;
   font-family: "GTZirkon-Bold";
   color: #181818;
+}
+
+p {
+  @apply uppercase;
 }
 
 a:hover {

@@ -1,7 +1,9 @@
 <template>
-  <div class="grid my-8">
-    <div class="px-2 ">
+  <div class="grid my-8 px-2">
+    <div class="px-2">
       <h2 class="text-[28px] uppercase text-center">Login</h2>
+    </div>
+    <div>
       <div class="form-control py-8 w-full max-w-3xl mx-auto uppercase">
         <div class="space-y-4">
           <input
@@ -28,6 +30,7 @@
         <p class="text-center underline py-8"><a href="">Create An Account</a></p>
         <hr class="border-black"/>
       </div>
+
     </div>
     <div class="text-[12px] max-w-xl mx-auto space-y-4 py-8">
       <p>ENJOY AN ELEVATED SHOPPING EXPERIENCE WITH YOUR EXCLUSIVE ACCESS</p>

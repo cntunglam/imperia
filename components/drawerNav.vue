@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
       <div class="navbar-end">
         <ul class="menu menu-horizontal text-sm uppercase space-x-2">
           <div class="hidden md:flex "> 
-            <li><a>Client Services</a></li>
+            <li><a href="/client-service">Client Services</a></li>
             <li><a href="/login">Login</a></li>
           </div>
           <Icon
