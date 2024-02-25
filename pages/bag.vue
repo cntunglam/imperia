@@ -81,7 +81,7 @@
                         <p class="text-sm font-bold my-2">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full my-4 font-thin">Checkout</button>
+                <button class="btn btn-primary w-full font-thin">Checkout</button>
             </div>
         </div>
 </div>
