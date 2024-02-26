@@ -8,7 +8,7 @@
             class="tabs space-x-2 flex flex-nowrap overflow-y-hidden overflow-x-scroll max-w-full no-scrollbar justify-start md:justify-center px-2 md:px-0 bg-transparent uppercase font-sans"
         >
             <a role="tab" class="tab tab-xl text-[14px] text-black">My Account</a>
-            <a role="tab" class="tab tab-xl text-[14px] text-black">Orders</a>
+            <a role="tab" class="tab tab-xl text-[14px] text-black underline">Orders</a>
             <a role="tab" class="tab tab-xl text-[14px] text-black">Profile </a>
             <a role="tab" class="tab tab-xl text-[14px] text-black">Log Out</a>
         </div>
