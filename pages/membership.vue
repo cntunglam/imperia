@@ -12,7 +12,7 @@
             <a role="tab" class="tab tab-xl text-[14px] text-black">Profile </a>
             <a role="tab" class="tab tab-xl text-[14px] text-black">Log Out</a>
         </div>
-        <div class="px-2 grid h-52">
+        <div class="px-2 grid h-64">
             <hr class="border-t-[1px] border-black">
             <p class="place-self-center text-[12px]">You have no placed order</p>
             <button class="btn btn-primary text-[10px] w-full place-self-end">Shop New Arrivals</button>
