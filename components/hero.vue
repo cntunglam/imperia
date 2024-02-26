@@ -7,7 +7,7 @@
     >
       <video
         class="min-w-full min-h-full absolute object-cover"
-        src="https://cdn.shopify.com/videos/c/o/v/87490f744b6b47cb84fb48ca1ffb87ea.mp4"
+        src="https://cdn.shopify.com/videos/c/o/v/c3c93db7f043420e90c70cbe1269bca6.mp4"
         type="video/mp4"
         playsinline
         autoplay

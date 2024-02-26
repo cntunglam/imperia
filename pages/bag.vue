@@ -1,6 +1,6 @@
 <template>
 <div class="my-8 xl:flex justify-center">
-        <div class="xl:w-1/2 px-6 ">
+        <div class="xl:w-1/2 px-6">
             <h1 class="text-center uppercase text-[28px]">Bag</h1>
             <div class="overflow-x-auto">
                 <h2 class="uppercase text-[12px] py-6">Shopping Bag (2)</h2>
