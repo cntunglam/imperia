@@ -1,14 +1,14 @@
 <template>
-<div class="my-8 xl:flex justify-center">
-        <div class="xl:w-1/2 px-6">
+<main class="_body">
+        <div>
             <h1 class="text-center uppercase text-[28px]">Bag</h1>
             <div class="overflow-x-auto">
                 <h2 class="uppercase text-[12px] py-6">Shopping Bag (2)</h2>
                 <table class="table min-w-max text-[10px] uppercase">
                     <thead>
                     <tr>
-                        <th class="text-left p-0">Item</th>
-                        <th class="text-right">Total</th>
+                        <th class="text-left px-0">Item</th>
+                        <th class="text-right px-0">Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@
                     </tbody>
                     <!-- foot -->                    
                 </table>
-                <div class="flex justify-between text-[10px] py-8 uppercase">
+                <div class="flex justify-between pt-4 uppercase">
                     <div>
                         <p class="text-sm">Total</p>
                         <p class="text-sm">Shipping</p>
@@ -84,5 +84,5 @@
                 <button class="btn btn-primary w-full font-thin">Checkout</button>
             </div>
         </div>
-</div>
-</template>
+</main>
+</template> 

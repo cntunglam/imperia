@@ -80,8 +80,12 @@ div .navbar {
   }
 }
 
+p {
+  @apply uppercase;
+}
+
 .btn {
-  @apply rounded-none font-thin;
+  @apply rounded-none font-thin text-[12px] my-4 max-w-full;
 }
 
  td {
@@ -163,4 +167,8 @@ input[type="checkbox"]:checked + label::after {
 
 ._accordion details summary {
   padding-left: 10px;
+}
+
+._body {
+  @apply px-4 md:px-0 grid my-8 max-w-3xl mx-auto;
 }
