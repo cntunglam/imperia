@@ -1,5 +1,5 @@
 <template>
-  <main class="_body">
+  <main class="_body ">
     <div>
       <h2 class="text-[28px] uppercase text-center">Login</h2>
     </div>

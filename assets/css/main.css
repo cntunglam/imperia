@@ -155,6 +155,9 @@ input[type="checkbox"]:checked + label::after {
   width: 8px;
   vertical-align: middle;
 }
+._accordion {
+  @apply w-full;
+}
 
 ._accordion details {
   border-bottom: 1px solid black;
@@ -170,5 +173,6 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._body {
-  @apply px-4 md:px-0 grid my-8 max-w-3xl mx-auto;
+  @apply px-4 md:px-0 flex flex-col my-8 max-w-3xl w-full mx-auto;
+  min-height: 80vh;
 }

@@ -1,8 +1,6 @@
-<script setup>
-</script>
 <template>
   <div
-    class="grid md:grid-cols-2 grid-cols-1 mx-auto mb-10 md:mb-20"
+    class="grid md:grid-cols-2 grid-cols-1 md:h-[800px] mx-auto mb-10 md:mb-20"
   >
     <ProductSwiper/>
     <ProductInfo :isOutOfStock = "true"/>
