@@ -1,12 +1,10 @@
 <template>
-    <main class="space-y-12 _body">
-      <div class="text-center gap-8">
+    <main class="_body space-y-12">
+      <div class="text-center space-y-8">
         <h1 class="text-[28px]">FAQs</h1>
         <p class="text-[12px]">SELECT A CATEGORY BELOW TO SEE ANSWERS TO FREQUENTLY ASKED QUESTIONS</p>
-      </div>
-      <div class="mx-auto my-8 text-[10px]">
-          <select
-            class="select select-bordered uppercase border-black rounded-none"
+        <select
+            class="w-full select select-bordered uppercase border-black rounded-none"
           >
             <option>Order And Payment</option>
             <option>Lorem Ipsum</option>
@@ -15,8 +13,7 @@
             <option>Lorem Ipsum</option>
           </select>
       </div>
-      <div class="mx-auto my-4 text-[12px]">
-          <div class="_accordion">
+      <div class="_accordion mx-auto my-4 text-[12px]">
             <details class="collapse collapse-arrow uppercase">
             <summary class="collapse-title text-[12px] font-medium">WHAT FORMS OF PAYMENT DO YOU ACCEPT?</summary>
             <div class="collapse-content text-[12px]"> 
@@ -66,6 +63,5 @@
             </div>
             </details>
           </div>
-      </div>
     </main>
 </template>

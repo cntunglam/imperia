@@ -1,5 +1,5 @@
 <template>
-  <div class="_accordion">
+  <div class="_accordion px-2">
     <details class="collapse collapse-arrow uppercase">
       <summary class="collapse-title text-[12px] font-medium flex">PRODUCT SUSTAINABILITY</summary>
       <div class="collapse-content text-[12px]"> 

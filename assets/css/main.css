@@ -150,15 +150,11 @@ input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
 
-.collapse-arrow8 > .collapse-title:after {
-  height: 8px;
-  width: 8px;
-  vertical-align: middle;
-}
+
+
 ._accordion {
   @apply w-full;
 }
-
 ._accordion details {
   border-bottom: 1px solid black;
   border-radius: 0;
@@ -169,7 +165,15 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._accordion details summary {
-  padding-left: 10px;
+  padding-left: 2px;
+}
+
+._accordion .collapse-content {
+  padding-left: 2px;
+}
+
+.collapse-arrow > .collapse-title:after {
+  top: 20px;
 }
 
 ._body {
