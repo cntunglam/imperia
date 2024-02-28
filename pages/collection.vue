@@ -5,7 +5,7 @@ useSeoMeta({
 });
 </script>
 <template>
-  <div class="grid px-2 md:px-20">
+  <div class="grid px-4 md:px-8">
     <div class="">
       <div class="grid md:grid-cols-4 grid-cols-2 px-2 md:py-10 gap-2 md:gap-8">
         <div v-for="item in product">
