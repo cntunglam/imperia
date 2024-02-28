@@ -17,6 +17,10 @@
     background-color: #494949 !important;
     width: 40px;
   }
+  
+  ._full-height {
+    max-height: 95vh;
+  }
 
   @media screen and (min-width: 768px){
     .swiper-pagination {
@@ -26,9 +30,9 @@
 
 </style>
 <template>
-  <div id="swiper" class="w-full place-self-start">
+  <div id="swiper" class="w-full">
     <Swiper
-      class="xl:h-screen"
+      class="_full-height"
       :modules="[SwiperMousewheel, SwiperPagination	]"
       :edge-swipe-detection="true"
       :breakpoints="{
@@ -46,25 +50,25 @@
         eventsTarget: '#swiper',
       }"
     >
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/flatback.png"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/flatfront.png"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/closeupshorts.jpg"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/modelfront.jpg"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/modelmain.jpg"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/1.jpg"/>
       </SwiperSlide>
-      <SwiperSlide class="xl:h-screen">
+      <SwiperSlide class="">
         <img src="/img/products/short/2.jpg"/>
       </SwiperSlide>
     </Swiper>
