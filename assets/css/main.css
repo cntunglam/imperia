@@ -165,6 +165,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._accordion details summary {
+  @apply h-fit pt-5 pb-5;
   padding-left: 2px;
 }
 
@@ -173,7 +174,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .collapse-arrow > .collapse-title:after {
-  top: 20px;
+  top: 25px;
 }
 
 ._body {
