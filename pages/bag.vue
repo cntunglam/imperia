@@ -71,14 +71,14 @@
                 </table>
                 <div class="flex justify-between pt-4 uppercase">
                     <div>
-                        <p class="text-sm">Total</p>
-                        <p class="text-sm">Shipping</p>
-                        <p class="text-sm font-bold my-2">Order Total</p>
+                        <p>Total</p>
+                        <p>Shipping</p>
+                        <p class=" font-bold my-2">Order Total</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-sm">$400 USD</p>
-                        <p class="text-sm">Calculated At Checkout</p>
-                        <p class="text-sm font-bold my-2">$400 USD</p>
+                        <p>$400 USD</p>
+                        <p>Calculated At Checkout</p>
+                        <p class="font-bold my-2">$400 USD</p>
                     </div>
                 </div>
                 <button class="btn btn-primary w-full font-thin">Checkout</button>

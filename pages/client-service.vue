@@ -10,17 +10,17 @@
     </div>
     <div class="mx-auto w-full md:max-w-xl text-center space-y-4">
         <div>
-        <p class=" text-[18px] font-thin">Frequently Ask Questions</p>
+        <p class=" text-[12px] font-thin">Frequently Ask Questions</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">See FAQ</button>
     </div>
     <div>
-        <p class=" text-[18px] font-thin">Call Us</p>
+        <p class=" text-[12px] font-thin">Call Us</p>
         <p>Mon - Fri 9AM - 9PM EST</p>
         <p>Sat - Sun 10AM - 7PM EST</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">+1 (678) 782 8404</button>
     </div>
     <div>
-        <p class=" text-[18px] font-thin">Email Us</p>
+        <p class=" text-[12px] font-thin">Email Us</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">Send A Message</button>
     </div>
 

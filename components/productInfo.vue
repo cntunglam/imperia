@@ -7,9 +7,9 @@
 <template>
       <div class="py-4 px-4 grid md:w-3/4 mx-auto">
         <div class="text-center">
-          <h1 class="text-lg uppercase">Imperia Hoodie</h1>
+          <h1 class="text-[12px] uppercase">Imperia Hoodie</h1>
           <p class="text-base text-gray-600 uppercase">black</p>
-          <p class="text-lg py-4">$200</p>
+          <p class="text-[12px] py-4">$200</p>
           <p class="py-2 uppercase text-sm">
             black short sleeve t-shirt in a lightweight jersey cotton
           </p>
