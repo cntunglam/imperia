@@ -5,7 +5,7 @@
 
 </script>
 <template>
-      <div class="py-4 grid md:w-3/4 mx-auto">
+      <div class="py-4 px-2 grid md:w-3/4 mx-auto">
         <div class="text-center">
           <h1 class="text-[12px] uppercase">Imperia Hoodie</h1>
           <p class="text-base text-gray-600 uppercase">black</p>

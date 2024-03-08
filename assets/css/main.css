@@ -183,7 +183,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._body_fullwidth {
-  @apply px-2 md:px-0 flex flex-col w-full mx-auto;
+  @apply md:px-0 flex flex-col w-full mx-auto;
   min-height: 80vh;
 }
 
