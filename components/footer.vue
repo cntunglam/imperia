@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer md:block py-2">
+  <footer class="footer md:block py-2 bg-[#f2f2f2]">
     <div class="justify-center space-y-4 mx-auto py-2">
       <div class="mx-auto">
         <a href="/">
@@ -36,7 +36,7 @@
           buttonStyle="hover:cursor-help hover:bg-transparent"
           boxHeader="Copyright Information"
         >
-          <p class="py-12 text-base uppercase">
+          <p class="py-12 uppercase">
             All contents of this website are property of Imperia. No part of
             this site, including all text and images, may be reproduced in any
             form without prior written consent of Imperia.
