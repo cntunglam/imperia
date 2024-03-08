@@ -14,7 +14,7 @@
             black short sleeve t-shirt in a lightweight jersey cotton
           </p>
         </div>
-        <div v-if="!isOutOfStock" class="form-control w-full text-xl">
+        <div v-if="!isOutOfStock" class="form-control w-full px-2 text-xl">
         <label class="label">
           <span class="label-text uppercase">Size: (US)</span>
           <span class="label-text uppercase underline">Size Guide</span>
