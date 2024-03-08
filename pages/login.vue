@@ -31,7 +31,7 @@
       </div>
     </div>
     <hr class="border-black"/>
-    <div class="text-[12px] max-w-xl mx-auto space-y-4 py-6">
+    <div class="text-[12px] max-w-xl mx-auto space-y-8 py-8">
       <p>ENJOY AN ELEVATED SHOPPING EXPERIENCE WITH YOUR EXCLUSIVE ACCESS</p>
       <ul class="space-y-2">
         <li>- CHECK THE DETAILS AND MONITOR THE STATUS OF YOUR ORDERS</li>
