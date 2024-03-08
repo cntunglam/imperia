@@ -178,12 +178,12 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._body {
-  @apply px-4 md:px-0 flex flex-col max-w-3xl w-full mx-auto;
+  @apply px-2 md:px-0 flex flex-col max-w-3xl w-full mx-auto;
   min-height: 80vh;
 }
 
 ._body_fullwidth {
-  @apply px-4 md:px-0 flex flex-col w-full mx-auto;
+  @apply px-2 md:px-0 flex flex-col w-full mx-auto;
   min-height: 80vh;
 }
 
