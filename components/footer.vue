@@ -41,7 +41,7 @@
             this site, including all text and images, may be reproduced in any
             form without prior written consent of Imperia.
           </p>
-        </Modal>
+        </Modal>  
       </div>
     </div>
   </footer>
