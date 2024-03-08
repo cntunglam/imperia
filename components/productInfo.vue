@@ -5,11 +5,12 @@
 
 </script>
 <template>
-      <div class="py-4 px-2 grid md:w-3/4 mx-auto">
+      <div class="px-2 grid md:w-3/4 mx-auto">
         <div class="text-center">
-          <h1 class="text-[12px] uppercase">Imperia Hoodie</h1>
-          <p class="text-base text-gray-600 uppercase">black</p>
-          <p class="text-[12px] py-4">$200</p>
+          <div class="py-6">
+            <h1 class="text-[12px] uppercase">Imperia Hoodie</h1>
+            <p class="text-[12px]">$200</p>
+          </div>
           <p class="py-2 uppercase text-sm">
             black short sleeve t-shirt in a lightweight jersey cotton
           </p>
