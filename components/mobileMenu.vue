@@ -32,7 +32,7 @@
               <li><a href="/">Audio</a></li>
             </div>
             <div class="py-32 ">
-              <li><a href="/">Client Services</a></li>
+              <li><a href="/client-service">Client Services</a></li>
               <li><a href="/login">Login</a></li>
             </div>
           </ul>
