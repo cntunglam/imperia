@@ -22,7 +22,7 @@
             />
           </summary>
           <ul
-            class="flex flex-col justify-between dropdown-content z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen"
+            class="flex flex-col justify-between dropdown-content mobile-menu z-[1] menu p-2 shadow bg-white text-[14px] uppercase py-20 rounded-none w-screen h-screen"
           >
             <div>
               <li><a href="/collection">Shop</a></li>
@@ -37,5 +37,4 @@
             </div>
           </ul>
         </details>
-
 </template>

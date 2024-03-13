@@ -186,3 +186,7 @@ input[type="checkbox"]:checked + label::after {
   @apply md:px-0 flex flex-col w-full mx-auto;
   min-height: 80vh;
 }
+
+.mobile-menu {
+  top: 80% !important;
+}

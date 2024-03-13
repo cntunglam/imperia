@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-const isHidden = ref(false);
+const isHidden = ref(true);
 const isOpen = ref(false);
 const lastScrollTop = ref(0);
 console.log(isOpen.value);
@@ -19,7 +19,10 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  if (window.location.pathname === "/") {
+    isHidden.value = false;
+    window.addEventListener("scroll", handleScroll);
+  }
 });
 
 onBeforeUnmount(() => {
@@ -50,7 +53,7 @@ onBeforeUnmount(() => {
         </a>
       </div>
       <div class="navbar-end">
-        <ul class="menu menu-horizontal text-sm uppercase space-x-2">
+        <ul class="menu menu-horizontal text-sm px-2 md:px-4 uppercase space-x-2">
           <div class="hidden md:flex "> 
             <li><a href="/client-service">Client Services</a></li>
             <li><a href="/login">Login</a></li>
