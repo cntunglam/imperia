@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer md:block py-2 bg-[#f2f2f2]">
+  <footer class="footer md:block py-6 bg-[#f2f2f2]">
     <div class="justify-center space-y-4 mx-auto py-2">
       <div class="mx-auto">
         <a href="/">
@@ -30,12 +30,14 @@
         <Modal
           name="footerModal"
           action="footerModal.showModal()"
-          icon=""
           modalStyle="modal-box w-full min-h-screen md:w-fit md:min-h-fit rounded-none"
           buttonText="© 2023 Imperia"
           buttonStyle="hover:cursor-help hover:bg-transparent"
           boxHeader="Copyright Information"
         >
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle bg-transparent border-none hover:bg-inherit absolute right-4 top-1">✕</button>
+        </form>
           <p class="py-12 uppercase">
             All contents of this website are property of Imperia. No part of
             this site, including all text and images, may be reproduced in any
