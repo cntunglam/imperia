@@ -8,7 +8,7 @@
             OUR CLIENT SERVICE IS AVAILABLE TO ASSIST YOU WITH YOUR ONLINE ORDER. BY CONTACTING OUR CLIENT SERVICE, YOU CONSENT TO YOUR DATA BEING TRANSFERRED OUTSIDE OF YOUR LOCAL COUNTRY/REGION.
         </p>
     </div>
-    <div class="mx-auto w-full md:max-w-xl text-center space-y-4">
+    <div class="mx-auto w-full text-center space-y-4">
         <div>
         <p class=" text-[12px] font-thin">Frequently Ask Questions</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">See FAQ</button>
