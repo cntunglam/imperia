@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer md:block bg-[#f2f2f2]">
+  <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
     <div class="justify-center space-y-4 mx-auto py-14">
       <div class="mx-auto">
         <a href="/">
@@ -11,7 +11,7 @@
     <div class="py-0">
       <Newsletter />
     </div>
-    <div class="py- mx-auto space-y-4">
+    <div class="mx-auto space-y-4">
       <div class="mx-auto">
         <Payment />
       </div>
