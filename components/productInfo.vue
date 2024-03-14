@@ -31,13 +31,13 @@
           <option>XL</option>
         </select>
         <div
-          class="btn btn-primary w-full mt-4 top-90 bg-black font-normal text-white text-md p-4 uppercase rounded-none"
+          class="btn btn-primary w-full mt-4 mt-0 top-90 bg-black font-normal text-white text-md p-4 uppercase rounded-none"
         >
           <p class="text-center">Add To Bag</p>
         </div>
         </div>
       <OrderModal v-else/>
-      <div class="py-10 space-y-6 px-2 text-left">
+      <div class="py-6 space-y-6 px-2 text-left">
         <ul class="space-y-2 list-none uppercase text-sm">
           <li>- Laser printed script logo on front</li>
           <li>- 150 GSM 100% french terry cotton</li>

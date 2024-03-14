@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer md:block py-6 bg-[#f2f2f2]">
-    <div class="justify-center space-y-4 mx-auto py-2">
+  <footer class="footer md:block bg-[#f2f2f2]">
+    <div class="justify-center space-y-4 mx-auto py-14">
       <div class="mx-auto">
         <a href="/">
           <img class="md:h-[28px] h-[22px] w-auto" src="/img/logo.svg" />
@@ -8,7 +8,7 @@
       </div>
       <SocialIcon />
     </div>
-    <div class="py-0 md:py-12">
+    <div class="py-0">
       <Newsletter />
     </div>
     <div class="py- mx-auto space-y-4">

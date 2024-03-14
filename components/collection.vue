@@ -1,5 +1,5 @@
 <template>
-  <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1 pb-20">
+  <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1">
     <div
       class="w-full hover:filter hover:grayscale duration-100 flex justify-center lg:row-span-2 lg:col-span-1 col-span-2 bg-top lg:bg-center bg-cover bg-[url('/img/luxury.jpg')]"
     >
