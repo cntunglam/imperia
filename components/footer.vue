@@ -17,7 +17,7 @@
       </div>
       <div class="mx-auto">
         <ul
-          class="max-w-xl flex flex-col md:flex-row text-center py-2 text-xl md:text-base md:space-x-24 uppercase"
+          class="max-w-xl text-[12px] flex flex-col md:flex-row text-center py-2 md:space-x-24 uppercase"
         >
           <li><a href="">Client Services</a></li>
           <li><a href="">Terms Of Service</a></li>
