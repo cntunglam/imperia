@@ -73,12 +73,12 @@ onBeforeUnmount(() => {
     <div :class="[isHidden ? 'hidden' : 'block', 'relative']">
       <Icon
         name="ic:outline-search"
-        class="text-2xl text-black absolute top-80 left-3 md:left-5"
+        class="text-2xl text-black absolute z-10 top-3 left-3 md:left-5"
       />
       <input
         type="text"
         placeholder="WHAT ARE YOU LOOKING FOR ?"
-        class="input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-16 text-[12px] md:text-[11px]"
+        class="input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[11px]"
       />
     </div>
   </header>
