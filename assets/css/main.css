@@ -177,7 +177,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._body {
-  @apply px-4 py-4 md:px-0 flex flex-col max-w-3xl w-full mx-auto;
+  @apply px-4 pt-12 md:px-0 flex flex-col max-w-3xl w-full mx-auto;
 }
 
 ._body_fullwidth {
