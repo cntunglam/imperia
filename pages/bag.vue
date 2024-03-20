@@ -19,13 +19,14 @@
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
-                            <div>
-                            <div>Imperia Short</div>
-                            <div class="opacity-50">White</div>
+                            <div class="space-y-10">
+                            <div>Imperia Short
+                                <div class="opacity-50">White</div>
+                            </div>
                             <select
                                 class="my-6 uppercase border-none rounded-none"
                             >
-                                <option selected>XS</option>
+                                <option selected> XS</option>
                                 <option>S</option>
                                 <option>M</option>
                                 <option>L</option>
@@ -34,9 +35,9 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right items-center align-middle">
-                            <div class="my-6">$200 USD</div>
-                            <div class="my-8 underline">Remove</div>
+                        <td class="text-right p-0 space-y-14">
+                            <div class="">$200 USD</div>
+                            <div class=" underline">Remove</div>
                         </td>
                     </tr>
                     <!-- row 2 -->
@@ -46,13 +47,14 @@
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
-                            <div>
-                            <div>Imperia Short</div>
-                            <div class="opacity-50">White</div>
+                            <div class="space-y-10">
+                            <div>Imperia Short
+                                <div class="opacity-50">White</div>
+                            </div>
                             <select
                                 class="my-6 uppercase border-none rounded-none"
                             >
-                                <option selected>XS</option>
+                                <option selected> XS</option>
                                 <option>S</option>
                                 <option>M</option>
                                 <option>L</option>
@@ -61,11 +63,12 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right items-center align-middle gap-3">
-                            <div class="my-8">$200 USD</div>
-                            <div class="my-8 underline">Remove</div>
+                        <td class="text-right p-0 space-y-14">
+                            <div class="">$200 USD</div>
+                            <div class=" underline">Remove</div>
                         </td>
                     </tr>
+
                     </tbody>
                     <!-- foot -->                    
                 </table>
@@ -81,7 +84,7 @@
                         <p class="font-bold my-2">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full font-thin">Checkout</button>
+                <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY</button>
             </div>
         </div>
 </main>

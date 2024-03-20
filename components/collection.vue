@@ -12,7 +12,7 @@
       </div>
     </div>
     <div
-      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-center bg-[url('/img/t-shirts.webp')]"
+      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-center bg-[url('/img/t-shirt.jpeg')]"
     >
       <div class="mx-auto justify-center self-end flex">
         <a href="/collection" class="">
