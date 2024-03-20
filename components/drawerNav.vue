@@ -21,8 +21,8 @@ const handleScroll = () => {
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
-    window.addEventListener("scroll", handleScroll);
   }
+  window.addEventListener("scroll", handleScroll);
 });
 
 onBeforeUnmount(() => {
