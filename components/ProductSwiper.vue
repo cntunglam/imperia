@@ -3,7 +3,7 @@
 <style>
   .swiper-pagination {
     position: initial ;
-    margin: 0px auto;
+    margin: 10px auto;
   }
 
   .swiper-pagination-bullet {
@@ -19,7 +19,7 @@
   }
   
   ._full-height {
-    max-height: 95vh;
+    max-height: 90vh;
   }
 
   @media screen and (min-width: 768px){
