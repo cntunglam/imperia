@@ -3,12 +3,12 @@
         <div>
             <h1 class="text-center uppercase text-[28px]">Bag</h1>
             <div class="overflow-x-auto">
-                <h2 class="uppercase text-[12px] py-6">Shopping Bag (2)</h2>
+                <p class="uppercase text-[12px] py-6">Shopping Bag (2)</p>
                 <table class="table min-w-max text-[10px] uppercase">
                     <thead>
                     <tr>
-                        <th class="text-left px-0">Item</th>
-                        <th class="text-right px-0">Total</th>
+                        <th class="text-left px-0 font-thin">Item</th>
+                        <th class="text-right px-0 font-thin">Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -84,7 +84,7 @@
                         <p class="font-bold my-2">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY</button>
+                <button class="btn btn-primary w-full font-thin"><Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/>CHECKOUT SECURELY</button>
             </div>
         </div>
 </main>
