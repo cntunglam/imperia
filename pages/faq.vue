@@ -1,7 +1,7 @@
 <template>
     <main class="_body space-y-12">
       <div class="text-center space-y-8">
-        <h1 class="text-[28px]">FAQs</h1>
+        <h1 class="text-[28px]">FAQ</h1>
         <p class="text-[12px]">SELECT A CATEGORY BELOW TO SEE ANSWERS TO FREQUENTLY ASKED QUESTIONS</p>
         <select
             class="w-full select select-bordered uppercase border-black rounded-none"
