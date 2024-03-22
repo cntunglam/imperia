@@ -16,19 +16,26 @@ const handleScroll = () => {
   lastScrollTop.value = scrollTop;
 };
 
-// const handleScrollUp = () => {
-//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-//   if (scrollTop = lastScrollTop.value && scrollTop > 100) {
-//     // Scrolling down
-//     isHidden.value = false;
-//   }
-//   lastScrollTop.value = scrollTop;
-// }
+const handleHideSearchbar = () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  if (scrollTop >= lastScrollTop.value && scrollTop > 100) {
+    // Scrolling down
+    isHidden.value = true;
+  }
+  else {
+    // Scrolling up
+    isHidden.value = true;
+  }
+  lastScrollTop.value = scrollTop;
+};
 
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
     window.addEventListener("scroll", handleScroll);  
+  } 
+  else {
+    window.addEventListener("scroll", handleHideSearchbar);
   }
 });
 
@@ -54,7 +61,7 @@ onBeforeUnmount(() => {
           <li><a href="/">Couture</a></li>
           <li><a href="/">Audio</a></li>
         </ul>
-        <MobileMenu />
+        <MobileMenu @click="isHidden = false" />
       </div>
       <div class="navbar-center">
         <a href="/" class="btn btn-ghost text-xl">
@@ -82,12 +89,12 @@ onBeforeUnmount(() => {
     <div :class="[isHidden ? 'hidden' : 'block', 'relative']">
       <Icon
         name="ic:outline-search"
-        class="text-2xl text-black absolute z-10 top-3 left-3 md:left-5"
+        class="text-2xl text-black absolute z-20 top-3 left-3 md:left-5"
       />
       <input
         type="text"
         placeholder="WHAT ARE YOU LOOKING FOR ?"
-        class="input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[11px]"
+        class="z-10 input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[11px]"
       />
     </div>
   </header>
