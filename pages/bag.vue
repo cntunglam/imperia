@@ -4,7 +4,7 @@
             <h1 class="text-center uppercase text-[28px]">Bag</h1>
             <div class="overflow-x-auto">
                 <p class="uppercase text-[12px] py-6">Shopping Bag (2)</p>
-                <table class="table min-w-max text-[10px] uppercase">
+                <table class="table min-w-max text-[10px] uppercase border-black">
                     <thead>
                     <tr>
                         <th class="text-left px-0 font-thin">Item</th>
@@ -36,8 +36,8 @@
                         </div>
                         </td>
                         <td class="text-right p-0 space-y-14">
-                            <div class="">$200 USD</div>
-                            <div class=" underline">Remove</div>
+                            <div class="mb-2">$200 USD</div>
+                            <div class="underline">Remove</div>
                         </td>
                     </tr>
                     <!-- row 2 -->
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right p-0 space-y-14">
+                        <td class="text-right p-0 space-y-16">
                             <div class="">$200 USD</div>
                             <div class=" underline">Remove</div>
                         </td>
@@ -84,7 +84,7 @@
                         <p class="font-bold my-2">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full font-thin"><Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/>CHECKOUT SECURELY</button>
+                <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY <Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/></button>
             </div>
         </div>
 </main>
