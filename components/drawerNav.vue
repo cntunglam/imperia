@@ -1,32 +1,41 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-
 const isHidden = ref(true);
-const isOpen = ref(false);
 const lastScrollTop = ref(0);
-console.log(isOpen.value);
 
 const handleScroll = () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop >= lastScrollTop.value && scrollTop > 100) {
     // Scrolling down
     isHidden.value = true;
-  } else {
+  }
+  else {
     // Scrolling up
     isHidden.value = false;
   }
   lastScrollTop.value = scrollTop;
 };
 
+// const handleScrollUp = () => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//   if (scrollTop = lastScrollTop.value && scrollTop > 100) {
+//     // Scrolling down
+//     isHidden.value = false;
+//   }
+//   lastScrollTop.value = scrollTop;
+// }
+
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
+    window.addEventListener("scroll", handleScroll);  
   }
-  window.addEventListener("scroll", handleScroll);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
+
+
 });
 </script>
 <template>

@@ -11,19 +11,15 @@
         products, services, stores and events.
       </p>
     </div>
-    <div class="form-control py-4 w-full space-y-4 md:space-y-6">
-      <div
-        class="flex flex-col space-y-4 md:space-x-8 md:flex-row md:space-y-0"
-      >
+    <div class="form-control py-4 w-full">
         <input
           type="email"
           placeholder="Email Address"
           class="w-full md:text-[11px] text-[12px] input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
-      </div>
-      <button class="btn btn-primary my-4 font-normal rounded-none">
+        <button class="btn btn-primary font-normal rounded-none">
         Sign Up
-      </button>
+        </button>
+      </div>
     </div>
-  </div>
 </template>
