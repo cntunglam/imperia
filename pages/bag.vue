@@ -19,7 +19,7 @@
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
-                            <div class="space-y-10">
+                            <div class="">
                             <div>Imperia Short
                                 <div class="opacity-50">White</div>
                             </div>
@@ -35,9 +35,11 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right p-0 space-y-14">
-                            <div class="mb-2">$200 USD</div>
-                            <div class="underline">Remove</div>
+                        <td class="text-right px-0 py-8">
+                            <div class="">
+                                <div class="">$200 USD</div>
+                                <div class="underline my-6 pt-4">Remove</div>
+                            </div>
                         </td>
                     </tr>
                     <!-- row 2 -->
@@ -47,7 +49,7 @@
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
-                            <div class="space-y-10">
+                            <div class="">
                             <div>Imperia Short
                                 <div class="opacity-50">White</div>
                             </div>
@@ -63,9 +65,11 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right p-0 space-y-16">
-                            <div class="">$200 USD</div>
-                            <div class=" underline">Remove</div>
+                        <td class="text-right px-0 py-8">
+                            <div class="">
+                                <div class="">$200 USD</div>
+                                <div class="underline my-6 pt-4">Remove</div>
+                            </div>
                         </td>
                     </tr>
 
