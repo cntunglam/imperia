@@ -88,8 +88,8 @@ p {
   @apply rounded-none font-thin text-[12px] my-2 max-w-full;
 }
 
-tr, th, td {
-  border-bottom: 1px solid black;
+tr {
+  border-bottom: 1px solid black !important;
   padding: 0 !important;
 }
 
