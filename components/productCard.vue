@@ -25,7 +25,7 @@ defineProps({
           <p class="text-center">Sold Out</p>
         </button>
       </div>
-      <div class="md:p-2 my-6 md:my-4 py-2 px-0">
+      <div class="md:p-2 mt-6 md:mt-4 py-2 px-0">
         <h3 class="text-[12px] uppercase leading-4 text-center">
           {{ productName }}
         </h3>

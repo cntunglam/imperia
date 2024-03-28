@@ -1,7 +1,7 @@
 <template>
   <main class="_body">
     <div>
-      <h2 class="text-[28px] uppercase text-center">Login</h2>
+      <h2 class="text-[20px] uppercase text-center">Login</h2>
     </div>
     <div>
       <div class="form-control py-8 w-full mx-auto uppercase">
