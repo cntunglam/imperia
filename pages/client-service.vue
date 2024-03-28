@@ -19,7 +19,7 @@
         <p>Sat - Sun 10AM - 7PM EST</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">+1 (678) 782 8404</button>
     </div>
-    <div>
+    <div class="pt-8">
         <p class=" text-[12px] font-thin">Email Us</p>
         <button class="btn btn-primary text-[10px] w-full mt-4">Send A Message</button>
     </div>
