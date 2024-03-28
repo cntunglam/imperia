@@ -177,11 +177,11 @@ input[type="checkbox"]:checked + label::after {
 }
 
 ._body {
-  @apply px-4 pt-12 md:px-0 flex flex-col max-w-3xl w-full mx-auto;
+  @apply px-4 pt-12 md:px-0 flex flex-col max-w-3xl w-full mx-auto mb-10;
 }
 
 ._body_fullwidth {
-  @apply md:px-0 flex flex-col w-full mx-auto;
+  @apply md:px-0 flex flex-col w-full mx-auto mb-10;
 }
 
 .mobile-menu {

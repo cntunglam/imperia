@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer mt-10 space-y-0 md:block bg-[#f2f2f2]">
+  <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
     <div class="justify-center space-y-4 mx-auto py-1 pt-12 md:pb-12">
       <div class="mx-auto">
         <a href="/">

@@ -22,7 +22,6 @@
             <a role="tab" class="tab tab-xl text-black">Log Out</a>
         </div>
         <div class="grid">
-            <hr class="border-t-[1px] border-black">
             <template v-if="activeTab === 'account'">
                 <p class="place-self-center text-[12px]">Account content goes here</p>
             </template>
@@ -92,7 +91,7 @@
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <select
-                            class="select select-bordered w-full uppercase border-black rounded-none"
+                            class="select select-bordered w-full text-[12px] uppercase border-black rounded-none"
                             >
                             <option disabled selected>Title</option>
                             <option>Mr</option>
