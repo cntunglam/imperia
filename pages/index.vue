@@ -5,7 +5,7 @@ useSeoMeta({
 });
 </script>
 <template>
-  <main class="pb-2">
+  <main class="pb-1">
     <Hero />
     <LatestNews />
     <section class="mx-auto py-4 flex flex-col">
