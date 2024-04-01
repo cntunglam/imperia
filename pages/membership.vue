@@ -132,7 +132,7 @@
                             />
                         </div>
                     </div>
-                    <div class="justify-between space-y-4 pt-4 pb-2">
+                    <div class="justify-between space-y-4 pt-4">
                         <div>
                         <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
                         <label for="remember" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
@@ -152,7 +152,6 @@
 
                     </div>
                     <button class="btn btn-primary">Save Changes</button>
-                    <button class="btn btn-outline">Cancel</button>
       </div>
             </template>
         </div>
