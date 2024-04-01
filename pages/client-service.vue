@@ -1,7 +1,7 @@
 <template>
 <div class="_body space-y-8">
     <div>
-        <h2 class="text-[28px] uppercase text-center">Client Services</h2>
+        <h2 class="text-[20px] uppercase text-center">Client Services</h2>
     </div>
     <div class="mx-auto text-center">
         <p class="uppercase font-[12px]">

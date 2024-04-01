@@ -10,7 +10,7 @@
 <template>
     <div class="_body space-y-8">
         <div>
-            <h2 class="text-[28px] uppercase text-center">Welcome, [First Name]</h2>
+            <h2 class="text-[20px] uppercase text-center">Welcome, [First Name]</h2>
         </div>
         <div
             role="tablist"
