@@ -10,7 +10,7 @@ useSeoMeta({
     <LatestNews />
     <section class="mx-auto py-4 flex flex-col">
       <div class="py-4">
-        <h2 class="text-[28px] text-center uppercase">New Arrivals</h2>
+        <h2 class="text-[20px] text-center uppercase">New Arrivals</h2>
         <tab />
       </div>
       <div
