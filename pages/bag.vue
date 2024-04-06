@@ -3,7 +3,6 @@
         <div>
             <h1 class="text-center uppercase text-[20px]">Bag</h1>
             <div class="overflow-x-auto">
-                <p class="uppercase text-[12px] py-6">Shopping Bag (2)</p>
                 <table class="table min-w-max text-[10px] uppercase border-black">
                     <thead>
                     <tr>
