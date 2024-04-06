@@ -14,7 +14,7 @@
         </div>
         <div
             role="tablist"
-            class="tabs flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans"
+            class="tabs flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans border-b-[1px] border-black pb-4"
         >
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'account' }" @click="setActiveTab('orders')">My Account</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'orders' }" @click="setActiveTab('orders')">Orders</a>
@@ -88,6 +88,9 @@
                 <button class="btn btn-primary w-full">Shop New Arrivals</button>
             </template>
             <template v-else-if="activeTab === 'profile'">
+                <div class="py-10 mx-auto w-full">
+                    <p class="mx-auto text-center">Account Information</p>
+                </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <select
@@ -115,9 +118,9 @@
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <input
-                        type="date"
-                        placeholder="Date of Birth"
-                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                            type="date"
+                            placeholder="Date of Birth"
+                            class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <div class="flex gap-2">
                             <input
@@ -134,20 +137,20 @@
                     </div>
                     <div class="justify-between space-y-4 pt-4">
                         <div>
-                        <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="remember" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <input type="checkbox" id="checkbox-1" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
+                        <label for="checkbox-1" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
                         </div>
                         <div>
-                        <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="remember" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <input type="checkbox" id="checkbox-2" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
+                        <label for="checkbox-2" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
                         </div>
                         <div>
-                        <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="remember" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <input type="checkbox" id="checkbox-3" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
+                        <label for="checkbox-3" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
                         </div>
                         <div>
-                        <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="remember" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <input type="checkbox" id="checkbox-4" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
+                        <label for="checkbox-4" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
                         </div>
 
                     </div>
