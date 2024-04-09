@@ -28,7 +28,7 @@
         </div>
 
           <button class="btn btn-primary">Login</button>
-          <p class="text-center underline pt-4 text-[12px]"><a href="">Create An Account</a></p>
+          <p class="text-center underline pt-4 text-[12px]"><a href="/signup">Create An Account</a></p>
       </div>
     </div>
     <hr class="border-black"/>
