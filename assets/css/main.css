@@ -85,7 +85,7 @@ p {
 }
 
 .btn {
-  @apply rounded-none font-thin text-[12px] my-[14px] max-w-full;
+  @apply rounded-none font-thin py-2 px-16 text-[12px] my-[14px] max-w-full;
 }
 
 tr {
