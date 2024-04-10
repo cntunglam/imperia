@@ -50,11 +50,11 @@
                     <div class="justify-between space-y-4 pt-4">
                         <div>
                         <input type="checkbox" id="checkbox-1" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="checkbox-1" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <label for="checkbox-1" class="text-[12px] px-2">I agree to the privacy policy and to the Terms of use. *</label>
                         </div>
                         <div>
                         <input type="checkbox" id="checkbox-2" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-                        <label for="checkbox-2" class="text-[12px] px-2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</label>
+                        <label for="checkbox-2" class="text-[12px] px-2">I would like to receive information and updates about Imperia new activities, exclusive products, tailored services (including through phone, SMS, MMS and instant messaging applications), and to have a personalised client experience based on my interests.By agreeing to receive customised information and updates, you authorize Balenciaga to deliver marketing calls and messages to you, including using an automatic telephone dialing system or an artificial or prerecorded voice, to the phone number provided on your profile. Balenciaga does not require you to agree to receive such calls or messages as a condition of purchasing any products or services.</label>
                         </div>
                     </div>
                     <button class="btn btn-primary">Create My Profile</button>
