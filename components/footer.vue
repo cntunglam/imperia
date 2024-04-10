@@ -36,7 +36,7 @@
           boxHeader="Copyright Information"
         >
         <form method="dialog">
-          <button class="btn btn-sm btn-circle bg-transparent border-none hover:bg-inherit absolute right-4 top-1">✕</button>
+          <button class="btn btn-sm btn-circle bg-transparent border-none hover:bg-inherit absolute right-4 top-1 focus:outline-none">✕</button>
         </form>
           <p class="py-12 uppercase">
             All contents of this website are property of Imperia. No part of
