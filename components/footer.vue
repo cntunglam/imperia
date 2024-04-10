@@ -1,6 +1,6 @@
 <template>
   <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
-    <div class="justify-center space-y-4 mx-auto py-1 pt-12 md:pb-12">
+    <div class="justify-center space-y-4 mx-auto py-1 pt-20 md:pt-12 md:pb-12">
       <div class="mx-auto">
         <a href="/">
           <img class="md:h-[28px] h-[22px] w-auto" src="/img/logo.svg" />
