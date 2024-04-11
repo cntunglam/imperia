@@ -11,7 +11,7 @@
         products, services, stores and events.
       </p>
     </div>
-    <div class="form-control py-4 w-full">
+    <div class="form-control pt-4 w-full">
         <input
           type="email"
           placeholder="Email Address"

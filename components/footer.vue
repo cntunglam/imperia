@@ -1,6 +1,6 @@
 <template>
   <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
-    <div class="justify-center space-y-4 mx-auto py-1 pt-20 md:pt-12 md:pb-12">
+    <div class="justify-center space-y-4 mx-auto py-1 pt-14 md:pb-12">
       <div class="mx-auto">
         <a href="/">
           <img class="md:h-[28px] h-[22px] w-auto" src="/img/logo.svg" />
@@ -11,28 +11,27 @@
     <div class="py-0">
       <Newsletter />
     </div>
-    <div class="mx-auto space-y-4">
+    <div class="mx-auto space-y-8">
       <div class="mx-auto">
         <Payment />
       </div>
       <div class="mx-auto">
         <ul
-          class="max-w-xl text-[12px] flex flex-col md:flex-row text-center py-2 md:space-x-24 uppercase"
+          class="max-w-xl text-[12px] flex flex-col md:flex-row text-center md:space-x-24 uppercase"
         >
           <li><a href="">Client Services</a></li>
           <li><a href="">Terms Of Service</a></li>
           <li><a href="">Privacy Policy</a></li>
         </ul>
       </div>
-    </div>
-    <div class="mx-auto">
+      <div class="mx-auto">
       <div class="mx-auto">
         <Modal
           name="footerModal"
           action="footerModal.showModal()"
           modalStyle="modal-box w-full min-h-screen md:w-fit md:min-h-fit rounded-none"
           buttonText="© 2023 Imperia"
-          buttonStyle="hover:cursor-help hover:bg-transparent"
+          buttonStyle="hover:cursor-help hover:bg-transparent mb-6"
           boxHeader="Copyright Information"
         >
         <form method="dialog">
@@ -45,6 +44,8 @@
           </p>
         </Modal>  
       </div>
+    </div>
+
     </div>
   </footer>
 </template>
