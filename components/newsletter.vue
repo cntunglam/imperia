@@ -15,7 +15,7 @@
         <input
           type="email"
           placeholder="Email Address"
-          class="w-full md:text-[10px] text-[10px] input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered rounded-none border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
         <button class="btn btn-primary font-normal rounded-none">
           Sign Up
