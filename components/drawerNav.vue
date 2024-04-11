@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
       <input
         type="text"
         placeholder="WHAT ARE YOU LOOKING FOR ?"
-        class="z-10 input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[11px]"
+        class="z-10 input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[10px]"
       />
     </div>
   </header>
