@@ -96,6 +96,8 @@ tr {
 input {
   text-transform: uppercase;
   border-radius: 0 !important;
+  -webkit-appearance: none;
+  appearance: inherit;
 }
 
 input[type="checkbox"]:checked {
