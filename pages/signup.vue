@@ -30,9 +30,9 @@
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <input
-                            type="date"
-                            placeholder="Date of Birth"
-                            class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                          type="date"
+                          placeholder="Date of birth (MM/DD/YYYY)"
+                          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <input
                         type="email"
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary">Create My Profile</button>
-                    <p class="text-center">Already have a profile? <a class="underline" href="/login">Log in</a></p>
+                    <p class="text-center py-6">Already have a profile? <a class="underline" href="/login">Log in</a></p>
                 </div>
       </div>
     </main>

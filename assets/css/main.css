@@ -96,8 +96,11 @@ tr {
 input {
   text-transform: uppercase;
   border-radius: 0 !important;
+}
+
+input[type = "date"] {
   -webkit-appearance: none;
-  appearance: inherit;
+  appearance: textfield;
 }
 
 input[type="checkbox"]:checked {
