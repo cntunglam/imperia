@@ -1,9 +1,10 @@
 <template>
   <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
-    <div class="justify-center space-y-4 mx-auto py-1 pt-14 md:pb-12">
+    <div class="max-w-3xl mx-auto">
+      <div class="justify-center space-y-4 mx-auto py-1 pt-14 md:pb-12">
       <div class="mx-auto">
         <a href="/">
-          <img class="md:h-[28px] h-[22px] w-auto" src="/img/logo.svg" />
+          <img class="md:h-[28px] h-[22px] mx-auto w-auto" src="/img/logo.svg" />
         </a>
       </div>
       <SocialIcon />
@@ -44,6 +45,8 @@
           </p>
         </Modal>  
       </div>
+    </div>
+
     </div>
 
     </div>

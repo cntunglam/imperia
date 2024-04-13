@@ -1,14 +1,17 @@
 <template>
-    <main class="_body">
+    <main class="_body space-y-8">
       <div>
         <h2 class="text-[20px] uppercase text-center">create an account</h2>
-        <p class="text-center">Create an account and benefit from order delivery updates and return management as well as personalized recommendations</p>
       </div>
+      <div class="mx-auto text-center">
+        <p class="text-center">Create an account and benefit from order delivery updates and return management as well as personalized recommendations</p>
+    </div>
+
       <div>
         <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <select
-                            class="select select-bordered w-full text-[12px] uppercase border-black rounded-none"
+                            class="select select-bordered w-full md:text-[10px] text-[12px] uppercase border-black rounded-none"
                             >
                             <option disabled selected>Title</option>
                             <option>Mr</option>
@@ -26,11 +29,13 @@
                         placeholder="Last Name"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
-                        <input
+                        <div class="w-full">
+                          <input
                             type="date"
                             placeholder="Date of Birth"
                             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
+                        </div>
                         <input
                         type="email"
                         placeholder="Email Address"
