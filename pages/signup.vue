@@ -61,8 +61,8 @@
                         <label for="checkbox-2" class="text-[12px] px-2">I would like to receive information and updates about Imperia new activities, exclusive products, tailored services (including through phone, SMS, MMS and instant messaging applications), and to have a personalised client experience based on my interests.By agreeing to receive customised information and updates, you authorize Balenciaga to deliver marketing calls and messages to you, including using an automatic telephone dialing system or an artificial or prerecorded voice, to the phone number provided on your profile. Balenciaga does not require you to agree to receive such calls or messages as a condition of purchasing any products or services.</label>
                         </div>
                     </div>
-                    <button class="btn btn-primary">Create My Profile</button>
-                    <p class="text-center py-6">Already have a profile? <a class="underline" href="/login">Log in</a></p>
+                    <button class="btn btn-primary">create my account</button>
+                    <p class="text-center py-6">already have an account? <a class="underline" href="/login">Log in</a></p>
                 </div>
       </div>
     </main>
