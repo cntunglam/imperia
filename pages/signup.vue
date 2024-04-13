@@ -44,6 +44,12 @@
                         placeholder="Password"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
+                        <countries-selector/>
+                        <input
+                        type="text"
+                        placeholder="Province/State/County"
+                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                        />
                     </div>
                     <div class="justify-between space-y-4 pt-4">
                         <div>
