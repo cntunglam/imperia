@@ -16,14 +16,97 @@
             role="tablist"
             class="tabs flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans border-b-[1px] border-black pb-4"
         >
-            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'account' }" @click="setActiveTab('orders')">My Account</a>
+            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'account' }" @click="setActiveTab('account')">My Account</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'orders' }" @click="setActiveTab('orders')">Orders</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'profile' }" @click="setActiveTab('profile')">Profile</a>
             <a role="tab" class="tab tab-xl text-black">Log Out</a>
         </div>
         <div class="grid">
             <template v-if="activeTab === 'account'">
-                <p class="place-self-center text-[12px]">Account content goes here</p>
+                <div class="w-full max-w-3xl mx-auto uppercase">
+                    <p class="py-6 text-center">Payment Informamation</p>
+                    <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
+                        <credit-card/>
+                        <credit-card/>
+                        <credit-card/>
+                    </div>
+                    <div class="mt-6">
+                        <p class="py-2 text-center">Your Bags</p>
+                        <table class="table min-w-max text-[10px] uppercase border-black">
+                            <thead>
+                            <tr>
+                                <th class="text-left px-0 font-thin">Item</th>
+                                <th class="text-right px-0 font-thin">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <td>
+                                <div class="flex items-center align-middle gap-3">
+                                    <div class="w-32">
+                                        <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                                    </div>
+                                    <div class="">
+                                    <div>Imperia Short
+                                        <div class="opacity-50">White</div>
+                                    </div>
+                                    <select
+                                        class="my-6 uppercase border-none rounded-none"
+                                    >
+                                        <option selected> XS</option>
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                        <option>XL</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="text-right px-0 py-8">
+                                    <div class="">
+                                        <div class="">$200 USD</div>
+                                        <div class="underline my-6 pt-4">Remove</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td>
+                                <div class="flex items-center align-middle gap-3">
+                                    <div class="w-32">
+                                        <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                                    </div>
+                                    <div class="">
+                                    <div>Imperia Short
+                                        <div class="opacity-50">White</div>
+                                    </div>
+                                    <select
+                                        class="my-6 uppercase border-none rounded-none"
+                                    >
+                                        <option selected> XS</option>
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                        <option>XL</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="text-right px-0 py-8">
+                                    <div class="">
+                                        <div class="">$200 USD</div>
+                                        <div class="underline my-6 pt-4">Remove</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                            <!-- foot -->                    
+                        </table>
+                        <button class="btn btn-primary w-full font-thin"><a href="/bag">View Full Bag</a></button>
+                    </div>
+                </div>
             </template>
             <template v-else-if="activeTab === 'orders'">
                 <div class="py-10 mx-auto">
