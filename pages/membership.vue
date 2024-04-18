@@ -31,7 +31,7 @@
                         <credit-card/>
                     </div>
                     <div class="mt-6">
-                        <p class="py-2 text-center">Your Bags</p>
+                        <p class="py-2 text-center">Your Bag</p>
                         <table class="table min-w-max text-[10px] uppercase border-black">
                             <thead>
                             <tr>
