@@ -32,7 +32,7 @@
                     </div>
                     <div class="mt-6">
                         <p class="py-2 text-center">Your Bag</p>
-                        <table class="table min-w-max text-[10px] uppercase border-black">
+                        <table class="table min-w-max text-[10px] mb-6 uppercase border-black">
                             <thead>
                             <tr>
                                 <th class="text-left px-0 font-thin">Item</th>
