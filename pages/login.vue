@@ -17,7 +17,7 @@
           class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
         />
         </div>
-        <div class="flex justify-between pt-2">
+        <div class="flex justify-between pt-4">
             <div>
               <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
               <label for="remember" class="text-[12px] px-2">Remember me</label>
