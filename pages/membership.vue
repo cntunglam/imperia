@@ -24,7 +24,7 @@
         <div class="grid">
             <template v-if="activeTab === 'account'">
                 <div class="w-full max-w-3xl mx-auto uppercase">
-                    <p class="py-6 text-center">Payment Informamation</p>
+                    <p class="py-6 text-center">Payment Information</p>
                     <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
                         <credit-card/>
                         <credit-card/>
