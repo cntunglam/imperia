@@ -2,12 +2,12 @@
   <footer class="footer space-y-0 md:block bg-[#f2f2f2]">
     <div class="max-w-3xl mx-auto">
       <div class="justify-center space-y-4 mx-auto py-1 pt-14 md:pb-12">
-      <div class="mx-auto">
+      <div class="mx-auto pb-14 md:pb-0">
         <a href="/">
-          <img class="md:h-[28px] h-[22px] mx-auto w-auto" src="/img/logo.svg" />
+          <img class="md:h-[28px] h-[22px] mx-auto w-auto my-4" src="/img/logo.svg" />
         </a>
+        <SocialIcon />
       </div>
-      <SocialIcon />
     </div>
     <div class="py-0">
       <Newsletter />
