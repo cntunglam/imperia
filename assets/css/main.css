@@ -88,6 +88,10 @@ p {
   @apply rounded-none font-thin text-[12px] my-[14px] max-w-full;
 }
 
+.btn-stack {
+  @apply my-0
+}
+
 tr {
   border-bottom: 1px solid black !important;
   padding: 0 !important;
