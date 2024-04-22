@@ -26,9 +26,9 @@
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <p class="py-6 text-center">Payment Information</p>
                     <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
-                        <credit-card/>
-                        <credit-card/>
-                        <credit-card/>
+                        <credit-card id="1"/>
+                        <credit-card id="2"/>
+                        <credit-card id="3"/>
                     </div>
                     <div class="mt-6">
                         <p class="py-2 text-center">Your Bag</p>
@@ -201,7 +201,7 @@
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <input type="date" placeholder="dd/mm/yyyy" pattern="(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)"                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                         required>
+                     required>
                         <div class="flex gap-2">
                             <input
                             type="number"
