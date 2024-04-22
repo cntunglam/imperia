@@ -13,7 +13,7 @@
       <Newsletter />
     </div>
     <div class="mx-auto space-y-8">
-      <div class="mx-auto">
+      <div class="mx-auto w-full">
         <Payment />
       </div>
       <div class="mx-auto">

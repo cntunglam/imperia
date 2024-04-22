@@ -1,5 +1,5 @@
 <template>
-  <div class="space-x-2 md:space-x-4">
+  <div class="space-x-2 md:space-x-4 w-fit mx-auto"> 
     <Icon name="fa6-brands:cc-visa" class="text-5xl" />
     <Icon name="fa6-brands:cc-mastercard" class="text-5xl" />
     <Icon name="fa6-brands:cc-paypal" class="text-5xl" />
