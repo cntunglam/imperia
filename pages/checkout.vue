@@ -16,7 +16,7 @@
             role="tablist"
             class="tabs flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans"
         >
-            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'summary' }" @click="setActiveTab('summary')">Order Sumary</a>
+            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'summary' }" @click="setActiveTab('summary')">Order Summary</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'login' }" @click="setActiveTab('login')">Login</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'shipping' }" @click="setActiveTab('shipping')">Shipping Information</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'payment' }" @click="setActiveTab('payment')">Payment Information</a>
