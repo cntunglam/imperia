@@ -202,21 +202,3 @@ td, th {
   color: black !important;
 }
 
-/* Hide the default arrow button */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-/* Style the custom date input */
-.custom-date {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
-}
-
-/* Style the selected date */
-.custom-date::-webkit-calendar-picker-indicator {
-  background: transparent;
-  cursor: pointer;
-}
