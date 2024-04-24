@@ -52,7 +52,7 @@
                                         <div class="opacity-50">White</div>
                                     </div>
                                     <select
-                                        class="my-6 uppercase border-none rounded-none"
+                                        class="my-6 bg-white uppercase border-none rounded-none"
                                     >
                                         <option selected> XS</option>
                                         <option>S</option>
@@ -82,7 +82,7 @@
                                         <div class="opacity-50">White</div>
                                     </div>
                                     <select
-                                        class="my-6 uppercase border-none rounded-none"
+                                        class="my-6 bg-white uppercase border-none rounded-none"
                                     >
                                         <option selected> XS</option>
                                         <option>S</option>
