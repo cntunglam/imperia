@@ -6,7 +6,7 @@
         v-model="selectedDate"
         @input="updatePlaceholderVisibility"
       />
-      <span v-if="isIPhone && !selectedDate" class="placeholder">Select a date</span>
+      <span v-if="isIPhone && !selectedDate" class="placeholder">Date Of Birth</span>
     </div>
   </template>
   
@@ -42,6 +42,7 @@
   }
   
   .placeholder {
+    @apply md:text-[10px] text-[12px] uppercase;
     position: absolute;
     left: 10px;
     top: 50%;
