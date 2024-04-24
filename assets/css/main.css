@@ -212,14 +212,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 8px;
   outline: none;
 }
 
 /* Style the selected date */
 .custom-date::-webkit-calendar-picker-indicator {
   background: transparent;
-  color: #333; /* Set the color according to your design */
-  font-size: 16px;
   cursor: pointer;
 }
