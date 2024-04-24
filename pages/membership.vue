@@ -177,7 +177,7 @@
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <select
-                            class="select select-bordered w-full text-[10px] uppercase border-black rounded-none"
+                            class="select custom-select select-bordered w-full text-[10px] uppercase border-black rounded-none"
                             >
                             <option disabled selected>Title</option>
                             <option>Mr</option>
