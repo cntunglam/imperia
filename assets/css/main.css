@@ -201,3 +201,25 @@ input[type="checkbox"]:checked + label::after {
 td, th {
   color: black !important;
 }
+
+/* Hide the default arrow button */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Style the custom date input */
+.custom-date {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px;
+  outline: none;
+}
+
+/* Style the selected date */
+.custom-date::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: #333; /* Set the color according to your design */
+  font-size: 16px;
+  cursor: pointer;
+}
