@@ -202,24 +202,3 @@ td, th {
   color: black !important;
 }
 
-/* Style the custom select */
-.custom-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: white; /* For iOS */
-}
-
-/* Style the dropdown arrow icon */
-.custom-select::after {
-  content: '\25BC'; /* Unicode character for down arrow */
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
-
-/* Style the selected option */
-.custom-select option:checked {
-  background-color: #ccc;
-}
