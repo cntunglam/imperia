@@ -200,7 +200,7 @@
                         placeholder="Email Address"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
-                        <input type="tel" class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600" id="dwfrm_profile_customer_birthdate_d0izpyvvazzh" name="dwfrm_profile_customer_birthdate" required="" value="" maxlength="10" pattern="^(([0]?[1-9])|([1-2][0-9])|(3[01]))\/(0[1-9]|1[0-2])\/(19[0-9]\d|20[0-9]\d|2050)$" data-formid="customer_birthdate" data-error-value="Please insert a valid birthdate." data-error-missing="Please insert your birthdate." autocomplete="off">
+                        <date-picker />
                         <div class="flex gap-2">
                             <input
                             type="number"

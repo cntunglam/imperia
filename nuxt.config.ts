@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "nuxt-icon", "nuxt-swiper", '@nuxtjs/device'],
+  plugins: ['~/plugins/dateFormatDirective.js'],
   colorMode: {
     preference: "system", // default theme
     dataValue: "theme", // activate data-theme in <html> tag
