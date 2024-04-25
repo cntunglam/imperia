@@ -87,7 +87,9 @@
                         <p class="font-bold my-2">$400 USD</p>
                     </div>
                 </div>
-                <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY <Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/></button>
+                <a href="/checkout">
+                    <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY <Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/></button>
+                </a>
             </div>
         </div>
 </main>
