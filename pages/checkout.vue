@@ -26,7 +26,7 @@
             <template v-if="activeTab === 'summary'">
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <div class="mt-6">
-                        <p class="py-2 text-center">Order Sumary</p>
+                        <p class="py-2 text-center">Order Summary</p>
                         <table class="table min-w-max text-[10px] uppercase border-black">
                             <thead>
                             <tr>
