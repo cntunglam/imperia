@@ -120,7 +120,6 @@
                 <div class="grid grid-cols-2 min-w-96 pt-4 mx-auto">
                         <p class=" text-gray-400">2 items</p>
                         <p class="mx-auto">$420</p>
-                        <p class="col-span-2 text-gray-400 mx-auto">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. </p>
                 </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
@@ -152,9 +151,11 @@
                 </div>  
             </template>
             <template v-else-if="activeTab === 'shipping'">
-                    <div class="grid grid-cols-2 pt-4 mx-auto">
-                        <p class=" text-gray-400">2 items</p>
-                        <p class="mx-auto">$420</p>
+                    <div class="grid pt-4 mx-auto">
+                        <div class="w-36 flex mx-auto col-span-2">
+                            <p class=" text-gray-400">2 items</p>
+                            <p class="mx-auto">$420</p>
+                        </div>
                         <p class="col-span-2 text-gray-400">Your Confirmation Email Will Be Sent To: xxxxxx@gmail.com</p>
                     </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
@@ -182,8 +183,10 @@
             </template>
             <template v-else-if="activeTab === 'payment'">
                 <div class="grid grid-cols-2 gap-2 py-4 mx-auto text-center">
-                        <p class=" text-gray-400">2 items</p>
-                        <p class="mx-auto">$420</p>
+                    <div class="w-36 flex mx-auto col-span-2">
+                            <p class=" text-gray-400">2 items</p>
+                            <p class="mx-auto">$420</p>
+                        </div>
                         <p class="col-span-2 text-gray-400 mx-auto">Your Confirmation Email Will Be Sent To: xxxxxx@gmail.com</p>
                         <div class="col-span-2 py-2">
                             <p class=" text-gray-400"><Icon name="material-symbols:check-small" class="text-2xl text-gray-400"/>Delivery</p>
