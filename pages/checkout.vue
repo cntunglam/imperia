@@ -2,6 +2,7 @@
     import { ref } from 'vue';
 
     const activeTab = ref('summary');
+    const activePayment = ref('creditcard')
 
     const setActiveTab = (tab) => {
         activeTab.value = tab;
@@ -199,8 +200,8 @@
                         </div>
 
                     </div>
-                    <div class="py-2 mb-8 space-y-1">
-                        <div class="border-black border-[1px] text-left p-2 flex justify-between">
+                    <div class="py-2 mb-8 space-y-2">
+                        <div class="border-[1px] text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'creditcard' ? 'border-black' : 'border-gray-500' ">
                             <div class="justify-center align-middle my-auto">
                                 <p>Credit Card</p>
                             </div>
@@ -211,7 +212,7 @@
                                 <Icon name="fa6-brands:cc-discover" class="text-3xl"/>
                             </div>
                     </div>
-                    <div class="border-black border-[1px] text-left p-2 flex justify-between">
+                    <div class=" border-[1px] text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' ? 'border-black' : 'border-gray-300'">
                         <div class="justify-center align-middle my-auto">
                             <p>PayPal</p>
                         </div>
@@ -227,7 +228,7 @@
                             <credit-card/>
                             <credit-card/>
                         </div>
-                        <div class="form-control py-8 w-full mx-auto uppercase">
+                        <div class="form-control py-8 w-full mx-auto uppercase" v-if="activePayment === 'creditcard'">
                             <div class="space-y-4">
                                 <input
                                 type="number"
