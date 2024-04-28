@@ -14,19 +14,19 @@
         </div>
         <div
             role="tablist"
-            class="tabs flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans"
+            class="tabs border-b-[1px] border-black pb-2 flex max-w-full justify-center md:space-x-4 md:px-0 bg-transparent uppercase font-sans"
         >
-            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'summary' }" @click="setActiveTab('summary')">Order Summary</a>
+            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'summary' }" @click="setActiveTab('summary')">Order</a>
             <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'login' }" @click="setActiveTab('login')">Login</a>
-            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'shipping' }" @click="setActiveTab('shipping')">Shipping Information</a>
-            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'payment' }" @click="setActiveTab('payment')">Payment Information</a>
+            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'shipping' }" @click="setActiveTab('shipping')">Shipping</a>
+            <a role="tab" class="tab tab-xl text-black" :class="{ 'active underline': activeTab === 'payment' }" @click="setActiveTab('payment')">Payment</a>
 
         </div>
         <div class="grid">
             <template v-if="activeTab === 'summary'">
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <div class="mt-6">
-                        <p class="py-2 text-center">Order Summary</p>
+                        <p class="text-center">Order Summary</p>
                         <table class="table min-w-max text-[10px] uppercase border-black">
                             <thead>
                             <tr>
@@ -194,41 +194,69 @@
                             <p class=" text-gray-400"><Icon name="material-symbols:check-small" class="text-2xl text-gray-400"/>Shipping</p>
                             <p class=" text-gray-400">Compliment Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
-                    </div>
-                <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
-                        <credit-card/>
-                        <credit-card/>
-                        <credit-card/>
-                </div>
-                <div class="form-control py-8 w-full mx-auto uppercase">
-                    <div class="space-y-4">
-                        <input
-                        type="number"
-                        placeholder="Card Number"
-                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                        />
-                        <input
-                        type="text"
-                        placeholder="Full Name"
-                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                        />
-
-                        <div class="grid grid-cols-2 gap-2">
-                            <input
-                                type="date"
-                                placeholder="Expired Date"
-                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                                />
-                                <input
-                                type="number"
-                                placeholder="CCV"
-                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                                />
+                        <div class="col-span-2 py-2">
+                            <p>All Transaction Are Secure And Encrypted</p>
                         </div>
 
                     </div>
-                    <button class="btn btn-primary">Check Out</button>
-                </div>
+                    <div class="py-2 mb-8 space-y-1">
+                        <div class="border-black border-[1px] text-left p-2 flex justify-between">
+                            <div class="justify-center align-middle my-auto">
+                                <p>Credit Card</p>
+                            </div>
+                            <div class="space-x-1">
+                                <Icon name="fa6-brands:cc-visa" class="text-3xl" />
+                                <Icon name="fa6-brands:cc-mastercard" class="text-3xl" />
+                                <Icon name="formkit:amex" class="text-3xl" />
+                                <Icon name="fa6-brands:cc-discover" class="text-3xl"/>
+                            </div>
+                    </div>
+                    <div class="border-black border-[1px] text-left p-2 flex justify-between">
+                        <div class="justify-center align-middle my-auto">
+                            <p>PayPal</p>
+                        </div>
+                        <div class="space-x-1">
+                            <Icon name="fa6-brands:cc-paypal" class="text-3xl" />
+                        </div>
+                    </div>
+                    </div>
+
+                    <div>
+                        <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
+                            <credit-card/>
+                            <credit-card/>
+                            <credit-card/>
+                        </div>
+                        <div class="form-control py-8 w-full mx-auto uppercase">
+                            <div class="space-y-4">
+                                <input
+                                type="number"
+                                placeholder="Card Number"
+                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                />
+                                <input
+                                type="text"
+                                placeholder="Full Name"
+                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                />
+
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input
+                                        type="date"
+                                        placeholder="Expired Date"
+                                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                        />
+                                        <input
+                                        type="number"
+                                        placeholder="CCV"
+                                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                        />
+                                </div>
+
+                            </div>
+                            <button class="btn btn-primary">Check Out</button>
+                        </div>
+                    </div>
             </template>
 
         </div>
