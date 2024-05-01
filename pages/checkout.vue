@@ -27,7 +27,7 @@
             <template v-if="activeTab === 'summary'">
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <div class="mt-6">
-                        <p class="text-center">Order Summary</p>
+                        <p class="text-center mb-2">Order Summary</p>
                         <table class="table min-w-max text-[10px] uppercase border-black">
                             <thead>
                             <tr>
@@ -117,7 +117,7 @@
                 </div>
             </template>
             <template v-else-if="activeTab === 'login'">
-                <div class="grid grid-cols-2 min-w-96 pt-4 mx-auto">
+                <div class="grid grid-cols-2 min-w-96 pt-4 mx-auto py-2">
                         <p class=" text-gray-400">2 items</p>
                         <p class="mx-auto">$420</p>
                 </div>
@@ -151,7 +151,7 @@
                 </div>  
             </template>
             <template v-else-if="activeTab === 'shipping'">
-                    <div class="grid pt-4 mx-auto">
+                    <div class="grid pt-4 mx-auto pb-2">
                         <div class="w-36 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
@@ -198,7 +198,7 @@
                             <p class=" text-gray-400"><Icon name="material-symbols:check-small" class="text-2xl text-gray-400"/>Shipping</p>
                             <p class=" text-gray-400">Compliment Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
-                        <div class="col-span-2 py-2">
+                        <div class="col-span-2 pt-2 pb-8">
                             <p>All Transaction Are Secure And Encrypted</p>
                         </div>
 
@@ -255,10 +255,12 @@
 
                                 <div class="grid grid-cols-2 gap-2">
                                     <input
-                                        type="date"
-                                        placeholder="Expired Date"
+                                        type="text"
+                                        placeholder="MM/YY"
+                                        pattern="\d{2}/\d{2}"
+                                        title="Please enter a valid MM/YY format"
                                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                                        />
+                                    />
                                         <input
                                         type="number"
                                         placeholder="CCV"
