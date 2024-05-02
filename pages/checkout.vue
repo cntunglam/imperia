@@ -118,8 +118,10 @@
             </template>
             <template v-else-if="activeTab === 'login'">
                 <div class="grid grid-cols-2 min-w-96 pt-4 mx-auto py-2">
-                        <p class=" text-gray-400">2 items</p>
-                        <p class="mx-auto">$420</p>
+                        <div class="w-28 flex mx-auto col-span-2">
+                            <p class=" text-gray-400">2 items</p>
+                            <p class="mx-auto">$420</p>
+                        </div>
                 </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
@@ -143,7 +145,7 @@
                         <a href="/" class="text-[12px] underline uppercase">Forgot password?</a>
                         </div>
                     </div>
-                    <div class="grid gap-2 py-4">
+                    <div class="grid gap-4 py-4">
                         <button class="btn btn-stack btn-primary">Log In And Continue</button>
                         <button class="btn btn-stack btn-outline">Skip To Guest Checkout</button>
                     </div>
@@ -152,7 +154,7 @@
             </template>
             <template v-else-if="activeTab === 'shipping'">
                     <div class="grid pt-4 mx-auto pb-2">
-                        <div class="w-36 flex mx-auto col-span-2">
+                        <div class="w-28 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
@@ -160,10 +162,9 @@
                     </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
-                        <countries-selector/>
                         <input
-                        type="Number"
-                        placeholder="Zip Code"
+                        type="text"
+                        placeholder="Address"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
                         <input
@@ -171,11 +172,13 @@
                         placeholder="Province/State/County"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
+
                         <input
-                        type="text"
-                        placeholder="Addresss"
+                        type="Number"
+                        placeholder="Zip Code"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                         />
+                        <countries-selector/>
 
                     </div>
                     <button class="btn btn-primary">Continue To Payment</button>
@@ -183,7 +186,7 @@
             </template>
             <template v-else-if="activeTab === 'payment'">
                 <div class="grid grid-cols-2 gap-2 py-4 mx-auto text-center">
-                    <div class="w-36 flex mx-auto col-span-2">
+                    <div class="w-28 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
@@ -204,7 +207,7 @@
 
                     </div>
                     <div class="py-2 mb-8 space-y-2">
-                        <div class="border-[1px] text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'creditcard' && 'border-black'" @click="activePayment = 'creditcard'">
+                        <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'creditcard' && 'bg-black text-white'" @click="activePayment = 'creditcard'">
                             <div class="justify-center align-middle my-auto">
                                 <p>Credit Card</p>
                             </div>
@@ -215,7 +218,7 @@
                                 <Icon name="fa6-brands:cc-discover" class="text-3xl"/>
                             </div>
                     </div>
-                    <div class="border-[1px] text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' && 'border-black border-[1px]'" @click="activePayment = 'paypal'">
+                    <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' && 'bg-black text-white border-[1px]'" @click="activePayment = 'paypal'">
                         <div class="justify-center align-middle my-auto">
                             <p>PayPal</p>
                         </div>
@@ -223,9 +226,9 @@
                             <Icon name="fa6-brands:cc-paypal" class="text-3xl" />
                         </div>
                     </div>
-                    <div class="border-[1px] text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'venmo' && 'border-black border-[1px]'" @click="activePayment = 'venmo'">
+                    <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'venmo' && 'bg-black text-white border-[1px]'" @click="activePayment = 'venmo'">
                         <div class="justify-center align-middle my-auto">
-                            <p>Vennmo</p>
+                            <p>Venmo</p>
                         </div>
                         <div class="space-x-1">
                             <Icon name="cib:venmo" class="text-3xl" />

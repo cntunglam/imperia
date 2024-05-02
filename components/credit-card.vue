@@ -20,14 +20,15 @@
             </div>
             <div class="form-control w-full mx-auto  space-y-4 uppercase">
                 <input
-                        type="number"
-                        placeholder="**** **** **** **** 5472"
-                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                />
-                <input
                         type="text"
                         placeholder="Lam Cao"
-                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
+                />
+
+                <input
+                        type="number"
+                        placeholder="**** **** **** **** 5472"
+                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
                 />
                 <div class="grid grid-cols-2 gap-2">
                                 <input
@@ -35,17 +36,17 @@
                                         placeholder="MM/YY"
                                         pattern="\d{2}/\d{2}"
                                         title="Please enter a valid MM/YY format"
-                                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
                                     />
                                 <input
                                 type="number"
                                 placeholder="***"
-                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                                class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
                                 />
                 </div>
                 <div class="flex gap-1 w-full">
-                    <button class="btn btn-primary w-1/2">Save Change</button>
-                    <button class="btn btn-outline w-1/2">Remove Cards</button>
+                    <button class="btn btn-primary w-1/2">Save Changes</button>
+                    <button class="btn btn-outline w-1/2">Remove Card</button>
                 </div>
             </div>
         </div>
