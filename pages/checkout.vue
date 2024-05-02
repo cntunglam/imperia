@@ -209,9 +209,9 @@
                     <div class="py-2 mb-8 space-y-2">
                         <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'creditcard' && 'bg-black text-white'" @click="activePayment = 'creditcard'">
                             <div class="justify-center align-middle my-auto">
-                                <p>Credit Card</p>
+                                <p class="pl-2">Credit Card</p>
                             </div>
-                            <div class="space-x-1">
+                            <div class="space-x-1 pr-2">
                                 <Icon name="fa6-brands:cc-visa" class="text-3xl" />
                                 <Icon name="fa6-brands:cc-mastercard" class="text-3xl" />
                                 <Icon name="formkit:amex" class="text-3xl" />
@@ -220,17 +220,17 @@
                     </div>
                     <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' && 'bg-black text-white border-[1px]'" @click="activePayment = 'paypal'">
                         <div class="justify-center align-middle my-auto">
-                            <p>PayPal</p>
+                            <p class="pl-2">PayPal</p>
                         </div>
-                        <div class="space-x-1">
+                        <div class="space-x-1 pr-2">
                             <Icon name="fa6-brands:cc-paypal" class="text-3xl" />
                         </div>
                     </div>
                     <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'venmo' && 'bg-black text-white border-[1px]'" @click="activePayment = 'venmo'">
                         <div class="justify-center align-middle my-auto">
-                            <p>Venmo</p>
+                            <p class="pl-2 pr-2">Venmo</p>
                         </div>
-                        <div class="space-x-1">
+                        <div class="space-x-1 pr-2">
                             <Icon name="cib:venmo" class="text-3xl" />
                         </div>
                     </div>
@@ -246,13 +246,13 @@
                         <div class="form-control py-8 w-full mx-auto uppercase">
                             <div class="space-y-4">
                                 <input
-                                type="number"
-                                placeholder="Card Number"
+                                type="text"
+                                placeholder="Full Name"
                                 class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                                 />
                                 <input
-                                type="text"
-                                placeholder="Full Name"
+                                type="number"
+                                placeholder="Card Number"
                                 class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
                                 />
 
@@ -272,7 +272,7 @@
                                 </div>
 
                             </div>
-                            <button class="btn btn-primary">Check Out</button>
+                            <button class="btn btn-primary w-full font-thin">CHECKOUT SECURELY <Icon name="material-symbols:lock-open-outline-rounded" class="text-xl mb-1"/></button>
                         </div>
                     </div>
             </template>
