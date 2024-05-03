@@ -169,6 +169,16 @@
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <input
+                        type="email"
+                        placeholder="Email"
+                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                        />
+                        <input
+                        type="name"
+                        placeholder="Name"
+                        class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+                        />
+                        <input
                         type="text"
                         placeholder="Address"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
