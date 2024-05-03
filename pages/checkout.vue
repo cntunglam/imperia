@@ -153,12 +153,18 @@
                 </div>  
             </template>
             <template v-else-if="activeTab === 'shipping'">
-                    <div class="grid pt-4 mx-auto pb-2">
+                <div class="grid pt-4 mx-auto pb-2">
                         <div class="w-28 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
                         <p class="col-span-2 text-gray-400">Your Confirmation Email Will Be Sent To: xxxxxx@gmail.com</p>
+                    
+                </div>
+                <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 mb-4 mt-8 max-w-3xl">
+                            <AddressCard :isPrimary = "true"/>
+                            <AddressCard :isPrimary = "false"/>
+                            <AddressCard :isPrimary = "false"/>
                     </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">

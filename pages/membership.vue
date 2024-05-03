@@ -1,5 +1,6 @@
 <script setup>
     import { ref } from 'vue';
+import AddressCard from '~/components/addressCard.vue';
 
     const activeTab = ref('account');
 
@@ -26,10 +27,19 @@
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <p class="py-6 text-center">Payment Information</p>
                     <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
-                        <credit-card id="1"/>
-                        <credit-card id="2"/>
-                        <credit-card id="3"/>
+                        <credit-card id="credit-1"/>
+                        <credit-card id="credit-2"/>
+                        <credit-card id="credit-3"/>
                     </div>
+                    <div class="w-full max-w-3xl mx-auto uppercase">
+                    <p class="py-6 text-center">Address</p>
+                    <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
+                        <AddressCard id="address-3" :isPrimary = "true"/>
+                        <AddressCard id="address-4" :isPrimary = "false"/>
+                        <AddressCard id="address-5" :isPrimary = "false"/>
+                    </div>
+                    </div>
+
                     <div class="mt-6">
                         <p class="py-2 text-center">Your Bag</p>
                         <table class="table min-w-max text-[10px] mb-6 uppercase border-black">
