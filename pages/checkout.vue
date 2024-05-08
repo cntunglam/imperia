@@ -48,7 +48,7 @@
                                         <div class="opacity-50">White</div>
                                     </div>
                                     <select
-                                        class="my-6 uppercase border-none rounded-none"
+                                        class="my-6 uppercase border-none rounded-none bg-white"
                                     >
                                         <option selected> XS</option>
                                         <option>S</option>
@@ -78,7 +78,7 @@
                                         <div class="opacity-50">White</div>
                                     </div>
                                     <select
-                                        class="my-6 uppercase border-none rounded-none"
+                                        class="my-6 uppercase border-none rounded-none bg-white"
                                     >
                                         <option selected> XS</option>
                                         <option>S</option>
@@ -233,23 +233,40 @@
                                 <Icon name="formkit:amex" class="text-3xl" />
                                 <Icon name="fa6-brands:cc-discover" class="text-3xl"/>
                             </div>
-                    </div>
-                    <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' && 'bg-black text-white border-[1px]'" @click="activePayment = 'paypal'">
-                        <div class="justify-center align-middle my-auto">
-                            <p class="pl-2">PayPal</p>
                         </div>
-                        <div class="space-x-1 pr-2">
-                            <Icon name="fa6-brands:cc-paypal" class="text-3xl" />
+                        <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'paypal' && 'bg-black text-white border-[1px]'" @click="activePayment = 'paypal'">
+                            <div class="justify-center align-middle my-auto">
+                                <p class="pl-2">PayPal</p>
+                            </div>
+                            <div class="space-x-1 pr-2">
+                                <Icon name="fa6-brands:cc-paypal" class="text-3xl" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'venmo' && 'bg-black text-white border-[1px]'" @click="activePayment = 'venmo'">
-                        <div class="justify-center align-middle my-auto">
-                            <p class="pl-2 pr-2">Venmo</p>
+                        <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'venmo' && 'bg-black text-white border-[1px]'" @click="activePayment = 'venmo'">
+                            <div class="justify-center align-middle my-auto">
+                                <p class="pl-2 pr-2">Venmo</p>
+                            </div>
+                            <div class="space-x-1 pr-2">
+                                <Icon name="cib:venmo" class="text-3xl" />
+                            </div>
                         </div>
-                        <div class="space-x-1 pr-2">
-                            <Icon name="cib:venmo" class="text-3xl" />
+                        <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'apple' && 'bg-black text-white border-[1px]'" @click="activePayment = 'apple'">
+                            <div class="justify-center align-middle my-auto">
+                                <p class="pl-2 pr-2">Apple Pay</p>
+                            </div>
+                            <div class="space-x-1 pr-2">
+                                <Icon name="fa6-brands:cc-apple-pay" class="text-3xl" />
+                            </div>
                         </div>
-                    </div>
+                        <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'google' && 'bg-black text-white border-[1px]'" @click="activePayment = 'google'">
+                            <div class="justify-center align-middle my-auto">
+                                <p class="pl-2 pr-2">Apple Pay</p>
+                            </div>
+                            <div class="space-x-1 pr-2">
+                                <Icon name="fa6-brands:google-pay" class="text-3xl" />
+                            </div>
+                        </div>
+
 
                     </div>
 
