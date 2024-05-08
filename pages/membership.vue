@@ -32,7 +32,7 @@ import AddressCard from '~/components/addressCard.vue';
                         <credit-card id="credit-3"/>
                     </div>
                     <div class="w-full max-w-3xl mx-auto uppercase">
-                    <p class="py-6 text-center">Address</p>
+                    <p class="py-6 text-center">Shipping Information</p>
                     <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
                         <AddressCard id="address-3" :isPrimary = "true"/>
                         <AddressCard id="address-4" :isPrimary = "false"/>

@@ -2,6 +2,11 @@
 <main class="_body">
         <div>
             <h1 class="text-center uppercase text-[20px]">Bag</h1>
+            <div class="w-fit gap-2 py-4 flex mx-auto col-span-2">
+                            <p class=" text-gray-400 text-center">2 items</p>
+                            <p class="mx-auto text-center">$420</p>
+            </div>
+
             <div class="overflow-x-auto">
                 <table class="table min-w-max text-[10px] uppercase border-black">
                     <thead>
