@@ -31,7 +31,7 @@
           name="footerModal"
           action="footerModal.showModal()"
           modalStyle="modal-box w-full min-h-screen md:w-fit md:min-h-fit rounded-none"
-          buttonText="© 2023 Imperia"
+          buttonText="© 2024 Imperia"
           buttonStyle="hover:cursor-help hover:bg-transparent mb-6"
           boxHeader="Copyright Information"
         >
