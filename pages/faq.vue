@@ -33,7 +33,7 @@
             </div>
             </details>
             <details class="collapse collapse-arrow uppercase">
-            <summary class="collapse-title text-[12px] font-medium ">WHY IS THE AMOUNT I PAID DIFFERENT FROM THE AMOUNT OF MY ORDER ?</summary>
+            <summary class="collapse-title text-[12px] font-medium ">WHY IS THE AMOUNT I PAID DIFFERENT FROM THE AMOUNT OF MY ORDER?</summary>
             <div class="collapse-content text-[12px]"> 
                 <p>content</p>
             </div>
@@ -45,7 +45,7 @@
             </div>
             </details>
             <details class="collapse collapse-arrow uppercase">
-            <summary class="collapse-title text-[12px] font-medium">WHAT IS A ORDER-ORDER ITEM?</summary>
+            <summary class="collapse-title text-[12px] font-medium">WHAT IS A PRE-ORDER ITEM?</summary>
             <div class="collapse-content text-[12px]"> 
               <p>content</p>
             </div>

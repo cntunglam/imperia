@@ -5,10 +5,10 @@
       </div>
       <div class="mx-auto text-center">
         <p class="text-center">Create an account and benefit from order delivery updates and return management as well as personalized recommendations</p>
-    </div>
+      </div>
 
       <div>
-        <div class="form-control py-8 w-full mx-auto uppercase">
+        <div class="form-control pb-8 pt-4 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <select
                         class="select select-bordered w-full md:text-[10px] text-[12px] uppercase border-black rounded-none">
