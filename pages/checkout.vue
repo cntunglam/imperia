@@ -154,11 +154,11 @@
             </template>
             <template v-else-if="activeTab === 'shipping'">
                 <div class="grid pt-4 mx-auto pb-2">
-                        <div class="w-28 flex mx-auto col-span-2">
+                        <div class="w-28 pb-2 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
-                        <p class="col-span-2 text-gray-400">Your Confirmation Email Will Be Sent To: xxxxxx@gmail.com</p>
+                        <p class="col-span-2 text-center text-gray-400">Your Confirmation Email Will Be Sent To: <br> <span class="text-black">xxxxxx@gmail.com</span> </p>
                     
                 </div>
                 <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 mb-4 mt-8 max-w-3xl">
@@ -206,18 +206,18 @@
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
-                        <p class="col-span-2 text-gray-400 mx-auto">Your Confirmation Email Will Be Sent To: xxxxxx@gmail.com</p>
+                        <p class="col-span-2 text-gray-400 mx-auto">Your Confirmation Email Will Be Sent To: <br> <span class="text-black">xxxxxx@gmail.com</span></p>
                         <div class="col-span-2 py-2">
-                            <p class=" text-gray-400"><Icon name="material-symbols:check-small" class="text-2xl text-gray-400"/>Delivery</p>
+                            <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Delivery</p>
                             <p class=" text-gray-400">Country/Region: United States</p>
                             <p class=" text-gray-400">Zip Code: 30189</p>
                             <p class="text-gray-400">Province/State/County: Georgia</p>
                         </div>
                         <div class="col-span-2 py-2">
-                            <p class=" text-gray-400"><Icon name="material-symbols:check-small" class="text-2xl text-gray-400"/>Shipping</p>
+                            <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Shipping</p>
                             <p class=" text-gray-400">Compliment Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
-                        <div class="col-span-2 pt-2 pb-8">
+                        <div class="col-span-2 pt-2 pb-2">
                             <p>All Transaction Are Secure And Encrypted</p>
                         </div>
 
