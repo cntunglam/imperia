@@ -29,77 +29,79 @@
                     <div class="mt-6">
                         <p class="text-center mb-2">Order Summary</p>
                         <table class="table min-w-max text-[10px] uppercase border-black">
-                            <thead>
-                            <tr>
-                                <th class="text-left px-0 font-thin">Item</th>
-                                <th class="text-right px-0 font-thin">Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                                <td>
-                                <div class="flex items-center align-middle gap-3">
-                                    <div class="w-32">
-                                        <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                    <div class="">
-                                    <div>Imperia Short
-                                        <div class="opacity-50">White</div>
-                                    </div>
-                                    <select
-                                        class="my-6 uppercase border-none rounded-none bg-white"
-                                    >
-                                        <option selected> XS</option>
-                                        <option>S</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                        <option>XL</option>
-                                    </select>
-                                    </div>
-                                </div>
-                                </td>
-                                <td class="text-right px-0 py-8">
-                                    <div class="">
-                                        <div class="">$200 USD</div>
-                                        <div class="underline my-6 pt-4">Remove</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                                <td>
-                                <div class="flex items-center align-middle gap-3">
-                                    <div class="w-32">
-                                        <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                    <div class="">
-                                    <div>Imperia Short
-                                        <div class="opacity-50">White</div>
-                                    </div>
-                                    <select
-                                        class="my-6 uppercase border-none rounded-none bg-white"
-                                    >
-                                        <option selected> XS</option>
-                                        <option>S</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                        <option>XL</option>
-                                    </select>
-                                    </div>
-                                </div>
-                                </td>
-                                <td class="text-right px-0 py-8">
-                                    <div class="">
-                                        <div class="">$200 USD</div>
-                                        <div class="underline my-6 pt-4">Remove</div>
-                                    </div>
-                                </td>
-                            </tr>
+                    <thead>
+                    <tr>
+                        <th class="text-left px-0 font-thin">Item</th>
+                        <th class="text-right px-0 font-thin">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                        <td>
+                        <div class="flex items-center align-middle gap-3 pt-4">
+                            <div class="w-32">
+                                <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                            </div>
+                            <div class="">
+                            <div>Imperia Short
+                                <div class="opacity-50">White</div>
+                            </div>
+                            <select
+                                class="my-6 bg-white uppercase border-none rounded-none"
+                            >
+                                <option selected> XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            </div>
+                        </div>
+                        </td>
+                        <td class="text-right px-0">
+                            <div class="h-32 mt-8">
+                                <div class="">$200 USD</div>
+                                <div class="underline mt-10">Remove</div>
+                            </div>
+                        </td>
+                    </tr>
 
-                            </tbody>
-                            <!-- foot -->                    
-                        </table>
+                    <!-- row 2 -->
+                    <tr>
+                        <td>
+                        <div class="flex items-center align-middle gap-3 pt-4">
+                            <div class="w-32">
+                                <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                            </div>
+                            <div class="">
+                            <div>Imperia Short
+                                <div class="opacity-50">White</div>
+                            </div>
+                            <select
+                                class="my-6 bg-white uppercase border-none rounded-none"
+                            >
+                                <option selected> XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            </div>
+                        </div>
+                        </td>
+                        <td class="text-right px-0">
+                            <div class="h-32 mt-8">
+                                <div class="">$200 USD</div>
+                                <div class="underline mt-10">Remove</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    <!-- foot -->                    
+                </table>
+
                         <div class="flex justify-between pt-4 uppercase">
                             <div>
                                 <p>Total</p>

@@ -19,7 +19,7 @@
                     <!-- row 1 -->
                     <tr>
                         <td>
-                        <div class="flex items-center align-middle gap-3">
+                        <div class="flex items-center align-middle gap-3 pt-4">
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
@@ -39,17 +39,18 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right px-0 py-8">
-                            <div class="">
+                        <td class="text-right px-0">
+                            <div class="h-32 mt-8">
                                 <div class="">$200 USD</div>
-                                <div class="underline my-6 pt-4">Remove</div>
+                                <div class="underline mt-10">Remove</div>
                             </div>
                         </td>
                     </tr>
+
                     <!-- row 2 -->
                     <tr>
                         <td>
-                        <div class="flex items-center align-middle gap-3">
+                        <div class="flex items-center align-middle gap-3 pt-4">
                             <div class="w-32">
                                 <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
                             </div>
@@ -69,10 +70,10 @@
                             </div>
                         </div>
                         </td>
-                        <td class="text-right px-0 py-8">
-                            <div class="">
+                        <td class="text-right px-0">
+                            <div class="h-32 mt-8">
                                 <div class="">$200 USD</div>
-                                <div class="underline my-6 pt-4">Remove</div>
+                                <div class="underline mt-10">Remove</div>
                             </div>
                         </td>
                     </tr>
