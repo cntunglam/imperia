@@ -217,7 +217,7 @@
                         </div>
                         <div class="col-span-2 py-2">
                             <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Shipping</p>
-                            <p class=" text-gray-400">Compliment Reduced-Carbon Delivery: 2-6 days</p>
+                            <p class=" text-gray-400">Complimentary Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
                         <div class="col-span-2 pt-2 pb-2">
                             <p>All Transaction Are Secure And Encrypted</p>
