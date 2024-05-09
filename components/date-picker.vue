@@ -45,7 +45,7 @@
   .placeholder {
     @apply md:text-[10px] text-[12px] uppercase;
     position: absolute;
-    left: 18px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
     color: #999; /* Set the color of the placeholder */
