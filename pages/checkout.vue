@@ -219,12 +219,12 @@
                             <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Shipping</p>
                             <p class=" text-gray-400">Complimentary Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
-                        <div class="col-span-2 pt-2 pb-2">
+                        <div class="col-span-2 pt-2">
                             <p>All Transactions Are Secure And Encrypted</p>
                         </div>
 
                     </div>
-                    <div class="py-2 mb-8 space-y-2">
+                    <div class="pb-2 mb-8 space-y-2">
                         <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'creditcard' && 'bg-black text-white'" @click="activePayment = 'creditcard'">
                             <div class="justify-center align-middle my-auto">
                                 <p class="pl-2">Credit Card</p>
