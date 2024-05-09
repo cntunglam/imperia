@@ -44,8 +44,8 @@
                         <countries-selector/>
                     </div>
                     <div class="grid grid-cols-2 gap-1 w-full justify-stretch align-middle">
-                    <button class="btn btn-primary w-1/2">Save Changes</button>
-                    <button class="btn btn-outline w-1/2">Remove Address</button>
+                    <button class="btn btn-primary">Save Changes</button>
+                    <button class="btn btn-outline">Remove Address</button>
                 </div>
             </div>
         </div>
