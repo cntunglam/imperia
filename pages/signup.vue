@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary">create my account</button>
-                    <p class="text-center py-6">already have an account? <a class="underline" href="/login">Log in</a></p>
+                    <p class="text-center py-1">already have an account? <a class="underline" href="/login">Log in</a></p>
                 </div>
       </div>
     </main>
