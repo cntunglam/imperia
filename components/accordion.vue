@@ -7,7 +7,7 @@
       </div>
     </details>
     <details class="collapse collapse-arrow uppercase">
-      <summary class="collapse-title text-[12px] font-medium">Free Shipping, Free Return</summary>
+      <summary class="collapse-title text-[12px] font-medium">Free Shipping, Free Returns</summary>
       <div class="collapse-content text-[12px]"> 
         <p>content</p>
       </div>
