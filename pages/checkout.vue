@@ -220,7 +220,7 @@
                             <p class=" text-gray-400">Complimentary Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
                         <div class="col-span-2 pt-2 pb-2">
-                            <p>All Transaction Are Secure And Encrypted</p>
+                            <p>All Transactions Are Secure And Encrypted</p>
                         </div>
 
                     </div>
@@ -262,7 +262,7 @@
                         </div>
                         <div class="border-[1px] border-black text-left p-2 flex justify-between cursor-pointer" :class="activePayment === 'google' && 'bg-black text-white border-[1px]'" @click="activePayment = 'google'">
                             <div class="justify-center align-middle my-auto">
-                                <p class="pl-2 pr-2">Apple Pay</p>
+                                <p class="pl-2 pr-2">Google Pay</p>
                             </div>
                             <div class="space-x-1 pr-2">
                                 <Icon name="fa6-brands:google-pay" class="text-3xl" />
