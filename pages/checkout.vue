@@ -120,7 +120,7 @@
             </template>
             <template v-else-if="activeTab === 'login'">
                 <div class="grid grid-cols-2 min-w-96 pt-4 mx-auto py-2">
-                        <div class="w-28 flex mx-auto col-span-2">
+                        <div class="gap-2 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
@@ -156,7 +156,7 @@
             </template>
             <template v-else-if="activeTab === 'shipping'">
                 <div class="grid pt-4 mx-auto pb-2">
-                        <div class="w-28 pb-2 flex mx-auto col-span-2">
+                        <div class="gap-2 pb-2 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
@@ -204,7 +204,7 @@
             </template>
             <template v-else-if="activeTab === 'payment'">
                 <div class="grid grid-cols-2 gap-2 py-4 mx-auto text-center">
-                    <div class="w-28 flex mx-auto col-span-2">
+                    <div class="gap-2 flex mx-auto col-span-2">
                             <p class=" text-gray-400">2 items</p>
                             <p class="mx-auto">$420</p>
                         </div>
