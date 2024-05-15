@@ -23,7 +23,7 @@
               <label for="remember" class="text-[12px] px-2">Remember me</label>
             </div>
             <div>
-              <a href="/" class="text-[12px] underline uppercase">Forgot password?</a>
+              <a href="/forgot-password" class="text-[12px] underline uppercase">Forgot password?</a>
             </div>
         </div>
 
