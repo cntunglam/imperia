@@ -21,7 +21,7 @@
           <span class="label-text uppercase underline">Size Guide</span>
         </label>
         <select
-          class="select select-bordered uppercase border-black rounded-none"
+          class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
         >
           <option disabled selected>Select A Size</option>
           <option>XS</option>
