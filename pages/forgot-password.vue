@@ -5,7 +5,7 @@
 <template>
     <main class="_body space-y-4">
       <div>
-        <h2 class="text-[20px] uppercase text-center">forgot password</h2>
+        <h2 class="text-[20px] uppercase text-center">reset password</h2>
       </div>
       <div>
         <div v-if="isConfirmEmail === false" class="form-control pb-8 pt-4 w-full mx-auto uppercase">
