@@ -210,14 +210,14 @@
                         </div>
                         <p class="col-span-2 text-gray-400 mx-auto">Your Confirmation Email Will Be Sent To: <br> <span class="text-black">xxxxxx@gmail.com</span></p>
                         <div class="col-span-2 py-2">
-                            <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Delivery</p>
+                            <p class=" text-black text-center mr-1"><Icon name="material-symbols:check-small" class="text-[24px] text-black"/>Delivery</p>
                             <p class=" text-gray-400">Country/Region: United States</p>
                             <p class=" text-gray-400">Zip Code: 30189</p>
                             <p class="text-gray-400">Province/State/County: Georgia</p>
                         </div>
                         <div class="col-span-2 py-2">
-                            <p class=" text-black"><Icon name="material-symbols:check-small" class="text-2xl text-black"/>Shipping</p>
-                            <p class=" text-gray-400">Complimentary Reduced-Carbon Delivery: 2-6 days</p>
+                            <p class=" text-black text-center mr-1"><Icon name="material-symbols:check-small" class="text-[24px] text-black"/>Shipping</p>
+                            <p class=" text-gray-400 ">Complimentary Reduced-Carbon Delivery: 2-6 days</p>
                         </div>
                         <div class="col-span-2 pt-2">
                             <p>All Transactions Are Secure And Encrypted</p>
