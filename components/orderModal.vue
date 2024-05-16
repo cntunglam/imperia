@@ -8,7 +8,7 @@
         </div>
     </div>
     <dialog id="my_modal" class="modal">
-        <div class="modal-box max-w-xl rounded-none">
+        <div class="modal-box rounded-none">
           <form method="dialog">
             <button
               class="btn btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-4 md:right-14 top-1"
