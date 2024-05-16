@@ -36,7 +36,7 @@
                         </div>
                         </td>
                         <td class="text-right px-0">
-                            <div class="h-32 mt-8">
+                            <div class="h-32 mt-10">
                                 <div class="">$200 USD</div>
                                 <div class="underline mt-10">Remove</div>
                             </div>
@@ -67,7 +67,7 @@
                         </div>
                         </td>
                         <td class="text-right px-0">
-                            <div class="h-32 mt-8">
+                            <div class="h-32 mt-10">
                                 <div class="">$200 USD</div>
                                 <div class="underline mt-10">Remove</div>
                             </div>

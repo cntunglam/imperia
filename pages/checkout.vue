@@ -28,7 +28,7 @@
                 <div class="w-full max-w-3xl mx-auto uppercase">
                     <div class="mt-6">
                         <p class="text-center mb-2">Order Summary</p>
-                        <table class="table min-w-max text-[10px] uppercase border-black">
+                <table class="table min-w-max text-[10px] uppercase border-black">
                     <thead>
                     <tr>
                         <th class="text-left px-0 font-thin">Item</th>
@@ -60,7 +60,7 @@
                         </div>
                         </td>
                         <td class="text-right px-0">
-                            <div class="h-32 mt-8">
+                            <div class="h-32 mt-10">
                                 <div class="">$200 USD</div>
                                 <div class="underline mt-10">Remove</div>
                             </div>
@@ -91,7 +91,7 @@
                         </div>
                         </td>
                         <td class="text-right px-0">
-                            <div class="h-32 mt-8">
+                            <div class="h-32 mt-10">
                                 <div class="">$200 USD</div>
                                 <div class="underline mt-10">Remove</div>
                             </div>
