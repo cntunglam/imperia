@@ -10,7 +10,7 @@
         <div class="modal-box rounded-none">
             <div class="mb-4 relatve">
                     <button
-                    class=" btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-2 top-4 my-0" @click="closeModal()"
+                    class=" btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-4 top-4 my-0" @click="closeModal()"
                     >
                     ✕
                     </button>
@@ -44,7 +44,7 @@
                                 class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
                                 />
                 </div>
-                <div class="grid grid-cols-2 gap-1 w-full justify-stretch align-middle">
+                <div class="grid grid-cols-2 gap-2 w-full justify-stretch align-middle">
                     <button class="btn btn-primary">Save Changes</button>
                     <button class="btn btn-outline">Remove Card</button>
                 </div>

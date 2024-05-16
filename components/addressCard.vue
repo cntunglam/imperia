@@ -15,7 +15,7 @@
         <div class="modal-box rounded-none">
             <div class="mb-4 relatve">
                     <button
-                    class=" btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-2 top-4 my-0" @click="closeModal()"
+                    class=" btn-sm btn-circle btn-ghost hover:bg-transparent absolute right-4 top-4 my-0" @click="closeModal()"
                     >
                     ✕
                     </button>
@@ -43,7 +43,7 @@
                         />
                         <countries-selector/>
                     </div>
-                    <div class="grid grid-cols-2 gap-1 w-full justify-stretch align-middle">
+                    <div class="grid grid-cols-2 gap-2 w-full justify-stretch align-middle">
                     <button class="btn btn-primary">Save Changes</button>
                     <button class="btn btn-outline">Remove Address</button>
                 </div>
