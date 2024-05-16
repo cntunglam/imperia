@@ -21,7 +21,7 @@
           </h3>
           <div class="form-control py-4 w-full max-w-md mx-auto space-y-6">
             <select
-              class="select text-[12px] select-bordered text-black rounded-none border-black"
+              class="select text-[12px] md:text-[10px] select-bordered text-black rounded-none border-black"
             >
               <option disabled selected>SELECT A SIZE</option>
               <option>XS</option>
