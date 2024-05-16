@@ -23,7 +23,7 @@
                         Edit Address       
                     </h3>
             </div>
-            <div class="form-control py-8 w-full mx-auto uppercase">
+            <div class="form-control space-y-4 w-full mx-auto uppercase">
                     <div class="space-y-4">
                         <input
                         type="text"
