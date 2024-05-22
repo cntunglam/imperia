@@ -1,5 +1,5 @@
 <template>
-    <main class="_body space-y-8">
+    <main class="_body md:px-2 space-y-8">
       <div>
         <h2 class="text-[20px] uppercase text-center">create an account</h2>
       </div>

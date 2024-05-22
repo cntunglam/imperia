@@ -1,7 +1,7 @@
 <template>
-    <div class="card cursor-pointer bg-current border-[1px] border-black rounded-none text-neutral-content" @click="showModal(id)"> 
+    <div class="card cursor-pointer border-[1px] border-black rounded-none text-neutral-content" :class="isActive ? 'bg-black text-white' : 'bg-current text-neutral-content'" @click="showModal(id)"> 
         <div class="card-body py-4">
-            <p class="text-[12px] font-bold text-black">
+            <p class="text-[12px] font-bold" :class="isActive ? 'text-white' : 'text-black'">
                 {{ isPrimary === true ? 'Primary Address' : 'Address' }}
             </p>
             <div>
@@ -29,7 +29,7 @@
                         type="text"
                         placeholder="Address"
                         class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-                        />
+                        />  
                         <input
                         type="text"
                         placeholder="Province/State/County"
@@ -57,7 +57,7 @@ export default {
     props: {
         id: String,
         isPrimary: Boolean,
-
+        isActive: Boolean
     },
     methods: {
         showModal(id) {

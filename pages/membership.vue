@@ -73,10 +73,9 @@ import AddressCard from '~/components/addressCard.vue';
                                     </div>
                                 </div>
                                 </td>
-                                <td class="text-right px-0 py-8">
-                                    <div class="">
+                                <td class="text-right px-0">
+                                    <div class="h-32 mt-10">
                                         <div class="">$200 USD</div>
-                                        <div class="underline my-6 pt-4">Remove</div>
                                     </div>
                                 </td>
                             </tr>
@@ -103,10 +102,9 @@ import AddressCard from '~/components/addressCard.vue';
                                     </div>
                                 </div>
                                 </td>
-                                <td class="text-right px-0 py-8">
-                                    <div class="">
+                                <td class="text-right px-0">
+                                    <div class="h-32 mt-10">
                                         <div class="">$200 USD</div>
-                                        <div class="underline my-6 pt-4">Remove</div>
                                     </div>
                                 </td>
                             </tr>

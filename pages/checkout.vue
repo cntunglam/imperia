@@ -1,6 +1,5 @@
 <script setup>
     import { ref } from 'vue';
-
     const activeTab = ref('summary');
     const activePayment = ref('')
 
@@ -164,9 +163,9 @@
                     
                 </div>
                 <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 mb-4 mt-8 max-w-3xl">
-                            <AddressCard :isPrimary = "true"/>
-                            <AddressCard :isPrimary = "false"/>
-                            <AddressCard :isPrimary = "false"/>
+                            <AddressCard :isPrimary = "true" :isActive="true"/>
+                            <AddressCard :isPrimary = "false" :isActive="false"/>
+                            <AddressCard :isPrimary = "false" :isActive="false"/>
                     </div>
                 <div class="form-control py-8 w-full mx-auto uppercase">
                     <div class="space-y-4">
@@ -274,9 +273,9 @@
 
                     <div v-if="activePayment === 'creditcard'">
                         <div class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl">
-                            <credit-card/>
-                            <credit-card/>
-                            <credit-card/>
+                            <credit-card :isActive="true"/>
+                            <credit-card :isActive="false"/>
+                            <credit-card :isActive="false"/>
                         </div>
                         <div class="form-control py-8 w-full mx-auto uppercase">
                             <div class="space-y-4">

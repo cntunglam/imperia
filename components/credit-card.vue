@@ -1,9 +1,9 @@
 <template>
-    <div class="card cursor-pointer bg-current border-[1px] border-black rounded-none text-neutral-content" @click="showModal(id)"> 
-        <div class="card-body py-2">
+    <div class="card cursor-pointer border-[1px] border-black rounded-none text-neutral-content" :class="isActive ? 'bg-black text-white' : 'bg-current'" @click="showModal(id)"> 
+        <div class="card-body py-2" :class="isActive ? ' text-white' : 'text-black'">
             <Icon name="logos:mastercard" class="text-4xl"/>
-            <p class="text-black">**** **** **** **** 5472</p>
-            <p class="text-black">02/27 </p>
+            <p class="">**** **** **** **** 5472</p>
+            <p class="">02/27 </p>
         </div>
     </div>
     <dialog :id="id" class="modal rounded-none">
@@ -17,6 +17,7 @@
                     <h3 class="font-bold text-[12px] text-center uppercase">
                         Edit Card       
                     </h3>
+
             </div>
             <div class="form-control w-full mx-auto  space-y-4 uppercase">
                 <input
@@ -44,11 +45,13 @@
                                 class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
                                 />
                 </div>
-                <div class="grid grid-cols-2 gap-2 w-full justify-stretch align-middle">
+                                <div class="grid grid-cols-2 gap-2 w-full justify-stretch align-middle">
                     <button class="btn btn-primary">Save Changes</button>
                     <button class="btn btn-outline">Remove Card</button>
                 </div>
+
             </div>
+
         </div>
     </dialog>
 </template>
@@ -56,7 +59,8 @@
 <script>
 export default {
     props: {
-        id: String
+        id: String,
+        isActive: Boolean
     },
     methods: {
         showModal(id) {
