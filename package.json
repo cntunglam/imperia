@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "netlify dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -16,12 +16,15 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "daisyui": "^3.9.3",
     "nuxt": "^3.8.0",
+    "nuxt-graphql-client": "^0.2.34",
     "nuxt-icon": "^0.6.1",
     "prettier": "3.2.5",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@netlify/functions": "^2.7.0",
+    "@shopify/storefront-api-client": "^0.3.4",
     "animate.css": "^4.1.1",
     "nuxt-swiper": "^1.2.2"
   }

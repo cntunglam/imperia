@@ -1,8 +1,15 @@
 <script setup>
+import { GET_PRODUCTS } from "~/queries/getProduct";
 import { product } from "/assets/product.json";
 useSeoMeta({
   title: "Imperia",
 });
+const { $shopifyClient } = useNuxtApp();
+const { data } = await useAsyncData('products', () =>
+  $shopifyClient.request(GET_PRODUCTS)
+);
+const products = data.value?.data.products.edges.map(edge => edge.node) || [];
+console.log(products)
 </script>
 <template>
   <main class="pb-1">

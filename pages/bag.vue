@@ -2,7 +2,6 @@
 <main class="_body">
         <div>
             <h1 class="text-center uppercase text-[20px]">Bag</h1>
-
             <div class="overflow-x-auto">
                 <table class="table min-w-max text-[10px] uppercase border-black">
                     <thead>

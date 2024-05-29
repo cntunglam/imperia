@@ -2,12 +2,26 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "nuxt-icon", "nuxt-swiper", '@nuxtjs/device'],
-  plugins: ['~/plugins/dateFormatDirective.js'],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+    "nuxt-icon",
+    "nuxt-swiper",
+    "@nuxtjs/device",
+    "nuxt-graphql-client",
+  ],
+  plugins: ["~/plugins/dateFormatDirective.js", "~/plugins/shopifyClient.js"],
   colorMode: {
     preference: "system", // default theme
     dataValue: "theme", // activate data-theme in <html> tag
     classSuffix: "",
+  },
+  runtimeConfig: {
+    public: {
+      shopifyStoreDomain: process.env.NUXT_SHOPIFY_STORE_DOMAIN,
+      shopifyStorefrontAccessToken:
+        process.env.NUXT_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+    },
   },
   app: {
     head: {
@@ -24,6 +38,6 @@ export default defineNuxtConfig({
     },
   },
   device: {
-    refreshOnResize: true
-  }
+    refreshOnResize: true,
+  },
 });

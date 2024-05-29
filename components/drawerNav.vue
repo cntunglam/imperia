@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
   <header class="sticky top-0 w-full z-10">
     <div class="bg-black flex align-middle justify-center">
       <p class="header-text text-sm w-full text-right text-white py-1">
-        Lorem Ipsum
+        Lorem Ipsum Test 1
       </p>
     </div>
     <div class="navbar bg-white">
