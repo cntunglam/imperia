@@ -1,14 +1,22 @@
-// queries.js
 export const GET_PRODUCTS = `
-  query {
-    products(first: 10) {
+  query($number: Int) {
+    products(first: $number) {
       edges {
         node {
           id
           title
           handle
           description
-          images(first: 1) {
+          availableForSale
+          variants(first: 10) {
+            nodes {
+              price {
+                amount
+                currencyCode
+              }
+            }
+          }
+          images(first: 10) {
             edges {
               node {
                 src

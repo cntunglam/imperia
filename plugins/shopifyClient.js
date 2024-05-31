@@ -6,8 +6,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     storeDomain: config.public.shopifyStoreDomain,
     apiVersion: '2024-04',
     publicAccessToken: config.public.shopifyStorefrontAccessToken,
-    customFetchApi: nuxtApp.$fetch
   });
+    console.log(shopifyClient); // Check if the client is created correctly
   return {
     provide: {
       shopifyClient
