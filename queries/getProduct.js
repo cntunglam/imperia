@@ -14,6 +14,10 @@ export const GET_PRODUCTS = `
                 amount
                 currencyCode
               }
+                selectedOptions {
+                    name
+                    value
+            }
             }
           }
           images(first: 10) {
@@ -27,4 +31,44 @@ export const GET_PRODUCTS = `
       }
     }
   }
+`;
+
+export const GET_PRODUCT_BY_HANDLE = `
+query($handle: String!) {
+  productByHandle(handle: $handle) {
+    availableForSale
+    descriptionHtml
+    handle
+    id
+    title
+    trackingParameters
+    totalInventory
+    updatedAt
+    images(first: 10) {
+        edges {
+            node {
+                src
+            }
+        }
+    }
+    variants(first: 10) {
+      nodes {
+        availableForSale
+                      price {
+                amount
+                currencyCode
+              }
+                selectedOptions {
+                    name
+                    value
+            }
+
+        image {
+          src
+        }
+        id
+      }
+    }
+  }
+}
 `;

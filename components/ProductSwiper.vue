@@ -1,4 +1,10 @@
 <script setup>
+const props = defineProps({
+  images: {
+    type: Array,
+    required: true
+  }
+});
 </script>
 <style>
   .swiper-pagination {
@@ -50,26 +56,8 @@
         eventsTarget: '#swiper',
       }"
     >
-      <SwiperSlide class="">
-        <img src="/img/products/short/flatback.png"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/flatfront.png"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/closeupshorts.jpg"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/modelfront.jpg"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/modelmain.jpg"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/1.jpg"/>
-      </SwiperSlide>
-      <SwiperSlide class="">
-        <img src="/img/products/short/2.jpg"/>
+      <SwiperSlide v-for="image in images" :key="image" class="">
+        <img :src="image.src" />
       </SwiperSlide>
     </Swiper>
   </div>

@@ -5,6 +5,7 @@ defineProps({
   Image: String,
   inStock: Boolean,
   link: String,
+  productColor: String,
 });
 </script>
 <template>
@@ -32,7 +33,7 @@ defineProps({
         <p
           class="text-[11px] md:text-[12px] uppercase text-center text-gray-600"
         >
-          Product Color
+          {{ productColor }}
         </p>
         <p class="text-[12px] text-center py-1"><span>$</span>{{ price }}</p>
       </div>

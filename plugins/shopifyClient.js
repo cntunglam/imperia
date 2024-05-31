@@ -7,7 +7,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     apiVersion: '2024-04',
     publicAccessToken: config.public.shopifyStorefrontAccessToken,
   });
-    console.log(shopifyClient); // Check if the client is created correctly
   return {
     provide: {
       shopifyClient

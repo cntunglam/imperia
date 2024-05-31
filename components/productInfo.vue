@@ -1,6 +1,10 @@
 <script setup>
   defineProps({
     isOutOfStock: Boolean,
+    productName: String,
+    price: String,
+    description: String,
+    availableSize: Object,
   });
 
 </script>
@@ -8,8 +12,8 @@
       <div class="px-2 grid place-content-start md:w-3/4 m-auto">
         <div class="text-center space-y-6 pt-6 pb-4">
           <div class="">
-            <h1 class="text-[12px] uppercase">Imperia Hoodie</h1>
-            <p class="text-[12px]">$200</p>
+            <h1 class="text-[12px] uppercase">{{ productName }}</h1>
+            <p class="text-[12px]">${{ price }}</p>
           </div>
           <p class=" uppercase text-sm">
             black short sleeve t-shirt in a lightweight jersey cotton
@@ -37,24 +41,23 @@
         </div>
         </div>
       <OrderModal v-else/>
-      <div class="px-2 text-left space-y-6 pt-6 pb-10">
-        <ul class="space-y-2 list-none uppercase text-sm">
-          <li>- Laser printed script logo on front</li>
-          <li>- 150 GSM 100% french terry cotton</li>
-          <li>- slightly oversized fit</li>
-        </ul>
-        <p class="uppercase text-sm">
-          Balenciaga Skiwear is a line consisting of technically advanced
-          thermal separates, comfortable and protective outerwear, accessories,
-          and winter sport equipment. Each Skiwear product’s sophisticated
-          design is engineered to withstand the elements.
-        </p>
-        <p class="uppercase text-sm">
-          Material: 99% cotton, 1% elastane <br />
-          Product ID: 773668TPVQ21000
-        </p>
+      <div>
+        <div v-html="description" class="productInfo"></div>
       </div>
       <Accordion />
     </div>
-
 </template>
+<style scoped>
+.productInfo ul {
+  list-style: disc !important; 
+  text-transform: uppercase;
+}
+
+.productInfo p {
+  @apply uppercase text-sm
+}
+
+.productInfo {
+  @apply px-2 text-left space-y-6 pt-6 pb-10 text-[14px]
+}
+</style>

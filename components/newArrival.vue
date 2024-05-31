@@ -34,9 +34,10 @@ onMounted(async () => {
     >
       <div v-for="item in products" :key="item.id">
         <ProductCard
-          :link="item.id"
+          :link="`/product/${item.handle}`"
           :inStock="item.availableForSale"
           :productName="item.title"
+          :productColor="item.variants.nodes[0]?.selectedOptions[0]?.value"
           :Image="item.images.edges[0]?.node.src"
           :price="item.variants.nodes[0]?.price.amount"
         />

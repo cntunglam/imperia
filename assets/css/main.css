@@ -143,7 +143,7 @@ input[type="checkbox"]:checked + label::before {
 
 /* Style the checkmark inside the custom checkbox */
 input[type="checkbox"] + label::after {
-  content: '\2713'; /* Unicode checkmark symbol */
+  content: '2713'; /* Unicode checkmark symbol */
   position: absolute;
   top: 8px;
   left: 3px;
