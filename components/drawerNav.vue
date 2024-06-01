@@ -104,6 +104,10 @@ onBeforeUnmount(() => {
   animation: slideInLeft 15s infinite linear;
 }
 
+header a:hover {
+  background: transparent !important ;
+}
+
 @media (min-width: 768px) {
   .header-text {
     animation-duration: 45s;

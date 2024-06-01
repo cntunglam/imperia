@@ -11,17 +11,17 @@
     <div class="mx-auto w-full text-center space-y-4">
         <div>
         <p class=" text-[12px] font-thin">Frequently Ask Questions</p>
-        <button class="btn btn-primary text-[10px] w-full mt-4">See FAQ</button>
+        <NuxtLink to="/faq" class="btn btn-primary text-[10px] w-full mt-4">See FAQ</NuxtLink>
     </div>
     <div>
         <p class=" text-[12px] font-thin">Call Us</p>
         <p>Mon - Fri 9AM - 9PM EST</p>
         <p>Sat - Sun 10AM - 7PM EST</p>
-        <button class="btn btn-primary text-[10px] w-full mt-4">+1 (678) 782 8404</button>
+        <NuxtLink to="tel:+16787828404" class="btn btn-primary text-[10px] w-full mt-4">+1 (678) 782 8404</NuxtLink>
     </div>
     <div class="pt-8">
         <p class=" text-[12px] font-thin">Email Us</p>
-        <button class="btn btn-primary text-[10px] w-full mt-4">Send A Message</button>
+        <NuxtLink to="mailto:NjLbE@example.com" class="btn btn-primary text-[10px] w-full mt-4">Send A Message</NuxtLink>
     </div>
 
     </div>

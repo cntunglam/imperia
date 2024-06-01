@@ -5,8 +5,8 @@
     price: String,
     description: String,
     availableSize: Object,
-  });
-
+    short_description: String,
+});
 </script>
 <template>
       <div class="px-2 grid place-content-start md:w-3/4 m-auto">
@@ -16,7 +16,7 @@
             <p class="text-[12px]">${{ price }}</p>
           </div>
           <p class=" uppercase text-sm">
-            black short sleeve t-shirt in a lightweight jersey cotton
+            {{ short_description }}
           </p>
         </div>
         <div v-if="!isOutOfStock" class="form-control py-0 m-0 w-full px-2 text-xl">
@@ -44,7 +44,7 @@
       <div>
         <div v-html="description" class="productInfo"></div>
       </div>
-      <Accordion />
+      <slot />
     </div>
 </template>
 <style scoped>

@@ -30,9 +30,6 @@ p {
   @apply uppercase text-[12px];
 }
 
-a:hover {
-  background: transparent !important;
-}
 
 .video-docker video {
   top: 50%;
@@ -88,9 +85,15 @@ p {
   @apply rounded-none font-thin text-[12px] my-[14px] max-w-full;
 }
 
+.btn-primary {
+  @apply hover:bg-black
+}
+
 .btn-stack {
   @apply my-0
 }
+
+
 
 tr {
   border-bottom: 1px solid black !important;
@@ -143,7 +146,7 @@ input[type="checkbox"]:checked + label::before {
 
 /* Style the checkmark inside the custom checkbox */
 input[type="checkbox"] + label::after {
-  content: '2713'; /* Unicode checkmark symbol */
+  content: '\2713'; /* Unicode checkmark symbol */
   position: absolute;
   top: 8px;
   left: 3px;

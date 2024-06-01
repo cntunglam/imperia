@@ -44,6 +44,21 @@ query($handle: String!) {
     trackingParameters
     totalInventory
     updatedAt
+    seo {
+      description
+      title
+    }
+    metafields(identifiers: [
+      {key: "short_description", namespace: "custom"},
+      {key: "payment", namespace: "custom"},
+      {key: "free_shipping_free_returns", namespace: "custom"}
+      {key: "product_sustainability", namespace: "custom"}
+      {key: "stylewith", namespace: "custom"}
+    ]) {
+        id
+        key
+        value
+    }
     images(first: 10) {
         edges {
             node {
