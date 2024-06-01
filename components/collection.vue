@@ -1,51 +1,37 @@
+<script setup>
+import { GET_ALL_COLLECTIONS } from "~/queries/getCollection";
+
+const { $shopifyClient } = useNuxtApp();
+const loading = ref(true);
+const collections = ref([]);
+onMounted(async () => {
+  try {
+    const { data } = await $shopifyClient.request(GET_ALL_COLLECTIONS);
+    collections.value = data.collections.edges.map((edge) => edge.node);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    loading.value = false;
+  }
+});
+</script>
 <template>
   <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1">
     <div
-      class="w-full hover:filter hover:grayscale duration-100 flex justify-center lg:row-span-2 lg:col-span-1 col-span-2 bg-top lg:bg-center bg-cover bg-[url('/img/luxury.jpg')]"
+      v-for="(collection, index) in collections"
+      :key="collection.id"
+      class="w-full hover:filter hover:grayscale duration-100 flex justify-center bg-top lg:bg-center bg-cover"
+      :class="[
+        index === 0 ? 'lg:row-span-2 lg:col-span-1 col-span-2' : '',
+        'bg-top lg:bg-center bg-cover'
+      ]"
+      :style="{ backgroundImage: `url(${collection.image.src})`}"
     >
       <div
         class="w-full px-10 py-1 align- mx-auto justify-center self-end flex"
       >
-        <a href="/collection" class="">
-          <h2 class="text-[14px] text-white py-1 px-20 uppercase">Luxury</h2>
-        </a>
-      </div>
-    </div>
-    <div
-      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-center bg-[url('/img/t-shirt.jpeg')]"
-    >
-      <div class="mx-auto justify-center self-end flex">
-        <a href="/collection" class="">
-          <h2 class="text-[14px] text-white py-1 px-10 uppercase">T-Shirts</h2>
-        </a>
-      </div>
-    </div>
-    <div
-      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-[url('/img/Hats_1.jpeg')]"
-    >
-      <div class="mx-auto justify-center self-end flex">
-        <a href="/collection">
-          <h2 class="text-[14px] text-white px-10 py-1 uppercase">
-            Accessories
-          </h2>
-        </a>
-      </div>
-    </div>
-    <div
-      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-[url('/img/hoodie.webp')]"
-    >
-      <div class="mx-auto justify-center self-end flex">
-        <a href="/collection">
-          <h2 class="text-[14px] text-white py-1 px-10 uppercase">Hoodies</h2>
-        </a>
-      </div>
-    </div>
-    <div
-      class="hover:filter hover:grayscale duration-100 flex justify-center bg-cover bg-[url('/img/shorts.webp')]"
-    >
-      <div class="mx-auto justify-center self-end flex">
-        <a href="/collection">
-          <h2 class="text-[14px] text-white py-1 px-10 uppercase">Shorts</h2>
+        <a :href="`/collection/${collection.handle}`">
+          <h2 class="text-[14px] text-white py-1 px-20 uppercase">{{ collection.title }}</h2>
         </a>
       </div>
     </div>
