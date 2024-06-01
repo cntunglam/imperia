@@ -9,6 +9,7 @@
         :price="product.variants?.nodes[0]?.price.amount"
         :availableSize="product.variants?.nodes"
         :short_description="short_description"
+        :variants="variants"
       >
         <Accordion
           :free_shipping_free_returns="free_shipping_free_returns"
@@ -34,6 +35,7 @@ const product_sustainability = ref("");
 const free_shipping_free_returns = ref("");
 const payment = ref("");
 const styleWith = ref([]);
+const variants = ref([]);
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_PRODUCT_BY_HANDLE, {
@@ -57,6 +59,8 @@ onMounted(async () => {
     styleWith.value = JSON.parse(
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
+    variants.value = product.value.variants.nodes;
+    console.log(variants.value);
   } catch (error) {
     console.error(error);
   } finally {

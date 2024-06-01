@@ -6,6 +6,7 @@
     description: String,
     availableSize: Object,
     short_description: String,
+    variants: Array
 });
 </script>
 <template>
@@ -28,11 +29,13 @@
           class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
         >
           <option disabled selected>Select A Size</option>
-          <option>XS</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
+          <option
+            v-for="variant in variants"
+            :key="variant"
+            :value="size"
+          >
+            {{ variant.selectedOptions[1].value }}
+          </option>
         </select>
         <div
           class="btn btn-primary w-full top-90 bg-black font-normal text-white mb-0 p-4 uppercase rounded-none"
@@ -45,7 +48,7 @@
         <div v-html="description" class="productInfo"></div>
       </div>
       <slot />
-    </div>
+     </div>
 </template>
 <style scoped>
 .productInfo ul {
