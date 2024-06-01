@@ -60,7 +60,6 @@ onMounted(async () => {
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
     variants.value = product.value.variants.nodes;
-    console.log(variants.value);
   } catch (error) {
     console.error(error);
   } finally {

@@ -8,48 +8,49 @@
     short_description: String,
     variants: Array
 });
+const size = ref("");
+console.log(size.value)
 </script>
+
 <template>
-      <div class="px-2 grid place-content-start md:w-3/4 m-auto">
-        <div class="text-center space-y-6 pt-6 pb-4">
-          <div class="">
-            <h1 class="text-[12px] uppercase">{{ productName }}</h1>
-            <p class="text-[12px]">${{ price }}</p>
-          </div>
-          <p class=" uppercase text-sm">
-            {{ short_description }}
-          </p>
-        </div>
-        <div v-if="!isOutOfStock" class="form-control py-0 m-0 w-full px-2 text-xl">
-        <label class="label">
-          <span class="label-text uppercase">Size: (US)</span>
-          <span class="label-text uppercase underline">Size Guide</span>
-        </label>
-        <select
-          class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
-        >
-          <option disabled selected>Select A Size</option>
-          <option
-            v-for="variant in variants"
-            :key="variant"
-            :value="size"
-          >
-            {{ variant.selectedOptions[1].value }}
-          </option>
-        </select>
-        <div
-          class="btn btn-primary w-full top-90 bg-black font-normal text-white mb-0 p-4 uppercase rounded-none"
-        >
-          <p class="text-center">Add To Bag</p>
-        </div>
-        </div>
-      <OrderModal v-else/>
-      <div>
-        <div v-html="description" class="productInfo"></div>
+  <div class="px-2 grid place-content-start md:w-3/4 m-auto">
+    <div class="text-center space-y-6 pt-6 pb-4">
+      <div class="">
+        <h1 class="text-[12px] uppercase">{{ productName }}</h1>
+        <p class="text-[12px]">${{ price }}</p>
       </div>
-      <slot />
-     </div>
+      <p class="uppercase text-sm">{{ short_description }}</p>
+    </div>
+    <div v-if="!isOutOfStock" class="form-control py-0 m-0 w-full px-2 text-xl">
+      <label class="label">
+        <span class="label-text uppercase">Size: (US)</span>
+        <span class="label-text uppercase underline">Size Guide</span>
+      </label>
+      <select
+        class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
+        v-model="size"
+      >
+              <option disabled selected value="">Select A Size</option> 
+
+        <option v-for="variant in variants" :key="variant" :value="variant.selectedOptions[1].value">
+          {{ variant.selectedOptions[1].value }}
+        </option>
+      </select>
+      <div
+        class="btn btn-primary w-full top-90 bg-black font-normal text-white mb-0 p-4 uppercase rounded-none"
+        :class="{ 'btn-disabled': !size }"
+      >
+        <p class="text-center">Add To Bag</p>
+      </div>
+    </div>
+    <OrderModal v-else />
+    <div>
+      <div v-html="description" class="productInfo"></div>
+    </div>
+    <slot />
+  </div>
 </template>
+
 <style scoped>
 .productInfo ul {
   list-style: disc !important; 
