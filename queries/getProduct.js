@@ -87,3 +87,36 @@ query($handle: String!) {
   }
 }
 `;
+
+export const GET_PRODUCTS_BY_ID = `
+  query($ids: [ID!]!  ) {
+    nodes(ids: $ids) {
+      ... on Product {
+        id
+        title
+        handle
+        description
+        availableForSale
+        images(first: 10) {
+          edges {
+            node {
+              src
+            }
+          }
+        }
+        variants(first: 10) {
+          nodes {
+            price {
+              amount
+              currencyCode
+            }
+            selectedOptions {
+              name
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+`;
