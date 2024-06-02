@@ -1,3 +1,9 @@
+<script setup>
+  defineProps({
+    videoUrl: String,
+  })
+
+</script>
 <template>
   <section
     class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3 z-0"
@@ -7,7 +13,7 @@
     >
       <video
         class="min-w-full min-h-full absolute object-cover"
-        src="https://cdn.shopify.com/videos/c/o/v/14ae374354824cf380c31dbdebc6e238.mp4"
+        :src="videoUrl"
         type="video/mp4"
         playsinline
         autoplay
