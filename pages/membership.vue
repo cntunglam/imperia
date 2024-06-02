@@ -55,7 +55,7 @@ import AddressCard from '~/components/addressCard.vue';
                                 <td>
                                 <div class="flex items-center align-middle gap-3">
                                     <div class="w-32">
-                                        <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                                        <img src="https://cdn.shopify.com/s/files/1/0815/2046/0068/files/flatbacktransparent.png?v=1716971277" alt="Avatar Tailwind CSS Component" />
                                     </div>
                                     <div class="">
                                     <div>Imperia Short
@@ -157,7 +157,7 @@ import AddressCard from '~/components/addressCard.vue';
                         <td>
                         <div class="flex items-center gap-3">
                             <div class="w-32">
-                                <img src="/img/products/short/flatfront.png" alt="Avatar Tailwind CSS Component" />
+                                <img src="https://cdn.shopify.com/s/files/1/0815/2046/0068/files/flatbacktransparent.png?v=1716971277" alt="Avatar Tailwind CSS Component" />
                             </div>
                             <div class="">
                                 <div class="">[Order Status]
