@@ -11,7 +11,7 @@
     <div class="mx-auto w-full text-center space-y-4">
         <div>
         <p class=" text-[12px] font-thin">Frequently Ask Questions</p>
-        <NuxtLink to="/faq" class="btn btn-primary text-[10px] w-full mt-4">See FAQ</NuxtLink>
+        <NuxtLink to="/page/faq" class="btn btn-primary text-[10px] w-full mt-4">See FAQ</NuxtLink>
     </div>
     <div>
         <p class=" text-[12px] font-thin">Call Us</p>

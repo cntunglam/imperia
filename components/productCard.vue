@@ -35,7 +35,7 @@ defineProps({
         >
           {{ productColor }}
         </p>
-        <p class="text-[12px] text-center py-1"><span>$</span>{{ price }}</p>
+        <p class="text-[12px] text-center py-1"><span>$</span>{{ price.split(".")[0] }}</p>
       </div>
     </div>
   </a>

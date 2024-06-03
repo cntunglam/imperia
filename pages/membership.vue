@@ -1,6 +1,6 @@
 <script setup>
     import { ref } from 'vue';
-import AddressCard from '~/components/addressCard.vue';
+    import AddressCard from '~/components/addressCard.vue';
 
     const activeTab = ref('account');
 

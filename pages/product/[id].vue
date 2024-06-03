@@ -61,7 +61,7 @@ onMounted(async () => {
     ).map((item) => item.replace(/"/g, ""));
     variants.value = product.value.variants.nodes;
   } catch (error) {
-    console.error(error);
+    navigateTo('/')
   } finally {
     loading.value = false;
   }

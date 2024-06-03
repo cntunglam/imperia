@@ -1,15 +1,20 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import { GET_METAOBJECT } from "~/queries/getMetaobject";
 const isHidden = ref(true);
 const lastScrollTop = ref(0);
+const menu = ref([]);
+const loading = ref(true);
+const topbarText = ref("");
+const menuItems = ref({});
+const { $shopifyClient } = useNuxtApp();
 
 const handleScroll = () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop >= lastScrollTop.value && scrollTop > 100) {
     // Scrolling down
     isHidden.value = true;
-  }
-  else {
+  } else {
     // Scrolling up
     isHidden.value = false;
   }
@@ -21,47 +26,65 @@ const handleHideSearchbar = () => {
   if (scrollTop >= lastScrollTop.value && scrollTop > 100) {
     // Scrolling down
     isHidden.value = true;
-  }
-  else {
+  } else {
     // Scrolling up
     isHidden.value = true;
   }
   lastScrollTop.value = scrollTop;
 };
 
+onMounted(async () => {
+  try {
+    const { data } = await $shopifyClient.request(GET_METAOBJECT, {
+      variables: {
+        handle: "main-menu-1",
+        type: "main_menu",
+      },
+    });
+
+    menu.value = data.metaobject.fields;
+    menuItems.value = JSON.parse(
+      menu.value.find((obj) => obj.key === "menu").value
+    );
+    topbarText.value = menu.value.find(
+      (obj) => obj.key === "top_bar_text"
+    ).value;
+    console.log(menuItems.value);
+    console.log(topbarText.value);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    loading.value = false;
+  }
+});
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
-    window.addEventListener("scroll", handleScroll);  
-  } 
-  else {
+    window.addEventListener("scroll", handleScroll);
+  } else {
     window.addEventListener("scroll", handleHideSearchbar);
   }
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
-
-
 });
 </script>
 <template>
   <header class="sticky top-0 w-full z-10">
     <div class="bg-black flex align-middle justify-center">
       <p class="header-text text-sm w-full text-right text-white py-1">
-        Lorem Ipsum Test 1
+        {{ topbarText }}
       </p>
     </div>
     <div class="navbar bg-white">
       <div class="navbar-start">
         <ul class="menu menu-horizontal text-sm uppercase hidden xl:flex">
-          <li><a href="/collection">Shop</a></li>
-          <li><a href="/">Company</a></li>
-          <li><a href="/">Design</a></li>
-          <li><a href="/">Couture</a></li>
-          <li><a href="/">Audio</a></li>
+          <li v-for="item in menuItems.MainMenu" :key="item">
+            <a :href="item.link"> {{ item.name }}</a>
+          </li>
         </ul>
-        <MobileMenu @click="isHidden = false" />
+        <MobileMenu :menuItems="menuItems" @click="isHidden = false" />
       </div>
       <div class="navbar-center">
         <a href="/" class="btn btn-ghost text-xl">
@@ -69,9 +92,11 @@ onBeforeUnmount(() => {
         </a>
       </div>
       <div class="navbar-end">
-        <ul class="menu menu-horizontal text-sm px-2 md:px-4 uppercase space-x-2">
-          <div class="hidden md:flex "> 
-            <li><a href="/client-service">Client Services</a></li>
+        <ul
+          class="menu menu-horizontal text-sm px-2 md:px-4 uppercase space-x-2"
+        >
+          <div class="hidden md:flex">
+            <li><a href="/page/client-service">Client Services</a></li>
             <li><a href="/login">Login</a></li>
           </div>
           <Icon

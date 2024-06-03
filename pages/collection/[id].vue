@@ -38,9 +38,8 @@ onMounted(async () => {
     products.value = data.collectionByHandle.products.edges.map(
       (edge) => edge.node
     );
-    console.log(product.value);
   } catch (error) {
-    console.error(error);
+    navigateTo("/collection");
   } finally {
     loading.value = false;
   }
