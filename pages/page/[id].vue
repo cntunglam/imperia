@@ -4,8 +4,14 @@
         <div v-html="bodyText"></div>
     </main>
 </template>
+<style scope>
+  h2 {
+    @apply py-4
+  }
+</style>
 <script setup>
 import { GET_METAOBJECT } from "~/queries/getMetaobject";
+import { convertSchemaToHtml } from '@thebeyondgroup/shopify-rich-text-renderer'
 
 const { id } = useRoute().params;
 const { $shopifyClient } = useNuxtApp();
@@ -23,7 +29,7 @@ onMounted(async () => {
     });
     content.value = data.metaobject.fields;
     title.value = content.value.find((obj) => obj.key === "title").value;
-    bodyText.value = content.value.find((obj) => obj.key === "content").value;
+    bodyText.value = convertSchemaToHtml( content.value.find((obj) => obj.key === "content").value)
 } catch (error) {
     console.log(error);
 } finally {
