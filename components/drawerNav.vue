@@ -49,8 +49,6 @@ onMounted(async () => {
     topbarText.value = menu.value.find(
       (obj) => obj.key === "top_bar_text"
     ).value;
-    console.log(menuItems.value);
-    console.log(topbarText.value);
   } catch (error) {
     console.error(error);
   } finally {
