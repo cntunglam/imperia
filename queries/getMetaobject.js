@@ -8,6 +8,15 @@ export const GET_METAOBJECT = `
                     id
                     url
                     }
+                    ... on Metaobject {
+                    fields {
+                        key
+                        type
+                        value
+                    }
+                        handle
+                        id
+                        }
                     ... on MediaImage {
                     id
                     image {
@@ -28,7 +37,7 @@ export const GET_METAOBJECT = `
             id
         }
         }
-`
+`;
 
 export const GET_METAOBJECTS = `
     query($type: String!) {
@@ -49,6 +58,16 @@ export const GET_METAOBJECTS = `
                         src
                     }
                 }
+                ...on Metaobject {
+                    id
+                    handle                    
+                }
+                ... on Video {
+                    id
+                    sources {
+                    url
+                    }
+                }
             }
             }
             handle
@@ -56,6 +75,4 @@ export const GET_METAOBJECTS = `
             }
         }
     }
-`
-
-
+`;

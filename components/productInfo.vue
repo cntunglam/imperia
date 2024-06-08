@@ -9,7 +9,6 @@
     variants: Array
 });
 const size = ref("");
-console.log(size.value)
 </script>
 
 <template>
