@@ -5,7 +5,7 @@
         v-for="item in content"
         :key="item"
         class="card bg-base-100 w-full z-0 h-[400px] shadow-xl rounded-none cursor-pointer image-full"
-        @click="navigateTo(`/design/${item.handle}`)"
+        @click="navigateTo(`/audio/${item.handle}`)"
       >
         <figure>
           <img

@@ -29,7 +29,7 @@ onMounted(async () => {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {
       variables: {
         handle: id,
-        type: "design",
+        type: "audio",
       },
     });
     content.value = data.metaobject.fields;
