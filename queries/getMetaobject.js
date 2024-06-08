@@ -29,3 +29,33 @@ export const GET_METAOBJECT = `
         }
         }
 `
+
+export const GET_METAOBJECTS = `
+    query($type: String!) {
+          metaobjects(type: $type, first: 250) {
+            nodes {
+            fields {
+                key
+                type
+                value
+                reference {
+                ... on GenericFile {
+                    id
+                    url
+                }
+                ... on MediaImage {
+                    id
+                    image {
+                        src
+                    }
+                }
+            }
+            }
+            handle
+            id
+            }
+        }
+    }
+`
+
+

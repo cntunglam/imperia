@@ -25,6 +25,7 @@
   "dependencies": {
     "@netlify/functions": "^2.7.0",
     "@shopify/storefront-api-client": "^0.3.4",
+    "@thebeyondgroup/shopify-rich-text-renderer": "github:thebeyondgroup/shopify-rich-text-renderer",
     "animate.css": "^4.1.1",
     "nuxt-swiper": "^1.2.2"
   }
