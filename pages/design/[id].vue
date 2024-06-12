@@ -5,11 +5,11 @@
     </main>
 </template>
 <style scope>
-  h2 {
+  ._body h2 {
     @apply py-4
   }
 
-  img {
+  ._body img {
     @apply mx-auto py-4
   }
 </style>
