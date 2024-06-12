@@ -16,7 +16,7 @@ const size = ref("");
     <div class="text-center space-y-6 pt-6 pb-4">
       <div class="">
         <h1 class="text-[12px] uppercase">{{ productName }}</h1>
-        <p class="text-[12px]">${{ price }}</p>
+        <p class="text-[12px]">${{ price?.split(".")[0] }}</p>
       </div>
       <p class="uppercase text-sm">{{ short_description }}</p>
     </div>
