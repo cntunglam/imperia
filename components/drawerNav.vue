@@ -58,9 +58,9 @@ onMounted(async () => {
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {passive: true});
   } else {
-    window.addEventListener("scroll", handleHideSearchbar);
+    window.addEventListener("scroll", handleHideSearchbar, {passive: true});
   }
 });
 

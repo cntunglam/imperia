@@ -14,7 +14,6 @@ onMounted(async () => {
       },
     });
     content.value = data.metaobject.fields;
-    console.log(content.value)
   } catch (error) {
     console.log(error);
   } finally {
