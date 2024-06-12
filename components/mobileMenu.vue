@@ -30,7 +30,7 @@ onMounted(() => {
         </li>
       </div>
       <div class="py-32">
-        <li><a href="page/client-service">Client Services</a></li>
+        <li><a href="/page/client-service">Client Services</a></li>
         <li><a href="/login">Login</a></li>
       </div>
     </ul>

@@ -20,7 +20,7 @@
         <ul
           class="max-w-xl text-[12px] flex flex-col md:flex-row text-center md:space-x-24 uppercase"
         >
-          <li><a href="/page/client-service">Client Services</a></li>
+          <li><a href="/client-service">Client Services</a></li>
           <li><a href="">Terms Of Service</a></li>
           <li><a href="">Privacy Policy</a></li>
         </ul>
