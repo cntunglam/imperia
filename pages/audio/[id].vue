@@ -6,12 +6,13 @@
 </template>
 <style scope>
   ._body h2 {
-    @apply py-4
+    @apply py-2
   }
-
+  
   ._body img {
     @apply mx-auto py-4
   }
+
 </style>
 <script setup>
 import { GET_METAOBJECT } from "~/queries/getMetaobject";
