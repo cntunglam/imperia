@@ -15,9 +15,9 @@
           />
         </figure>
         <div class="card-body">
-          <h2 class="card-title text-white m-auto text-center">
+          <p class="card-title font-bold text-white m-auto text-center">
             {{ item.fields[2].value }}
-          </h2>
+          </p>
         </div>
       </div>
     </div>

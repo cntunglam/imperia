@@ -11,13 +11,13 @@
           <img
             :src="item.fields[1].reference.image.src"
             :alt="item.fields[2].value"
-            class="w-full h-full"
+            class="w-full h-full rounded-none"
           />
         </figure>
         <div class="card-body">
-          <h2 class="card-title text-white m-auto text-center">
+          <p class="card-title font-bold text-white m-auto text-center">
             {{ item.fields[2].value }}
-          </h2>
+          </p>
         </div>
       </div>
     </div>
