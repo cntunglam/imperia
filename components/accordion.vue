@@ -10,19 +10,19 @@
     <details class="collapse collapse-arrow uppercase">
       <summary class="collapse-title text-[12px] font-medium"> <p>PRODUCT SUSTAINABILITY</p> </summary>
       <div class="collapse-content text-[12px]"> 
-        <p>{{ product_sustainability }}</p>
+        <div v-html="product_sustainability"></div>
       </div>
     </details>
     <details class="collapse collapse-arrow uppercase">
       <summary class="collapse-title text-[12px] font-medium">Free Shipping, Free Returns</summary>
       <div class="collapse-content text-[12px]"> 
-        <p>{{ free_shipping_free_returns }}</p>
+          <div v-html="free_shipping_free_returns"></div>
       </div>
     </details>
     <details class="collapse collapse-arrow uppercase">
       <summary class="collapse-title text-[12px] font-medium">PAYMENT</summary>
       <div class="collapse-content text-[12px]"> 
-        <p>{{ payment }}</p>
+        <div v-html="payment"></div>
       </div>
     </details>
   </div>
