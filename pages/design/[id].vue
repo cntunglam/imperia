@@ -45,6 +45,7 @@ onMounted(async () => {
     );
   } catch (error) {
     console.log(error);
+    navigateTo("/design")
   } finally {
     loading.value = false;
   }

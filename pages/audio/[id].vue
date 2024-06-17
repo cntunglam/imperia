@@ -38,6 +38,7 @@ onMounted(async () => {
     bodyText.value = convertSchemaToHtml( content.value.find((obj) => obj.key === "paragraph").value)
 } catch (error) {
     console.log(error);
+    navigateTo("/audio")
 } finally {
     loading.value = false;
   }

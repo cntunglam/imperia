@@ -32,6 +32,7 @@ onMounted(async () => {
     bodyText.value = convertSchemaToHtml( content.value.find((obj) => obj.key === "content").value)
 } catch (error) {
     console.log(error);
+    navigateTo("/")
 } finally {
     loading.value = false;
   }
