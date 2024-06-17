@@ -23,6 +23,7 @@
 </template>
 <script setup>
 import { GET_PRODUCT_BY_HANDLE } from "~/queries/getProduct";
+import { convertSchemaToHtml } from "@thebeyondgroup/shopify-rich-text-renderer";
 
 const { id } = useRoute().params;
 const { $shopifyClient } = useNuxtApp();
@@ -49,19 +50,18 @@ onMounted(async () => {
     short_description.value = customData.value.find(
       (obj) => obj.key === "short_description"
     ).value;
-    product_sustainability.value = customData.value.find(
-      (obj) => obj.key === "product_sustainability"
-    ).value;
-    free_shipping_free_returns.value = customData.value.find(
-      (obj) => obj.key === "free_shipping_free_returns"
-    ).value;
-    payment.value = customData.value.find((obj) => obj.key === "payment").value;
+    product_sustainability.value = convertSchemaToHtml(customData.value.find(
+      (obj) => obj.key === "sustainability"
+    ).value); 
+    free_shipping_free_returns.value = convertSchemaToHtml(customData.value.find(
+      (obj) => obj.key === "shippingandreturn"
+    ).value); 
+    payment.value = convertSchemaToHtml(customData.value.find((obj) => obj.key === "paymentoption").value)
     styleWith.value = JSON.parse(
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
     variants.value = product.value.variants.nodes;
   } catch (error) {
-    navigateTo('/')
   } finally {
     loading.value = false;
   }
