@@ -50,9 +50,9 @@ query($handle: String!) {
     }
     metafields(identifiers: [
       {key: "short_description", namespace: "custom"},
-      {key: "payment", namespace: "custom"},
-      {key: "free_shipping_free_returns", namespace: "custom"}
-      {key: "product_sustainability", namespace: "custom"}
+      {key: "paymentoption", namespace: "custom"},
+      {key: "shippingandreturn", namespace: "custom"}
+      {key: "sustainability", namespace: "custom"}
       {key: "stylewith", namespace: "custom"}
     ]) {
         id

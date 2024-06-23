@@ -18,7 +18,7 @@
         />
       </ProductInfo>
     </div>
-    <StyleWith :productIds="styleWith" />
+    <StyleWith v-if="styleWith.length > 0" :productIds="styleWith" />
   </main>
 </template>
 <script setup>

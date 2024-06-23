@@ -1,14 +1,33 @@
 <script setup>
-  defineProps({
-    isOutOfStock: Boolean,
-    productName: String,
-    price: String,
-    description: String,
-    availableSize: Object,
-    short_description: String,
-    variants: Array
+import { ADD_TO_CART } from '~/queries/mutateCart';
+
+defineProps({
+  isOutOfStock: Boolean,
+  productName: String,
+  price: String,
+  description: String,
+  availableSize: Object,
+  short_description: String,
+  variants: Array,
 });
 const size = ref("");
+const cardId = sessionStorage.getItem("cartId");
+console.log(cardId)
+const { $shopifyClient } = useNuxtApp();
+const addToCart = () => {
+  try {
+      if (size) {
+    $shopifyClient.request(ADD_TO_CART, {
+      variables: {
+        cartId: cardId,
+        line: size.value
+      }})
+    }
+  }
+  catch(error) {
+    console.log(error)
+  }
+}
 </script>
 
 <template>
@@ -29,15 +48,15 @@ const size = ref("");
         class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
         v-model="size"
       >
-              <option disabled selected value="">Select A Size</option> 
-
-        <option v-for="variant in variants" :key="variant" :value="variant.selectedOptions[1].value">
+        <option disabled selected value="">Select A Size</option>
+        <option v-for="variant in variants" :key="variant" :value="variant.id">
           {{ variant.selectedOptions[1].value }}
         </option>
       </select>
       <div
         class="btn btn-primary w-full top-90 bg-black font-normal text-white mb-0 p-4 uppercase rounded-none"
         :class="{ 'btn-disabled': !size }"
+        @click="addToCart()"
       >
         <p class="text-center">Add To Bag</p>
       </div>
@@ -52,15 +71,15 @@ const size = ref("");
 
 <style scoped>
 .productInfo ul {
-  list-style: disc !important; 
+  list-style: disc !important;
   text-transform: uppercase;
 }
 
 .productInfo p {
-  @apply uppercase text-sm
+  @apply uppercase text-sm;
 }
 
 .productInfo {
-  @apply px-2 text-left space-y-6 pt-6 pb-10 text-[14px]
+  @apply px-2 text-left space-y-6 pt-6 pb-10 text-[14px];
 }
 </style>

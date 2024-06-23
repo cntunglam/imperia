@@ -13,6 +13,10 @@
     @apply mx-auto py-4
   }
 
+  ._body iframe {
+    @apply py-6
+  }
+
 </style>
 <script setup>
 import { GET_METAOBJECT } from "~/queries/getMetaobject";

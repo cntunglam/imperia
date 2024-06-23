@@ -5,6 +5,7 @@ const props = defineProps({
     required: true
   }
 });
+
 </script>
 <style>
   .swiper-pagination {
@@ -39,7 +40,7 @@ const props = defineProps({
   <div id="swiper" class="w-full">
     <Swiper
       class="_full-height"
-      :modules="[SwiperMousewheel, SwiperPagination	]"
+      :modules="[SwiperMousewheel, SwiperPagination, SwiperController	]"
       :edge-swipe-detection="true"
       :breakpoints="{
         768: {
@@ -56,7 +57,7 @@ const props = defineProps({
         eventsTarget: '#swiper',
       }"
     >
-      <SwiperSlide v-for="image in images" :key="image" class="">
+      <SwiperSlide v-for="image in images" :key="image.src" class="">
         <img :src="image.src" />
       </SwiperSlide>
     </Swiper>

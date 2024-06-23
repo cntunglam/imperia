@@ -24,18 +24,6 @@ onMounted(async () => {
   <main class="_body space-y-12">
     <div class="text-center space-y-8">
       <h1 class="text-[20px]">FAQ</h1>
-      <p class="text-[12px]">
-        SELECT A CATEGORY BELOW TO SEE ANSWERS TO FREQUENTLY ASKED QUESTIONS
-      </p>
-      <select
-        class="w-full select select-bordered uppercase border-black rounded-none"
-      >
-        <option>Order And Payment</option>
-        <option>Lorem Ipsum</option>
-        <option>Lorem Ipsum</option>
-        <option>Lorem Ipsum</option>
-        <option>Lorem Ipsum</option>
-      </select>
     </div>
     <div class="_accordion mx-auto my-4 text-[12px]">
       <details

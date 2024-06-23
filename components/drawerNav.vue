@@ -103,9 +103,7 @@ onBeforeUnmount(() => {
             v-if="isHidden"
             @click="isHidden = false"
           />
-          <a href="/bag" class="my-auto">
-            <img src="/icon/bag.svg" alt="bag" class="w-6 h-6 my-auto" />
-          </a>
+          <Bag/>
         </ul>
       </div>
     </div>
