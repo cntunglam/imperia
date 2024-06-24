@@ -58,7 +58,7 @@ const props = defineProps({
       }"
     >
       <SwiperSlide v-for="image in images" :key="image.src" class="">
-        <img :src="image.src" class="object-cover aspect-square h-full md:h-auto md:aspect-auto">
+        <img :src="image.src" class="object-cover aspect-square md:h-full md:aspect-auto">
       </SwiperSlide>
     </Swiper>
   </div>
