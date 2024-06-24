@@ -2,45 +2,48 @@
 const props = defineProps({
   images: {
     type: Array,
-    required: true
-  }
+    required: true,
+  },
 });
-
 </script>
 <style>
+.swiper-pagination {
+  position: initial;
+  margin: 10px auto;
+}
+
+.swiper-pagination-bullet {
+  background-color: #7a7474;
+  border-radius: 0px;
+  height: 1px;
+  width: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #494949 !important;
+  width: 40px;
+}
+#swiper {
+  max-height: 90vh;
+}
+@media screen and (min-width: 768px) {
   .swiper-pagination {
-    position: initial ;
-    margin: 10px auto;
+    display: none;
   }
+}
 
-  .swiper-pagination-bullet {
-    background-color: #7a7474;
-    border-radius: 0px;
-    height: 1px;
-    width: 20px;
-  }
+@media screen and (max-width: 768px) {
+    #swiper {
+      width: 100%;
+      height: fit-content;
+}
 
-  .swiper-pagination-bullet-active {
-    background-color: #494949 !important;
-    width: 40px;
-  }
-  
-  ._full-height {
-    max-height: 90vh;
-  }
-
-  @media screen and (min-width: 768px){
-    .swiper-pagination {
-      display: none;
-    }
-  }
-
+}
 </style>
 <template>
-  <div id="swiper" class="w-full">
     <Swiper
-      class="_full-height"
-      :modules="[SwiperMousewheel, SwiperPagination, SwiperController	]"
+      id="swiper"
+      :modules="[SwiperMousewheel, SwiperPagination]"
       :edge-swipe-detection="true"
       :breakpoints="{
         768: {
@@ -57,10 +60,12 @@ const props = defineProps({
         eventsTarget: '#swiper',
       }"
     >
-      <SwiperSlide v-for="image in images" :key="image.src" class="">
-        <img :src="image.src" class="object-cover aspect-square md:h-full md:aspect-auto">
+      <SwiperSlide v-for="image in images" :key="image" class="">
+        <img
+          :src="image.src"
+          class="object-cover aspect-square md:h-full md:aspect-auto"
+        />
       </SwiperSlide>
     </Swiper>
-  </div>
 </template>
   
