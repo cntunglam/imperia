@@ -1,13 +1,24 @@
 <template>
     <main class="_body">
         <h1 class="text-center text-[20px] py-4">{{ title }}</h1>
+            <div class="article">
         <div v-html="bodyText"></div>
+      </div>
     </main>
 </template>
 <style scope>
-  h2 {
-    @apply py-4
-  }
+._body h2 {
+  @apply py-2;
+}
+
+._body .article > div {
+  @apply space-y-2
+}
+
+._body img {
+  @apply mx-auto py-4 rounded-none;
+}
+
 </style>
 <script setup>
 import { GET_METAOBJECT } from "~/queries/getMetaobject";
