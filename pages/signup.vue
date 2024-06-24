@@ -1,3 +1,34 @@
+<script setup>
+import { GET_METAOBJECT } from "~/queries/getMetaobject";
+import { convertSchemaToHtml } from '@thebeyondgroup/shopify-rich-text-renderer'
+const loading = ref(true);
+const { $shopifyClient } = useNuxtApp();
+const bodyText = ref("");
+const content = ref([]);
+
+onMounted(async () => {
+  try {
+    const { data } = await $shopifyClient.request(GET_METAOBJECT, {
+      variables: {
+        handle: "terms-of-service",
+        type: "custom_page",
+      },
+    });
+    content.value = data.metaobject.fields;
+    bodyText.value = convertSchemaToHtml( content.value.find((obj) => obj.key === "content").value)
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+  }
+});
+</script>
+<style scope>
+  h2 {
+    @apply py-4
+  }
+</style>
+
 <template>
   <main class="_body space-y-8">
     <div>
@@ -52,33 +83,7 @@
           />
         </div>
         <ScrollableContent>
-          <p>
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Vivamus sed urna a nulla rutrum varius. In varius hendrerit
-            feugiat. Proin congue placerat sem et blandit. Aenean quis neque
-            faucibus, laoreet erat a, consequat libero. Donec vel vulputate
-            lectus. Nullam quis tempus diam. Sed non massa odio. Nunc et leo
-            urna. Praesent aliquam lobortis ex et dictum. Vivamus ac arcu sem.
-            Cras pulvinar nibh non volutpat cursus. Donec tincidunt sapien
-            congue eros pretium lobortis. Nullam eu interdum felis. Ut et
-            scelerisque purus.
-          </p>
-          <p>
-            Sed suscipit ante velit, a lobortis nulla bibendum ultricies.
-            Curabitur lectus justo, posuere nec lacinia non, sagittis non erat.
-            Donec magna justo, dapibus rhoncus tortor ac, efficitur aliquet
-            turpis. In lobortis commodo odio non vehicula. Pellentesque
-            vestibulum molestie mauris. Mauris a leo porta, imperdiet dui eget,
-            tincidunt quam. Vestibulum tincidunt, elit at porta sodales, quam
-            massa finibus nibh, ac consequat mi sem at ex. Phasellus faucibus
-            commodo urna id molestie. Integer ultricies augue non est efficitur
-            placerat. Vivamus vel dignissim turpis, aliquet laoreet magna.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia curae; Vivamus id est eu lacus tristique cursus ut
-            at augue. Morbi suscipit commodo sem, imperdiet imperdiet urna
-            egestas vel. Duis tristique eu dui et faucibus. Phasellus vitae
-            justo in odio congue congue vel quis augue.
-          </p>
+          <div v-html="bodyText"></div>
         </ScrollableContent>
         <div class="justify-between space-y-4 pt-4">
           <div>
