@@ -5,6 +5,17 @@
     free_shipping_free_returns: String,
   })
 </script>
+<style scope>
+.collapse-content p {
+  @apply py-1;
+}
+
+.collapse-content h2 {
+  @apply space-y-2
+}
+
+</style>
+
 <template>
   <div class="_accordion px-2">
     <details class="collapse collapse-arrow uppercase">
