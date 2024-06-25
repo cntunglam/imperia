@@ -81,7 +81,7 @@ const removeCartLine = async (lineIds) => {
                   <div class="">
                     {{ item.node.merchandise.priceV2.amount }} USD
                   </div>
-                  <div class="underline mt-10 cursor-pointer btn-ghost" @click="removeCartLine(item.node.id)">
+                  <div class="underline mt-10 cursor-pointer btn-ghost hover:bg-transparent" @click="removeCartLine(item.node.id)">
                         Remove
                 </div>
                 </div>
