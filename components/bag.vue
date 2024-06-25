@@ -19,11 +19,11 @@ onMounted(async () => {
 });
 </script>
 <template>
-  <a v-if="totalItem > 0" class="my-auto">
+  <a href="/bag" v-if="totalItem > 0" class="my-auto">
     <div class="rounded-none bg-[#21e053] text-black w-8 h-8 flex">
       <span class="m-auto text-[12px]">{{ totalItem }} </span>
     </div>
-  </a>
+  </a>  
   <a v-else href="/bag" class="my-auto">
     <div class="relative">
       <img src="/icon/bag.svg" alt="bag" class="w-6 h-6 my-auto top-0" />

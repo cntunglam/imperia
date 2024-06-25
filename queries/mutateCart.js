@@ -20,17 +20,28 @@ export const CREAT_CART = `
     }
     }
 
-`
+`;
 
-export const ADD_TO_CART = `
-mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
-  cartLinesAdd(cartId: $cartId, lines: $lines) {
+export const ADD_TO_CART = `mutation AddToCard($cartId: ID!, $merchandiseId: ID!) {
+  cartLinesAdd(
+    cartId: $cartId
+    lines: {merchandiseId: $merchandiseId, quantity: 1}
+  ) {
     cart {
-        id
-    }
-    userErrors {
-      field
-      message
+      id
+      createdAt
     }
   }
-}`;
+}
+`
+
+export const REMOVE_ITEM = `
+mutation removeItem($cartId: ID!, $lineIds: [ID!]!) {
+  cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
+    userErrors {
+      code
+      field
+    }
+  }
+}
+`

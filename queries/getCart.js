@@ -2,9 +2,10 @@ export const GET_CART = `
   query ($id: ID!) {
     cart(id: $id) {
     id
+    checkoutUrl
     createdAt
     updatedAt
-    lines(first: 10) {
+    lines(first: 250) {
       edges {
         node {
           id
@@ -12,6 +13,18 @@ export const GET_CART = `
           merchandise {
             ... on ProductVariant {
               id
+              title
+              availableForSale
+              product {
+                title
+              }
+              image {
+                src
+              }
+              priceV2 {
+                amount
+                currencyCode
+              }
             }
           }
           attributes {
