@@ -93,7 +93,7 @@ onMounted(async () => {
               class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
             />
             <label for="checkbox-1" class="text-[12px] px-2"
-              >I agree to the <a href="/page/privacy-policy">Privacy Policy</a> and to the <a href="/page/terms-of-service"> Terms of use</a>. *</label
+              >I agree to the <a href="/page/privacy-policy" class="font-bold">Privacy Policy</a> and to the<a class="font-bold" href="/page/terms-of-service"> Terms of use</a>. *</label
             >
           </div>
           <div>

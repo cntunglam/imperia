@@ -9,7 +9,11 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@nuxtjs/device",
     "nuxt-graphql-client",
+    ["@pinia/nuxt", { disableVuex: true }],
   ],
+  alias: {
+    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
+  },
   plugins: ["~/plugins/dateFormatDirective.js", "~/plugins/shopifyClient.js"],
   colorMode: {
     preference: "system", // default theme

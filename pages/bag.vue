@@ -1,10 +1,13 @@
 <script setup>
 import { GET_CART } from "~/queries/getCart";
 import { REMOVE_ITEM } from "~/queries/mutateCart";
+import { useCartStore } from '~/store/cart';
+const cartStore = useCartStore();
 const { $shopifyClient } = useNuxtApp();
 const cartId = ref("");
 const totalAmount = ref("");
 const items = ref([]);
+
 onMounted(async () => {
   try {
     cartId.value = sessionStorage.getItem("cartId");
@@ -22,6 +25,7 @@ onMounted(async () => {
 });
 
 const removeCartLine = async (lineIds) => {
+  cartId.value = sessionStorage.getItem("cartId");
   try {
       await $shopifyClient.request(REMOVE_ITEM, {
         variables: {
@@ -29,11 +33,18 @@ const removeCartLine = async (lineIds) => {
           lineIds: lineIds,
         },
       });
-      window.location.reload();
+    await cartStore.fetchCart(cartId.value);
+    const {data} =await $shopifyClient.request(GET_CART, {
+      variables: {
+        id: cartId.value,
+      },
+    });
+    items.value = data.cart.lines.edges;
   } catch (error) {
     console.log(error);
   }
 };
+
 </script>
 <template>
   <main class="_body">
@@ -50,9 +61,9 @@ const removeCartLine = async (lineIds) => {
               <th class="text-right px-0 font-thin">Total</th>
             </tr>
           </thead>
-          <tbody v-if="items.length > 0">
+          <tbody id="bag-table" v-if="items.length > 0" :key="items">
             <!-- row 1 -->
-            <tr v-for="item in items" :key="item">
+            <tr v-for="item in items" :key="item.node.id">
               <td>
                 <div class="flex items-center align-middle gap-3 pt-4">
                   <div class="w-32">

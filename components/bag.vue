@@ -1,20 +1,18 @@
 <script setup>
-import { GET_CART } from "~/queries/getCart";
-const { $shopifyClient } = useNuxtApp();
-const cartId = ref("");
-const totalItem = ref();
+import { computed, onMounted } from 'vue';
+import { useCartStore } from '~/store/cart';
+
+const cartStore = useCartStore();
+const totalItem = computed(() => cartStore.totalItem);
+
 onMounted(async () => {
   try {
-    cartId.value = sessionStorage.getItem("cartId");
-    const { data } = await $shopifyClient.request(GET_CART, {
-      variables: {
-        id: cartId.value,
-      },
-    });
-    totalItem.value = data.cart.lines.edges.length;
-    console.log(totalItem.value);
+    const cartId = sessionStorage.getItem('cartId');
+    cartStore.setCartId(cartId);
+    await cartStore.fetchCart(cartId);
   } catch (error) {
     console.error(error);
+    
   }
 });
 </script>

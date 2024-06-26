@@ -1,5 +1,7 @@
 <script setup>
 import { ADD_TO_CART } from "~/queries/mutateCart";
+import { useCartStore } from '~/store/cart';
+const cartStore = useCartStore();
 
 defineProps({
   isOutOfStock: Boolean,
@@ -11,19 +13,19 @@ defineProps({
   variants: Array,
 });
 const size = ref("");
-const cardId = sessionStorage.getItem("cartId");
+const cartId = sessionStorage.getItem("cartId");
 const { $shopifyClient } = useNuxtApp();
 const addToCart = async () => {
   try {
     if (size) {
       await $shopifyClient.request(ADD_TO_CART, {
         variables: {
-          cartId: cardId,
+          cartId: cartId,
           merchandiseId: size.value,
         },
       });
     }
-          window.location.reload();
+    await cartStore.fetchCart(cartId);
   } catch (error) {
     console.log(error);
   }
