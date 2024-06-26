@@ -79,7 +79,7 @@ const removeCartLine = async (lineIds) => {
               <td class="text-right px-0">
                 <div class="h-32 mt-10">
                   <div class="">
-                    {{ item.node.merchandise.priceV2.amount }} USD
+                    {{ item.node.merchandise.priceV2.amount.split(".")[0] }} USD
                   </div>
                   <div class="underline mt-10 cursor-pointer btn-ghost hover:bg-transparent" @click="removeCartLine(item.node.id)">
                         Remove
