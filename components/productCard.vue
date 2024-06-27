@@ -21,7 +21,7 @@ defineProps({
         </figure>
         <button
           v-if="!inStock"
-          class="py-2 border-0 absolute w-full bottom-5 md:top-50 lg:top-80 bg-black text-white text-sm uppercase"
+          class="py-2 border-0 absolute w-full bottom-5 sm:top-50 lg:top-70 bg-black text-white text-sm uppercase"
         >
           <p class="text-center">Sold Out</p>
         </button>
