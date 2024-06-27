@@ -18,14 +18,14 @@ onMounted(async () => {
 <template>
   <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1">
     <div
-      v-for="(collection, index) in collections"
+      v-for="(collection, index) in collections.slice().reverse()"
       :key="collection.id"
       class="w-full hover:filter hover:grayscale duration-100 flex justify-center bg-top lg:bg-center bg-cover"
       :class="[
         index === 0 ? 'lg:row-span-2 lg:col-span-1 col-span-2 h-full' : '',
         'bg-top lg:bg-center bg-cover'
       ]"
-      :style="{ backgroundImage: `url(${collection.image.src})`}"
+      :style="{ backgroundImage: `url(${collection.image?.src})`}"
     >
       <div
         class="w-full px-10 py-1 align- mx-auto justify-center self-end flex"

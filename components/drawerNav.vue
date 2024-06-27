@@ -37,7 +37,7 @@ onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {
       variables: {
-        handle: "main-menu-1",
+        handle: "main-menu",
         type: "main_menu",
       },
     });

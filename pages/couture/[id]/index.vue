@@ -2,7 +2,7 @@
   <main class="._body_fullwidth">
     <div class="md:grid-cols-2 grid gap-4 md:px-36 px-4 py-12">
       <div
-        v-for="item in content.slice().reverse()"
+        v-for="item in content"
         :key="item"
         class="card bg-base-100 w-full z-0 h-[400px] shadow-xl rounded-none cursor-pointer image-full"
         @click="navigateTo(`/couture/${id}/${item.handle}`)"

@@ -47,7 +47,8 @@ export const GET_ALL_COLLECTIONS = `
                     image {
                         src
                     }
-                    metafields(identifiers: {namespace: "custom", key: "isbigimage"}) {
+                    metafields(identifiers: {namespace: "custom", key: "isbig"}) {
+                        key
                         value
                     }   
                 }
