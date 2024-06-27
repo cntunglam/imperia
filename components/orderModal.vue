@@ -1,3 +1,10 @@
+<script setup>
+  defineProps({
+    productName: String,
+    productId : String,
+  })
+
+</script>
 <template>
     <div class="form-control w-full px-2">
         <div
@@ -17,7 +24,7 @@
             </button>
           </form>
           <h3 class="font-bold text-[12px] text-center uppercase">
-            Imperia Sweat Shirts
+          {{ productName }}
           </h3>
           <div class="form-control py-4 w-full max-w-md mx-auto space-y-6">
             <select

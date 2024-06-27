@@ -15,7 +15,6 @@ defineProps({
         <figure class="">
           <img
             :src="Image"
-            alt="t-shirt"
             class="hover:scale-105 ease-in-out duration-500 mx-auto aspect-square object-cover"
           />
         </figure>

@@ -44,7 +44,7 @@ const addToCart = async () => {
     <div v-if="!isOutOfStock" class="form-control py-0 m-0 w-full px-2 text-xl">
       <label class="label">
         <span class="label-text uppercase">Size: (US)</span>
-        <span class="label-text uppercase underline">Size Guide</span>
+        <span class="label-text uppercase underline cursor-pointer">Size Guide</span>
       </label>
       <select
         class="select select-bordered text-[12px] md:text-[10px] uppercase border-black rounded-none"
@@ -63,7 +63,7 @@ const addToCart = async () => {
         <p class="text-center">Add To Bag</p>
       </div>
     </div>
-    <OrderModal v-else />
+    <OrderModal :productName="productName" v-else />
     <div>
       <div v-html="description" class="productInfo"></div>
     </div>

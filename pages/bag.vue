@@ -103,7 +103,7 @@ const removeCartLine = async (lineIds) => {
           </tbody>
           <!-- foot -->
         </table>
-        <div class="h-36 flex" v-else>
+        <div class="pt-14 lg:pt-20 lg:pb-4 flex" v-else>
           <p class="text-center m-auto">Your bag is empty</p>
         </div>
         <div
