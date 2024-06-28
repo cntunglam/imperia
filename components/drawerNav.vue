@@ -8,7 +8,7 @@ const loading = ref(true);
 const topbarText = ref("");
 const menuItems = ref({});
 const { $shopifyClient } = useNuxtApp();
-
+const searchValue = ref("");
 const handleScroll = () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop >= lastScrollTop.value && scrollTop > 100) {
@@ -58,15 +58,24 @@ onMounted(async () => {
 onMounted(() => {
   if (window.location.pathname === "/") {
     isHidden.value = false;
-    window.addEventListener("scroll", handleScroll, {passive: true});
+    window.addEventListener("scroll", handleScroll, { passive: true });
   } else {
-    window.addEventListener("scroll", handleHideSearchbar, {passive: true});
+    window.addEventListener("scroll", handleHideSearchbar, { passive: true });
   }
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+const handleSearch = (searchValue) => {
+  const { id } = useRoute();
+  if (id === "search") {
+    $route.push({ path: "/search", query: { query: searchValue } });
+  } else {
+    navigateTo(`/search/?query=${searchValue}`);
+  }
+};
 </script>
 <template>
   <header class="sticky top-0 w-full z-10">
@@ -103,7 +112,7 @@ onBeforeUnmount(() => {
             v-if="isHidden"
             @click="isHidden = false"
           />
-          <Bag/>
+          <Bag />
         </ul>
       </div>
     </div>
@@ -114,6 +123,8 @@ onBeforeUnmount(() => {
       />
       <input
         type="text"
+        v-model="searchValue"
+        @keypress.enter="handleSearch(searchValue)"
         placeholder="WHAT ARE YOU LOOKING FOR?"
         class="z-10 input absolute input-bordered border-t-black border-b-black border-l-0 border-r-0 rounded-none uppercase min-h-14 w-full max-w-full px-12 md:px-14 text-[12px] md:text-[10px]"
       />

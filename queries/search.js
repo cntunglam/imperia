@@ -6,11 +6,32 @@ export const SEARCH_QUERY = `
                 ... on Product {
                 id
                 title
-                image {
-                    url
+                handle
+                availableForSale
+                variants(first: 10) {
+                    nodes {
+                    price {
+                        amount
+                        currencyCode
+                    }
+                    selectedOptions {
+                        name
+                        value
+                    }
+                    }
                 }
+
+                images(first: 10) {
+                    edges {
+                    node {
+                        src
+                    }
+                    }
+                }
+
             }
             }
         }
+}
 }
 `;
