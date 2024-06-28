@@ -2,10 +2,7 @@
   <main class="_body">
     <h1 class="text-center text-[20px] py-4">{{ title }}</h1>
     <img :src="graphic" />
-    <div>
-      <p>
-        {{ bodyText }}
-      </p>
+    <div v-html="convertSchemaToHtml(bodyText)">
     </div>
   </main>
 </template>

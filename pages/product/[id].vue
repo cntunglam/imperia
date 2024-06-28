@@ -60,7 +60,7 @@ onMounted(async () => {
     styleWith.value = JSON.parse(
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
-    variants.value = product.value.variants.nodes;
+  variants.value = product.value.variants.nodes;
   } catch (error) {
   } finally {
     loading.value = false;

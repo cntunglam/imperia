@@ -66,7 +66,7 @@ const removeCartLine = async (lineIds) => {
             <tr v-for="item in items" :key="item.node.id">
               <td>
                 <div class="flex items-center align-middle gap-3 pt-4">
-                  <div class="w-32">
+                  <div class="w-36 object-contain">
                     <img :src="item.node.merchandise.image.src" />
                   </div>
                   <div class="">
