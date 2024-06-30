@@ -1,7 +1,7 @@
 <script setup>
 import { GET_CART } from "~/queries/getCart";
 import { REMOVE_ITEM } from "~/queries/mutateCart";
-import { useCartStore } from '~/store/cart';
+import { useCartStore } from "~/store/cart";
 const cartStore = useCartStore();
 const { $shopifyClient } = useNuxtApp();
 const cartId = ref("");
@@ -27,14 +27,14 @@ onMounted(async () => {
 const removeCartLine = async (lineIds) => {
   cartId.value = sessionStorage.getItem("cartId");
   try {
-      await $shopifyClient.request(REMOVE_ITEM, {
-        variables: {
-          cartId: cartId.value,
-          lineIds: lineIds,
-        },
-      });
+    await $shopifyClient.request(REMOVE_ITEM, {
+      variables: {
+        cartId: cartId.value,
+        lineIds: lineIds,
+      },
+    });
     await cartStore.fetchCart(cartId.value);
-    const {data} =await $shopifyClient.request(GET_CART, {
+    const { data } = await $shopifyClient.request(GET_CART, {
       variables: {
         id: cartId.value,
       },
@@ -44,7 +44,6 @@ const removeCartLine = async (lineIds) => {
     console.log(error);
   }
 };
-
 </script>
 <template>
   <main class="_body">
@@ -92,9 +91,12 @@ const removeCartLine = async (lineIds) => {
                   <div class="">
                     {{ item.node.merchandise.priceV2.amount.split(".")[0] }} USD
                   </div>
-                  <div class="underline mt-10 cursor-pointer btn-ghost hover:bg-transparent" @click="removeCartLine(item.node.id)">
-                        Remove
-                </div>
+                  <div
+                    class="underline mt-10 cursor-pointer btn-ghost hover:bg-transparent"
+                    @click="removeCartLine(item.node.id)"
+                  >
+                    Remove
+                  </div>
                 </div>
               </td>
             </tr>
@@ -103,8 +105,16 @@ const removeCartLine = async (lineIds) => {
           </tbody>
           <!-- foot -->
         </table>
-        <div class="pt-14 lg:pt-20 lg:pb-4 flex" v-else>
+        <div class="pt-14 lg:pt-20 lg:pb-4 grid gap-2" v-else>
           <p class="text-center m-auto">Your bag is empty</p>
+          <div
+            @click="navigateTo('/collection')"
+            class="btn btn-primary font-normal rounded-none w-full border-1 border-black bg-black text-white text-md p-4 uppercase"
+          >
+            <p class="text-center">
+              Shop New Arrivals
+            </p>
+          </div>
         </div>
         <div
           v-if="items.length > 0"
