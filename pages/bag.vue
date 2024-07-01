@@ -76,8 +76,7 @@ const removeCartLine = async (lineIds) => {
                       </div>
                     </div>
                     <select
-                      class="my-6 bg-white uppercase border-none rounded-none"
-                      disabled
+                      class="my-6 bg-white uppercase border-none rounded-none" disabled
                     >
                       <option selected>
                         {{ item.node.merchandise.title.split("/")[1] }}

@@ -4,6 +4,7 @@ export const GET_CART = `
     id
     createdAt
     updatedAt
+    checkoutUrl
     lines(first: 250) {
       edges {
         node {

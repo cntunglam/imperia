@@ -32,7 +32,7 @@ export const ADD_TO_CART = `mutation AddToCard($cartId: ID!, $merchandiseId: ID!
     }
   }
 }
-`
+`;
 
 export const REMOVE_ITEM = `
 mutation removeItem($cartId: ID!, $lineIds: [ID!]!) {
@@ -43,4 +43,13 @@ mutation removeItem($cartId: ID!, $lineIds: [ID!]!) {
     }
   }
 }
-`
+`;
+
+export const BUYER_INFO_UPDATE = `
+mutation buyerInfoUpdate($cartId: ID!, $address: BuyerIdentityDeliveryAddressInput!) {
+    cartBuyerIdentityUpdate(
+    buyerIdentity: {deliveryAddressPreferences: {deliveryAddress: $address}}
+    cartId: $cartId
+  )
+}
+`;

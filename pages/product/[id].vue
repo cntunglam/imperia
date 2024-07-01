@@ -10,7 +10,7 @@
         :availableSize="product.variants?.nodes"
         :short_description="short_description"
         :variants="variants"
-      >
+x      >
         <Accordion
           :free_shipping_free_returns="free_shipping_free_returns"
           :payment="payment"
@@ -51,7 +51,7 @@ onMounted(async () => {
       (obj) => obj.key === "short_description"
     ).value;
     product_sustainability.value = convertSchemaToHtml(
-      customData.value.find((obj) => obj.key === "sustainability").value
+      customData.value.find((obj) => obj.key === "sustainability").valueu
     );
     free_shipping_free_returns.value = convertSchemaToHtml(
       customData.value.find((obj) => obj.key === "shippingandreturn").value
