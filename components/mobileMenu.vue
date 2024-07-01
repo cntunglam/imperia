@@ -1,9 +1,15 @@
 <script setup>
 const isOpen = ref(false);
+const isAuthenticated = ref(false);
 defineProps({
   menuItems: Object,
 });
 onMounted(() => {
+  if (sessionStorage.getItem("accessToken")) {
+    isAuthenticated.value = true;
+  } else {
+    isAuthenticated.value = false;
+  }
   const dropdownMenu = document.getElementById("dropdown-menu");
   dropdownMenu.addEventListener("toggle", () => {
     isOpen.value = dropdownMenu.open;
@@ -31,7 +37,7 @@ onMounted(() => {
       </div>
       <div class="py-32">
         <li><a href="/page/client-service">Client Services</a></li>
-        <li><a href="/login">Login</a></li>
+            <li><a :href="isAuthenticated ? '/membership' : '/login'">{{ isAuthenticated ? "Membership" : "Login" }}</a></li>
       </div>
     </ul>
   </details>

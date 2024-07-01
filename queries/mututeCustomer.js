@@ -1,7 +1,15 @@
 export const LOGIN = `
   mutation Login($email: String!, $password: String!) {
-    customerAccessTokenCreate(input: {email: "", password: ""}) {
-      customerAccessToken
+    customerAccessTokenCreate(input: {email: $email, password: $password}) {
+      customerAccessToken {
+        accessToken
+        expiresAt
+      }
+      customerUserErrors {
+        code
+        field
+        message
+      }
       userErrors {
         field
         message
@@ -22,9 +30,9 @@ export const LOGOUT = `
   }
 `
 export const CREATE_CUSTOMER = `
-  mutation createCustomer ($email: String!, $password: String!, $firstName: String!, $lastName: String!, $phone: String!, $acceptsMarketing: Boolean!) {
+  mutation createCustomer ($email: String!, $password: String!, $firstName: String!, $lastName: String!, $acceptsMarketing: Boolean!) {
     customerCreate(
-      input: {email: $email, password: $password, firstName: $firstName, lastName: $lastName, phone: $phone, acceptsMarketing: $acceptsMarketing}
+      input: {email: $email, password: $password, firstName: $firstName, lastName: $lastName, acceptsMarketing: $acceptsMarketing}
     ) {
       userErrors {
         field

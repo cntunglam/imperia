@@ -7,6 +7,7 @@ const menu = ref([]);
 const loading = ref(true);
 const topbarText = ref("");
 const menuItems = ref({});
+const isAuthenticated = ref(false);
 const { $shopifyClient } = useNuxtApp();
 const searchValue = ref("");
 const handleScroll = () => {
@@ -34,6 +35,11 @@ const handleHideSearchbar = () => {
 };
 
 onMounted(async () => {
+  if (sessionStorage.getItem("accessToken")) {
+    isAuthenticated.value = true;
+  } else {
+    isAuthenticated.value = false;
+  }
   try {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {
       variables: {
@@ -104,7 +110,7 @@ const handleSearch = (searchValue) => {
         >
           <div class="hidden md:flex">
             <li><a href="/page/client-service">Client Services</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a :href="isAuthenticated ? '/membership' : '/login'">{{ isAuthenticated ? "Membership" : "Login" }}</a></li>
           </div>
           <Icon
             name="material-symbols:search-rounded"

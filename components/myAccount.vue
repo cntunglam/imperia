@@ -1,4 +1,8 @@
 <script setup>
+defineProps({
+  addresses: Array,
+  creditCards: Array,
+});
 import { GET_CART } from "~/queries/getCart";
 import { REMOVE_ITEM } from "~/queries/mutateCart";
 import { useCartStore } from "~/store/cart";
@@ -7,18 +11,16 @@ const { $shopifyClient } = useNuxtApp();
 const cartId = ref("");
 const totalAmount = ref("");
 const items = ref([]);
-const checkoutUrl = ref("");
 onMounted(async () => {
   try {
     cartId.value = sessionStorage.getItem("cartId");
-    const { data } = await $shopifyClient.request(GET_CART, {
+    const { data: cartData } = await $shopifyClient.request(GET_CART, {
       variables: {
         id: cartId.value,
       },
     });
-    totalAmount.value = data.cart.cost.subtotalAmount.amount.slice(0, -2);
-    checkoutUrl.value = data.cart.checkoutUrl;
-    items.value = data.cart.lines.edges;
+    totalAmount.value = cartData.cart.cost.subtotalAmount.amount.slice(0, -2);
+    items.value = cartData.cart.lines.edges;
     console.log(items.value);
   } catch (error) {
     console.error(error);
@@ -46,9 +48,39 @@ const removeCartLine = async (lineIds) => {
   }
 };
 </script>
-<template>
-  <main class="_body">
-    <div>
+<template v-if="activeTab === 'account'">
+  <div class="w-full max-w-3xl mx-auto uppercase">
+    <p class="py-6 text-center">Payment Information</p>
+    <div v-if="creditCards"
+      class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
+    >
+      <credit-card id="credit-1" v-for="creditCard in creditCards" :key="creditCard" />
+    </div>
+    <div v-else
+      class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
+    >
+      <credit-card id="credit-1" :isAddNewCard="true" />
+    </div>
+
+    <div v-if="addresses" class="w-full max-w-3xl mx-auto uppercase">
+      <p class="py-6 text-center">Shipping Information</p>
+      <div
+        class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
+      >
+        <AddressCard v-for="address in addresses" id="address-3" :key="address" />
+      </div>
+    </div>
+        <div v-else class="w-full max-w-3xl mx-auto uppercase">
+      <p class="py-6 text-center">Shipping Information</p>
+      <div
+        class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
+      >
+        <AddressCard id="address-3" :key="address" />
+      </div>
+    </div>
+
+
+    <div class="mt-6">
       <h1 class="text-center uppercase text-[20px]">Bag</h1>
       <div class="overflow-x-auto">
         <table
@@ -77,7 +109,8 @@ const removeCartLine = async (lineIds) => {
                       </div>
                     </div>
                     <select
-                      class="my-6 bg-white uppercase border-none rounded-none" disabled
+                      class="my-6 bg-white uppercase border-none rounded-none"
+                      disabled
                     >
                       <option selected>
                         {{ item.node.merchandise.title.split("/")[1] }}
@@ -111,36 +144,15 @@ const removeCartLine = async (lineIds) => {
             @click="navigateTo('/collection')"
             class="btn btn-primary font-normal rounded-none w-full border-1 border-black bg-black text-white text-md p-4 uppercase"
           >
-            <p class="text-center">
-              Shop New Arrivals
-            </p>
+            <p class="text-center">Shop New Arrivals</p>
           </div>
         </div>
-        <div
-          v-if="items.length > 0"
-          class="flex justify-between pt-4 uppercase"
-        >
-          <div>
-            <p>Total</p>
-            <p>Shipping</p>
-            <p class="font-bold my-2">Order Total</p>
-          </div>
-          <div class="text-right">
-            <p>{{ totalAmount }} USD</p>
-            <p>Calculated At Checkout</p>
-            <p class="font-bold my-2">{{ totalAmount }} USD</p>
-          </div>
-        </div>
-        <a v-if="items.length > 0" :href="checkoutUrl" _target="_blank">
+        <a v-if="items.length > 0" href="/bag" _target="_blank">
           <button class="btn btn-primary w-full font-thin">
-            CHECKOUT SECURELY
-            <Icon
-              name="material-symbols:lock-open-outline-rounded"
-              class="text-xl mb-1"
-            />
+            View Full Bag
           </button>
         </a>
       </div>
     </div>
-  </main>
-</template> 
+  </div>
+</template>

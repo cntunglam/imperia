@@ -345,7 +345,7 @@ const addShippingInformation = async () => {
               class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
             />
             <countries-selector
-              v-model="
+              v-on="
                 address.deliveryAddressPreferences.deliveryAddress.country
               "
             />
@@ -374,9 +374,9 @@ const addShippingInformation = async () => {
                 class="text-[24px] text-black"
               />Delivery
             </p>
-            <p class="text-gray-400">Country/Region: United States</p>
-            <p class="text-gray-400">Zip Code: 30189</p>
-            <p class="text-gray-400">Province/State/County: Georgia</p>
+            <p class="text-gray-400">Country/Region: {{ address.deliveryAddressPreferences.deliveryAddress.country }}</p>
+            <p class="text-gray-400">Zip Code: {{ address.deliveryAddressPreferences.deliveryAddress.postalCode }}</p>
+            <p class="text-gray-400">Province/State/County: {{ address.deliveryAddressPreferences.deliveryAddress.province }}</p>
           </div>
           <div class="col-span-2 py-2">
             <p class="text-black text-center mr-1">

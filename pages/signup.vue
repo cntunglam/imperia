@@ -1,11 +1,18 @@
 <script setup>
 import { GET_METAOBJECT } from "~/queries/getMetaobject";
-import { convertSchemaToHtml } from '@thebeyondgroup/shopify-rich-text-renderer'
+import { convertSchemaToHtml } from "@thebeyondgroup/shopify-rich-text-renderer";
+import { CREATE_CUSTOMER } from "~/queries/mututeCustomer";
 const loading = ref(true);
 const { $shopifyClient } = useNuxtApp();
 const bodyText = ref("");
 const content = ref([]);
-console.log(customer)
+const signupData = ref({
+  email: "",
+  password: "",
+  firstName: "",
+  lastName: "",
+  acceptsMarketing:true,
+});
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {
@@ -15,18 +22,40 @@ onMounted(async () => {
       },
     });
     content.value = data.metaobject.fields;
-    bodyText.value = convertSchemaToHtml( content.value.find((obj) => obj.key === "content").value)
+    bodyText.value = convertSchemaToHtml(
+      content.value.find((obj) => obj.key === "content").value
+    );
   } catch (error) {
     console.log(error);
   } finally {
     loading.value = false;
   }
 });
+
+const handleSignup = async () => {
+  try {
+    loading.value = true
+  await $shopifyClient.request(CREATE_CUSTOMER, {
+    variables: {
+      email: signupData.value.email,
+      password: signupData.value.password,
+      firstName: signupData.value.firstName,
+      lastName: signupData.value.lastName,
+      acceptsMarketing:signupData.value.acceptsMarketing
+    }
+  })
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+    navigateTo('/login')
+  }
+}
 </script>
 <style scope>
-  h2 {
-    @apply py-4
-  }
+h2 {
+  @apply py-4;
+}
 </style>
 
 <template>
@@ -43,7 +72,7 @@ onMounted(async () => {
 
     <div>
       <div class="form-control pb-8 pt-4 w-full mx-auto uppercase">
-        <div class="space-y-4">
+        <form class="space-y-4">
           <select
             class="select select-bordered w-full md:text-[10px] text-[12px] uppercase border-black rounded-none"
           >
@@ -56,22 +85,26 @@ onMounted(async () => {
           </select>
           <input
             type="text"
+            v-model="signupData.firstName"
             placeholder="First Name"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             type="text"
+            v-model="signupData.lastName"
             placeholder="Last Name"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <date-picker />
           <input
             type="email"
+            v-model="signupData.email"
             placeholder="Email Address"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             type="password"
+            v-model="signupData.password"
             placeholder="Password"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
@@ -81,7 +114,7 @@ onMounted(async () => {
             placeholder="Province/State/County"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
-        </div>
+        </form>
         <ScrollableContent>
           <div v-html="bodyText"></div>
         </ScrollableContent>
@@ -93,7 +126,11 @@ onMounted(async () => {
               class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
             />
             <label for="checkbox-1" class="text-[12px] px-2"
-              >I agree to the <a href="/page/privacy-policy" class="font-bold">Privacy Policy</a> and to the<a class="font-bold" href="/page/terms-of-service"> Terms of use</a>. *</label
+              >I agree to the
+              <a href="/page/privacy-policy" class="font-bold">Privacy Policy</a
+              > and to the<a class="font-bold" href="/page/terms-of-service"
+                > Terms of use</a
+              >. *</label
             >
           </div>
           <div>
@@ -117,7 +154,9 @@ onMounted(async () => {
             >
           </div>
         </div>
-        <button class="btn btn-primary">create my account</button>
+        <button class="btn btn-primary" @click="handleSignup">
+          create my account
+        </button>
         <p class="text-center py-1">
           already have an account? <a class="underline" href="/login">Log in</a>
         </p>

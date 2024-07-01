@@ -1,5 +1,10 @@
+<script setup>
+    defineProps({
+        country: String
+    })
+</script>
 <template>
-    <select name="country" id="country"
+    <select name="country" id="country" v-bind="country"
     class="select select-bordered w-full md:text-[10px] text-[12px] uppercase border-black rounded-none">
         <option value="0" label="Country/Region of residence">Country/Region of residence </option>
         <optgroup id="country-optgroup-Africa" label="Africa">
@@ -223,7 +228,6 @@
             <option value="SE" label="Sweden">Sweden</option>
             <option value="CH" label="Switzerland">Switzerland</option>
             <option value="UA" label="Ukraine">Ukraine</option>
-            <option value="SU" label="Union of Soviet Socialist Republics">Union of Soviet Socialist Republics</option>
             <option value="GB" label="United Kingdom">United Kingdom</option>
             <option value="VA" label="Vatican City">Vatican City</option>
             <option value="AX" label="Åland Islands">Åland Islands</option>

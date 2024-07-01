@@ -1,6 +1,38 @@
 <script setup>
-    
+import { LOGIN } from "~/queries/mututeCustomer";
+const loading = ref(true);
+const { $shopifyClient } = useNuxtApp();
+const loginInfo = ref({
+  email: "",
+  password: "",
+});
 
+onMounted(async () => {
+  if (sessionStorage.getItem("accessToken")) {
+    navigateTo("/");
+  }
+});
+const handleLogin = async () => {
+  try {
+    loading.value = true;
+    const { data } = await $shopifyClient.request(LOGIN, {
+      variables: {
+        email: loginInfo.value.email,
+        password: loginInfo.value.password,
+      },
+    });
+    sessionStorage.setItem(
+      "accessToken",
+      data.customerAccessTokenCreate.customerAccessToken.accessToken
+    );
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+    await navigateTo("/");
+  }
+};
 </script>
 <template>
   <main class="_body">
@@ -11,31 +43,41 @@
       <div class="form-control py-8 w-full mx-auto uppercase">
         <div class="space-y-4">
           <input
-          type="email"
-          placeholder="Email"
-          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-        />
+            v-model="loginInfo.email"
+            type="email"
+            placeholder="Email"
+            class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+          />
+          <input
+            v-model="loginInfo.password"
+            type="password"
+            placeholder="Password"
+            class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
+          />
         </div>
         <div class="flex justify-between pt-4">
-            <div>
-              <input type="checkbox" id="remember" class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"/>
-              <label for="remember" class="text-[12px] px-2">Remember me</label>
-            </div>
-            <div>
-              <a href="/forgot-password" class="text-[12px] underline uppercase">Forgot password?</a>
-            </div>
+          <div>
+            <input
+              type="checkbox"
+              id="remember"
+              class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
+            />
+            <label for="remember" class="text-[12px] px-2">Remember me</label>
+          </div>
+          <div>
+            <a href="/forgot-password" class="text-[12px] underline uppercase"
+              >Forgot password?</a
+            >
+          </div>
         </div>
 
-          <button class="btn btn-primary">Login</button>
-          <p class="text-center underline pt-4 text-[12px]"><a href="/signup">Create An Account</a></p>
+        <button @click="handleLogin" class="btn btn-primary">Login</button>
+        <p class="text-center underline pt-4 text-[12px]">
+          <a href="/signup">Create An Account</a>
+        </p>
       </div>
     </div>
-    <hr class="border-black"/>
+    <hr class="border-black" />
     <div class="text-[12px] max-w-xl mx-auto space-y-8 pt-8">
       <p>ENJOY AN ELEVATED SHOPPING EXPERIENCE WITH YOUR EXCLUSIVE ACCESS</p>
       <ul class="space-y-2">
