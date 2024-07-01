@@ -2,9 +2,8 @@ export const GET_CUSTOMER = `
 query ($customerAccessToken: String!) {
   customer(customerAccessToken: $customerAccessToken) {
     firstName
+    lastName
     email
-    fulfillmentStatus
-    financialStatus
     numberOfOrders
     orders(first: 50) {
       nodes {

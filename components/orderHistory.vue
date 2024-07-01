@@ -63,5 +63,5 @@
     </tbody>
     <!-- foot -->
   </table>
-  <button class="btn btn-primary w-full">Shop New Arrivals</button>
+  <button navigateTo="/collection" class="btn btn-primary w-full">Shop New Arrivals</button>
 </template>
