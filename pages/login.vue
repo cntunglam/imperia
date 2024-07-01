@@ -1,3 +1,7 @@
+<script setup>
+    
+
+</script>
 <template>
   <main class="_body">
     <div>

@@ -3,7 +3,6 @@ export const CREAT_CART = `
     cartCreate {
         cart {
         id
-        checkoutUrl
         lines(first: 5) {
             edges {
             node {

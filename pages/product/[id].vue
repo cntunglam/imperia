@@ -50,17 +50,19 @@ onMounted(async () => {
     short_description.value = customData.value.find(
       (obj) => obj.key === "short_description"
     ).value;
-    product_sustainability.value = convertSchemaToHtml(customData.value.find(
-      (obj) => obj.key === "sustainability"
-    ).value); 
-    free_shipping_free_returns.value = convertSchemaToHtml(customData.value.find(
-      (obj) => obj.key === "shippingandreturn"
-    ).value); 
-    payment.value = convertSchemaToHtml(customData.value.find((obj) => obj.key === "paymentoption").value)
+    product_sustainability.value = convertSchemaToHtml(
+      customData.value.find((obj) => obj.key === "sustainability").value
+    );
+    free_shipping_free_returns.value = convertSchemaToHtml(
+      customData.value.find((obj) => obj.key === "shippingandreturn").value
+    );
+    payment.value = convertSchemaToHtml(
+      customData.value.find((obj) => obj.key === "paymentoption").value
+    );
     styleWith.value = JSON.parse(
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
-  variants.value = product.value.variants.nodes;
+    variants.value = product.value.variants.nodes;
   } catch (error) {
   } finally {
     loading.value = false;

@@ -2,7 +2,6 @@ export const GET_CART = `
   query ($id: ID!) {
     cart(id: $id) {
     id
-    checkoutUrl
     createdAt
     updatedAt
     lines(first: 250) {

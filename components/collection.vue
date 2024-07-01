@@ -20,7 +20,7 @@ onMounted(async () => {
     <div
       v-for="(collection, index) in collections.slice().reverse()"
       :key="collection.id"
-      class="w-full hover:filter hover:grayscale duration-100 flex justify-center bg-top lg:bg-center bg-cover"
+      class="w-full hover:filter hover:grayscale duration-100 flex justify-center bg-top lg:bg-center bg-cover object-center"
       :class="[
         index === 0 ? 'lg:row-span-2 lg:col-span-1 col-span-2 h-full' : '',
         'bg-top lg:bg-center bg-cover'

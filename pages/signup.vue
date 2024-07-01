@@ -5,7 +5,7 @@ const loading = ref(true);
 const { $shopifyClient } = useNuxtApp();
 const bodyText = ref("");
 const content = ref([]);
-
+console.log(customer)
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {

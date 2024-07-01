@@ -11,6 +11,7 @@ defineProps({
   availableSize: Object,
   short_description: String,
   variants: Array,
+  isComingSoon: String
 });
 const size = ref("");
 const cartId = sessionStorage.getItem("cartId");
@@ -63,7 +64,7 @@ const addToCart = async () => {
         <p class="text-center">Add To Bag</p>
       </div>
     </div>
-    <OrderModal :productName="productName" v-else />
+    <OrderModal :productName="productName" :isComingSoon="isComingSoon" v-else />
     <div>
       <div v-html="description" class="productInfo"></div>
     </div>
