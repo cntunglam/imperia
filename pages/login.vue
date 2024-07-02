@@ -31,6 +31,7 @@ const handleLogin = async () => {
   } finally {
     loading.value = false;
     await navigateTo("/");
+    window.location.reload();
   }
 };
 </script>
