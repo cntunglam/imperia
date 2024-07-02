@@ -6,6 +6,8 @@ const loginInfo = ref({
   email: "",
   password: "",
 });
+const rememberMe = ref(false);
+const loginError = ref("");
 
 onMounted(async () => {
   if (sessionStorage.getItem("accessToken")) {
@@ -15,7 +17,7 @@ onMounted(async () => {
 const handleLogin = async () => {
   try {
     loading.value = true;
-    const { data } = await $shopifyClient.request(LOGIN, {
+    const { data, error } = await $shopifyClient.request(LOGIN, {
       variables: {
         email: loginInfo.value.email,
         password: loginInfo.value.password,
@@ -25,13 +27,11 @@ const handleLogin = async () => {
       "accessToken",
       data.customerAccessTokenCreate.customerAccessToken.accessToken
     );
-    console.log(data);
   } catch (error) {
     console.log(error);
+    loginError.value = "Something went wrong. Please try again.";
   } finally {
     loading.value = false;
-    await navigateTo("/");
-    window.location.reload();
   }
 };
 </script>
@@ -42,6 +42,7 @@ const handleLogin = async () => {
     </div>
     <div>
       <div class="form-control py-8 w-full mx-auto uppercase">
+        <p v-if="loginError" class="text-center py-2">{{ loginError }}</p>
         <div class="space-y-4">
           <input
             v-model="loginInfo.email"
@@ -59,6 +60,7 @@ const handleLogin = async () => {
         <div class="flex justify-between pt-4">
           <div>
             <input
+              v-model="rememberMe"
               type="checkbox"
               id="remember"
               class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"

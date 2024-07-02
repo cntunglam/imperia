@@ -37,7 +37,7 @@ onMounted(() => {
       </div>
       <div class="py-32">
         <li><a href="/page/client-service">Client Services</a></li>
-            <li><a :href="isAuthenticated ? '/membership' : '/login'">{{ isAuthenticated ? "My Account" : "Login" }}</a></li>
+            <li><a :href="isAuthenticated ? '/account' : '/login'">{{ isAuthenticated ? "My Account" : "Login" }}</a></li>
       </div>
     </ul>
   </details>
