@@ -38,6 +38,7 @@ const handleLogin = async () => {
     if (localStorage.getItem("accessToken")) {
       navigateTo("/");
       useAuthenticateStore.setIsAuthenticated(true);
+      window.location.reload();
     } else {
       loginError.value = "Something went wrong. Please try again.";
       useAuthenticateStore.setIsAuthenticated(false);

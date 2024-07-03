@@ -11,8 +11,11 @@ const signupData = ref({
   password: "",
   firstName: "",
   lastName: "",
-  acceptsMarketing:true,
+  acceptsMarketing: true,
 });
+const isAcceptPolicy = ref(false);
+const isAcceptMarketing = ref(false);
+const errorMessage = ref("");
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_METAOBJECT, {
@@ -34,23 +37,28 @@ onMounted(async () => {
 
 const handleSignup = async () => {
   try {
-    loading.value = true
-  await $shopifyClient.request(CREATE_CUSTOMER, {
-    variables: {
-      email: signupData.value.email,
-      password: signupData.value.password,
-      firstName: signupData.value.firstName,
-      lastName: signupData.value.lastName,
-      acceptsMarketing:signupData.value.acceptsMarketing
+    loading.value = true;
+    if (isAcceptPolicy.value) {
+      const { data } = await $shopifyClient.request(CREATE_CUSTOMER, {
+        variables: {
+          email: signupData.value.email,
+          password: signupData.value.password,
+          firstName: signupData.value.firstName,
+          lastName: signupData.value.lastName,
+          acceptsMarketing: isAcceptMarketing.value,
+        },
+      });
+      console.log(data);
+    } else {
+      errorMessage.value = "Please accept the terms of service";
     }
-  })
   } catch (error) {
     console.log(error);
+    errorMessage.value = "Something went wrong. Please try again.";
   } finally {
     loading.value = false;
-    navigateTo('/login')
   }
-}
+};
 </script>
 <style scope>
 h2 {
@@ -73,16 +81,7 @@ h2 {
     <div>
       <div class="form-control pb-8 pt-4 w-full mx-auto uppercase">
         <form class="space-y-4">
-          <select
-            class="select select-bordered w-full md:text-[10px] text-[12px] uppercase border-black rounded-none"
-          >
-            >
-            <option disabled selected>Title</option>
-            <option>Mr</option>
-            <option>Miss, Mrs, Ms</option>
-            <option>Mx</option>
-            <option>I'd rather not say</option>
-          </select>
+          <p class="text-center">{{ errorMessage }}</p>
           <input
             type="text"
             v-model="signupData.firstName"
@@ -95,7 +94,6 @@ h2 {
             placeholder="Last Name"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
-          <date-picker />
           <input
             type="email"
             v-model="signupData.email"
@@ -103,15 +101,9 @@ h2 {
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
-            type="password"
             v-model="signupData.password"
+            type="password"
             placeholder="Password"
-            class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
-          />
-          <countries-selector />
-          <input
-            type="text"
-            placeholder="Province/State/County"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
         </form>
@@ -121,6 +113,7 @@ h2 {
         <div class="justify-between space-y-4 pt-4">
           <div>
             <input
+              v-model="isAcceptPolicy"
               type="checkbox"
               id="checkbox-1"
               class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
@@ -135,6 +128,7 @@ h2 {
           </div>
           <div>
             <input
+              v-model="isAcceptMarketing"
               type="checkbox"
               id="checkbox-2"
               class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"

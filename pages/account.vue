@@ -15,8 +15,9 @@ const userInfo = ref({
 });
 
 const handleLogout = () => {
-  navigateTo("/login");
+  navigateTo("/");
   localStorage.removeItem("accessToken");
+  window.location.reload();
 };
 </script>
 <template>
