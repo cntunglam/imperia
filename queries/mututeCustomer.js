@@ -15,7 +15,7 @@ export const LOGIN = `
         message
       }
     }
-}`
+}`;
 
 export const LOGOUT = `
   mutation Logout ($customerAccessToken: String!) {
@@ -28,7 +28,7 @@ export const LOGOUT = `
     }
   }
   }
-`
+`;
 export const CREATE_CUSTOMER = `
   mutation createCustomer ($email: String!, $password: String!, $firstName: String!, $lastName: String!, $acceptsMarketing: Boolean!) {
     customerCreate(
@@ -40,4 +40,35 @@ export const CREATE_CUSTOMER = `
       }
     }
   }
-`
+`;
+export const RESET_PASSWORD = `
+mutation resetPassword($email: String!) {
+  customerRecover(email: $email) {
+    userErrors {
+      field
+      message
+    }
+    customerUserErrors {
+      code
+      field
+      message
+    }
+  }
+}
+`;
+
+export const UPDATE_NEW_PASSWORD = `
+mutation updateNwwPassword($password: String!, $resetUrl: URL!) {
+  customerResetByUrl(password: $password, resetUrl: $resetUrl) {
+    customerUserErrors {
+      code
+      field
+      message
+    }  
+      userErrors {  
+        field
+        message
+      }
+  }
+}
+`;
