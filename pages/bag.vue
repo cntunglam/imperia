@@ -26,7 +26,7 @@ onMounted(async () => {
 });
 
 const removeCartLine = async (lineIds) => {
-  cartId.value = sessionStorage.getItem("cartId");
+  cartId.value = localStorage.getItem("cartId");
   try {
     await $shopifyClient.request(REMOVE_ITEM, {
       variables: {
