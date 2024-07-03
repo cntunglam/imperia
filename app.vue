@@ -7,15 +7,15 @@ const cartId = ref("");
 const isCartExist = ref(false);
 onMounted(async () => {
   try {
-    if (sessionStorage.getItem("cartId")) {
+    if (localStorage.getItem("cartId")) {
       cartId.value = sessionStorage.getItem("cartId");
       isCartExist.value = true;
     } else {
       const { data } = await $shopifyClient.request(CREAT_CART);
       cartId.value = data.cartCreate.cart.id;
-      sessionStorage.setItem("cartId", cartId.value);
+      localStorage.setItem("cartId", cartId.value);
     }
-    if (sessionStorage.getItem("accessToken")) {
+    if (localStorage.getItem("accessToken")) {
       const { data } = await $shopifyClient.request(GET_CUSTOMER, {
         variables: {
           customerAccessToken: sessionStorage.getItem("accessToken"),
