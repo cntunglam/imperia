@@ -13,7 +13,7 @@ const totalAmount = ref("");
 const items = ref([]);
 onMounted(async () => {
   try {
-    cartId.value = sessionStorage.getItem("cartId");
+    cartId.value = localStorage.getItem("cartId");
     const { data: cartData } = await $shopifyClient.request(GET_CART, {
       variables: {
         id: cartId.value,

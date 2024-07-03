@@ -35,7 +35,7 @@ const handleHideSearchbar = () => {
 };
 
 onMounted(async () => {
-  if (sessionStorage.getItem("accessToken")) {
+  if (localStorage.getItem("accessToken")) {
     isAuthenticated.value = true;
   } else {
     isAuthenticated.value = false;

@@ -14,7 +14,7 @@ defineProps({
   isComingSoon: String
 });
 const size = ref("");
-const cartId = sessionStorage.getItem("cartId");
+const cartId = localStorage.getItem("cartId");
 const { $shopifyClient } = useNuxtApp();
 const addToCart = async () => {
   try {

@@ -7,7 +7,7 @@ const totalItem = computed(() => cartStore.totalItem);
 
 onMounted(async () => {
   try {
-    const cartId = sessionStorage.getItem('cartId');
+    const cartId = localStorage.getItem('cartId');
     cartStore.setCartId(cartId);
     await cartStore.fetchCart(cartId);
   } catch (error) {

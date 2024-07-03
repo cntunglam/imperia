@@ -10,7 +10,7 @@ const items = ref([]);
 const checkoutUrl = ref("");
 onMounted(async () => {
   try {
-    cartId.value = sessionStorage.getItem("cartId");
+    cartId.value = localStorage.getItem("cartId");
     const { data } = await $shopifyClient.request(GET_CART, {
       variables: {
         id: cartId.value,

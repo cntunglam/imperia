@@ -11,10 +11,10 @@ const userInfo = ref({
 });
 onMounted(async () => {
   try {
-    if (sessionStorage.getItem("accessToken")) {
+    if (localStorage.getItem("accessToken")) {
       const { data } = await $shopifyClient.request(GET_CUSTOMER, {
         variables: {
-          customerAccessToken: sessionStorage.getItem("accessToken"),
+          customerAccessToken: localStorage.getItem("accessToken"),
         },
       });
       userInfo.value = {

@@ -1,7 +1,9 @@
 <script setup>
 import { LOGIN } from "~/queries/mututeCustomer";
+import { useAuthenticated } from "~/store/authenticate";
 const loading = ref(true);
 const { $shopifyClient } = useNuxtApp();
+const useAuthenticateStore = useAuthenticated();
 const loginInfo = ref({
   email: "",
   password: "",
@@ -10,28 +12,36 @@ const rememberMe = ref(false);
 const loginError = ref("");
 
 onMounted(async () => {
-  if (sessionStorage.getItem("accessToken")) {
+  if (localStorage.getItem("accessToken")) {
     navigateTo("/");
   }
 });
 const handleLogin = async () => {
   try {
     loading.value = true;
-    const { data, error } = await $shopifyClient.request(LOGIN, {
+    const { data } = await $shopifyClient.request(LOGIN, {
       variables: {
         email: loginInfo.value.email,
         password: loginInfo.value.password,
       },
     });
-    sessionStorage.setItem(
+    localStorage.setItem(
       "accessToken",
       data.customerAccessTokenCreate.customerAccessToken.accessToken
     );
   } catch (error) {
     console.log(error);
     loginError.value = "Something went wrong. Please try again.";
+    useAuthenticateStore.setIsAuthenticated(false);
   } finally {
     loading.value = false;
+    if (localStorage.getItem("accessToken")) {
+      navigateTo("/");
+      useAuthenticateStore.setIsAuthenticated(true);
+    } else {
+      loginError.value = "Something went wrong. Please try again.";
+      useAuthenticateStore.setIsAuthenticated(false);
+    }
   }
 };
 </script>

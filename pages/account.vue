@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 onMounted(() => {
-  if (!sessionStorage.getItem("accessToken")) {
+  if (!localStorage.getItem("accessToken")) {
     navigateTo("/login");
   }
 });
@@ -16,8 +16,7 @@ const userInfo = ref({
 
 const handleLogout = () => {
   navigateTo("/login");
-  sessionStorage.removeItem("accessToken");
-  isAuthenticated.value = false;
+  localStorage.removeItem("accessToken");
 };
 </script>
 <template>
