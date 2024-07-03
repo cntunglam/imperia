@@ -2,7 +2,7 @@
   <main class="_body">
     <h1 class="text-center text-[20px] py-4">{{ title }}</h1>
     <img :src="graphic" />
-    <div v-html="convertSchemaToHtml(bodyText)">
+    <div v-html="bodyText">
     </div>
   </main>
 </template>
@@ -36,9 +36,9 @@ onMounted(async () => {
     });
     content.value = data.metaobject.fields;
     title.value = content.value.find((obj) => obj.key === "title").value;
-    bodyText.value = content.value.find(
+    bodyText.value = convertSchemaToHtml(content.value.find(
       (obj) => obj.key === "description"
-    ).value;
+    ).value) 
     graphic.value = content.value.find(
       (obj) => obj.key === "graphic"
     ).reference.image.src;
