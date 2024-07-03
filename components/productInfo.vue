@@ -8,7 +8,7 @@ defineProps({
   productName: String,
   price: String,
   description: String,
-  availableSize: Object,
+  availableSize: Array,
   short_description: String,
   variants: Array,
   isComingSoon: String
@@ -52,8 +52,9 @@ const addToCart = async () => {
         v-model="size"
       >
         <option disabled selected value="">Select A Size</option>
-        <option v-for="variant in variants" :key="variant" :value="variant.id" :disabled="!variant.availableForSale">
+        <option v-for="variant in availableSize" :key="variant" :value="variant.id" :disabled="!variant.availableForSale">
           {{ variant.selectedOptions[1].value }}
+          
         </option>
       </select>
       <div

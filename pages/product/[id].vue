@@ -9,8 +9,7 @@
         :price="product.variants?.nodes[0]?.price.amount"
         :availableSize="product.variants?.nodes"
         :short_description="short_description"
-        :variants="variants"
-x      >
+      >
         <Accordion
           :free_shipping_free_returns="free_shipping_free_returns"
           :payment="payment"
