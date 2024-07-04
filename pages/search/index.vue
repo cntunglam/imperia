@@ -50,7 +50,7 @@ onMounted(async () => {
       </div>
     </div>
     <div v-else class="h-96 flex">
-      <p class="text-center m-auto">No Products For {{ searchQuery }}</p>
+      <p class="text-center m-auto">"No matches for {{ searchQuery }}. Explore our curated collections."</p>
     </div>
   </div>
 </template>
