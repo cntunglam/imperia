@@ -85,8 +85,7 @@ onMounted(async () => {
           class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
         />
         <label for="checkbox-1" class="text-[12px] px-2"
-          >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur</label
+          >Yes, send me marketing and promotional emails.</label
         >
       </div>
       <div>
@@ -96,8 +95,7 @@ onMounted(async () => {
           class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
         />
         <label for="checkbox-2" class="text-[12px] px-2"
-          >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur</label
+          >Yes, send me order confirmations and account notifications.</label
         >
       </div>
       <div>
@@ -107,8 +105,7 @@ onMounted(async () => {
           class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
         />
         <label for="checkbox-3" class="text-[12px] px-2"
-          >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur</label
+          >Yes, send me marketing and promotional text messages.</label
         >
       </div>
       <div>
@@ -118,8 +115,7 @@ onMounted(async () => {
           class="align-middle appearance-none w-4 h-4 border border-black rounded-none checked:text-black"
         />
         <label for="checkbox-4" class="text-[12px] px-2"
-          >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-          consectetur</label
+          >Yes, send me order updates and delivery notifications.</label
         >
       </div>
     </div>

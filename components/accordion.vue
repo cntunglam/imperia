@@ -1,9 +1,12 @@
 <script setup>
+import { convertSchemaToHtml } from "@thebeyondgroup/shopify-rich-text-renderer";
+
   defineProps({
     payment: String,
     product_sustainability: String,
     free_shipping_free_returns: String,
   })
+
 </script>
 <style scope>
 .collapse-content p {
