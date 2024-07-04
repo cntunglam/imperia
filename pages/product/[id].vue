@@ -11,9 +11,9 @@
         :short_description="short_description"
       >
         <Accordion
-          :free_shipping_free_returns="free_shipping_free_returns"
-          :payment="payment"
-          :product_sustainability="product_sustainability"
+          :free_shipping_free_returns="convertSchemaToHtml(free_shipping_free_returns)"
+          :payment="convertSchemaToHtml(payment)"
+          :product_sustainability="convertSchemaToHtml(product_sustainability)"
         />
       </ProductInfo>
     </div>
@@ -49,15 +49,15 @@ onMounted(async () => {
     short_description.value = customData.value.find(
       (obj) => obj.key === "short_description"
     ).value;
-    product_sustainability.value = convertSchemaToHtml(
-      customData.value.find((obj) => obj.key === "sustainability").valueu
-    );
-    free_shipping_free_returns.value = convertSchemaToHtml(
+    product_sustainability.value = 
+      customData.value.find((obj) => obj.key === "sustainability").value
+    ;
+    free_shipping_free_returns.value =
       customData.value.find((obj) => obj.key === "shippingandreturn").value
-    );
-    payment.value = convertSchemaToHtml(
+    ;
+    payment.value = 
       customData.value.find((obj) => obj.key === "paymentoption").value
-    );
+    ;
     styleWith.value = JSON.parse(
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
