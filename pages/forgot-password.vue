@@ -12,7 +12,7 @@ const resetPassword = async () => {
       variables: {
         email: email.value,
       },
-    });
+    });     
   } catch (error) {
     console.log(error);
     errorMessage.value = "Something went wrong. Please try again.";
