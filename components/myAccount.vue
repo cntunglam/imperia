@@ -105,7 +105,7 @@ const removeCartLine = async (lineIds) => {
                     <div>
                       {{ item.node.merchandise.product.title }}
                       <div class="opacity-50">
-                        {{ item.node.merchandise.title.split("/")[0] }}
+                        {{ item.node.merchandise.title }}
                       </div>
                     </div>
                     <select
@@ -113,7 +113,7 @@ const removeCartLine = async (lineIds) => {
                       disabled
                     >
                       <option selected>
-                        {{ item.node.merchandise.title.split("/")[1] }}
+                        {{ item.node.quantity }}
                       </option>
                     </select>
                   </div>

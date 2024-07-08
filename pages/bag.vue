@@ -41,6 +41,7 @@ const removeCartLine = async (lineIds) => {
       },
     });
     items.value = data.cart.lines.edges;
+    totalAmount.value = data.cart.cost.subtotalAmount.amount.slice(0, -2);
   } catch (error) {
     console.log(error);
   }
