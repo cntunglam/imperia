@@ -72,3 +72,12 @@ mutation updateNwwPassword($password: String!, $resetUrl: URL!) {
   }
 }
 `;
+
+export const ADD_NEW_ADDRESS = `
+mutation addNewAddress($address: AddressInput!, $customerAccessToken: String!) {
+  customerAddressCreate(
+    address: {address1: $address.address1, city: $address.city, country: $address.country, province: $address.province, zip: $address.zip}
+    customerAccessToken: $customerAccessToken
+  )
+}
+`

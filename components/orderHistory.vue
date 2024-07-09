@@ -1,8 +1,15 @@
-<template v-else-if="activeTab === 'orders'">
+<script setup>
+
+defineProps({
+  numberOfOrder: Number,
+  orders: Array
+})
+</script>
+<template>
   <div class="py-10 mx-auto">
     <p>Order History</p>
   </div>
-  <table class="table min-w-max text-[10px] mb-6 uppercase border-black">
+  <table v-if="numberOfOrder > 0" class="table min-w-max text-[10px] mb-6 uppercase border-black">
     <thead>
       <tr>
         <th class="text-left px-0 font-thin">Item</th>
@@ -63,5 +70,10 @@
     </tbody>
     <!-- foot -->
   </table>
-  <button navigateTo="/collection" class="btn btn-primary w-full">Shop New Arrivals</button>
+  <div class="text-center pb-10 pt-4" v-else>
+    <p>No Order History</p>
+    <a href="/collection">
+          <button class="btn btn-primary w-full">Shop New Arrivals</button>
+    </a>
+  </div>
 </template>

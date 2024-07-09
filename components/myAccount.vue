@@ -21,7 +21,6 @@ onMounted(async () => {
     });
     totalAmount.value = cartData.cart.cost.subtotalAmount.amount.slice(0, -2);
     items.value = cartData.cart.lines.edges;
-    console.log(items.value);
   } catch (error) {
     console.error(error);
   }
@@ -50,17 +49,6 @@ const removeCartLine = async (lineIds) => {
 </script>
 <template v-if="activeTab === 'account'">
   <div class="w-full max-w-3xl mx-auto uppercase">
-    <p class="py-6 text-center">Payment Information</p>
-    <div v-if="creditCards"
-      class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
-    >
-      <credit-card id="credit-1" v-for="creditCard in creditCards" :key="creditCard" />
-    </div>
-    <div v-else
-      class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
-    >
-      <credit-card id="credit-1" :isAddNewCard="true" />
-    </div>
 
     <div v-if="addresses" class="w-full max-w-3xl mx-auto uppercase">
       <p class="py-6 text-center">Shipping Information</p>
@@ -75,8 +63,8 @@ const removeCartLine = async (lineIds) => {
       <div
         class="grid grid-flow-col-dense overflow-x-scroll overflow-y-hidden no-scrollbar gap-1 max-w-3xl"
       >
-        <AddressCard id="address-3" :key="address" />
-      </div>
+          <AddNewAddress id="addNewAddress" />
+    </div>
     </div>
 
 

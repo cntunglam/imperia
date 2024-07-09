@@ -18,7 +18,7 @@ onMounted(async () => {
     if (localStorage.getItem("accessToken")) {
       const { data } = await $shopifyClient.request(GET_CUSTOMER, {
         variables: {
-          customerAccessToken: sessionStorage.getItem("accessToken"),
+          customerAccessToken: localStorage.getItem("accessToken"),
         },
       });
       localStorage.setItem("firstName", data.customer.firstName);
