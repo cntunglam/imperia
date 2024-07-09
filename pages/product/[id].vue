@@ -9,6 +9,7 @@
         :price="product.variants?.nodes[0]?.price.amount"
         :availableSize="product.variants?.nodes"
         :short_description="short_description"
+        :isComingSoon="isComingSoon"
       >
         <Accordion
           :free_shipping_free_returns="free_shipping_free_returns"
@@ -36,6 +37,8 @@ const free_shipping_free_returns = ref("");
 const payment = ref("");
 const styleWith = ref([]);
 const variants = ref([]);
+const isComingSoon = ref("");
+console.log(isComingSoon.value);
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_PRODUCT_BY_HANDLE, {
@@ -62,6 +65,9 @@ onMounted(async () => {
       customData.value.find((obj) => obj.key === "stylewith").value
     ).map((item) => item.replace(/"/g, ""));
     variants.value = product.value.variants.nodes;
+    isComingSoon.value = 
+      customData.value.find((obj) => obj.key === "comingsoon").value
+    ;
   } catch (error) {
   } finally {
     loading.value = false;
