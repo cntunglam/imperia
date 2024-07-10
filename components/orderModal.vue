@@ -12,7 +12,7 @@
           onclick="my_modal.showModal()"
           class="btn btn-primary font-normal rounded-none w-full mt-4 top-90 border-1 border-black bg-black text-white text-md p-4 uppercase"
         >
-          <p class="text-center"> {{ isComingSoon === "true" ? 'Coming Soon' : 'notify me when available' }}</p>
+          <p class="text-center">notify me when available</p>
         </div>
     </div>
     <dialog id="my_modal" class="modal">

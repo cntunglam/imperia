@@ -6,6 +6,7 @@ defineProps({
   inStock: Boolean,
   link: String,
   productColor: String,
+  isCommingSoon: String,
 });
 </script>
 <template>
@@ -22,7 +23,7 @@ defineProps({
           v-if="!inStock"
           class="py-2 border-0 absolute w-full bottom-5 sm:top-50 lg:top-70 bg-black text-white text-sm uppercase"
         >
-          <p class="text-center">Sold Out</p>
+          <p class="text-center">{{ isCommingSoon === "true" ? 'Coming Soon' : 'Sold Out' }}</p>
         </button>
       </div>
       <div class="md:p-2 mt-6 md:mt-4 py-2 px-0">

@@ -8,6 +8,28 @@ export const GET_PRODUCTS = `
           handle
           description
           availableForSale
+          metafields(identifiers: [
+            {key: "short_description", namespace: "custom"},
+            {key: "paymentoption", namespace: "custom"},
+            {key: "shippingandreturn", namespace: "custom"},
+            {key: "sustainability", namespace: "custom"},
+            {key: "stylewith", namespace: "custom"},
+            {key: "comingsoon", namespace: "custom"},
+            {key: "sizeguide", namespace: "custom"},
+          ]) {
+              id
+              key
+              value
+              reference {
+                      ... on MediaImage {
+                          id
+                          image {
+                              src
+                          }
+                      }
+              }
+          }
+
           variants(first: 10) {
             nodes {
               price {
@@ -60,6 +82,14 @@ query($handle: String!) {
         id
         key
         value
+        reference {
+                ... on MediaImage {
+                    id
+                    image {
+                        src
+                    }
+                }
+        }
     }
     images(first: 10) {
         edges {

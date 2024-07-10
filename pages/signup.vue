@@ -60,11 +60,6 @@ const handleSignup = async () => {
   }
 };
 </script>
-<style scope>
-h2 {
-  @apply py-4;
-}
-</style>
 
 <template>
   <main class="_body space-y-8">

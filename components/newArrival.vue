@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 import { GET_PRODUCTS } from "~/queries/getProduct";
 
 // Fetch products data
@@ -8,19 +8,18 @@ const loading = ref(true);
 const products = ref([]);
 onMounted(async () => {
   try {
-    const {data} = await $shopifyClient.request(GET_PRODUCTS,{
-          variables: {
-            number: 4,
-          }
+    const { data } = await $shopifyClient.request(GET_PRODUCTS, {
+      variables: {
+        number: 4,
+      },
     });
-    products.value = data.products.edges.map(edge => edge.node);
+    products.value = data.products.edges.map((edge) => edge.node);
   } catch (error) {
     console.error(error);
   } finally {
     loading.value = false;
   }
 });
-
 </script>
 
 <template>
@@ -39,6 +38,7 @@ onMounted(async () => {
           :productColor="item.variants.nodes[0]?.selectedOptions[0]?.value"
           :Image="item.images.edges[0]?.node.src"
           :price="item.variants.nodes[0]?.price.amount"
+          :isCommingSoon="item.metafields[5]?.value"
         />
       </div>
     </div>
