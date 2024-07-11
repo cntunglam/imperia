@@ -32,9 +32,15 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport:
         "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+      script: [
+        {
+          src: "https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Mu7gE3",
+        },
+      ],
     },
   },
   css: ["~/assets/css/main.css", "~/assets/fonts/stylesheet.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
