@@ -9,7 +9,7 @@
         products, services, stores and events.
       </p>
     </div>
-    <div class="pt-4 w-full">
+    <div class="form-control z-100 pt-4 w-full">
       <div class="klaviyo-form-RdP238"></div>
     </div>
   </div>
