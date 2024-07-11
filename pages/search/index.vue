@@ -34,7 +34,7 @@ onMounted(async () => {
 });
 </script>
 <template>
-  <div class="grid px-4 md:px-8 py-10">
+  <div class="grid px-4 md:px-8 py-10 mt-10">
     <div class="" v-if="products.length > 0 && !loading">
       <div class="grid md:grid-cols-4 grid-cols-2 px-2 md:py-10 gap-2 md:gap-8">
         <div v-for="item in products" :key="item.id">

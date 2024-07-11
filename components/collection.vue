@@ -35,7 +35,7 @@ onMounted(async () => {
           <h2 class="text-[14px] text-white py-1 uppercase w-full">{{ collection.title }}</h2>
         </a>
       </div>
-          </a>
+      </a>
     </div>
   </div>
 </template>
