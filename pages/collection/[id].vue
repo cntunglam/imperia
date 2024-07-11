@@ -1,5 +1,5 @@
 <template>
-    <div class="grid px-4 md:px-8">
+    <div class="grid px-4 md:px-8 mt-20">
       <div class="" v-if="products.length > 0 && !loading">
         <div
           class="grid md:grid-cols-4 grid-cols-2 px-2 md:py-10 gap-2 md:gap-8"
