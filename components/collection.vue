@@ -17,7 +17,6 @@ onMounted(async () => {
 </script>
 <template>
   <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1">
-    <a :href="`/collection/${collection.handle}`">
     <div
       v-for="(collection, index) in collections.slice().reverse()"
       :key="collection.id"
@@ -28,6 +27,7 @@ onMounted(async () => {
       ]"
       :style="{ backgroundImage: `url(${collection.image?.src})`}"
     >
+      <a :href="`/collection/${collection.handle}`">
       <div
         class="w-full px-10 py-1 align- mx-auto justify-center self-end flex"
       >
@@ -35,7 +35,7 @@ onMounted(async () => {
           <h2 class="text-[14px] text-white py-1 uppercase w-full">{{ collection.title }}</h2>
         </a>
       </div>
+          </a>
     </div>
-    </a>
   </div>
 </template>
