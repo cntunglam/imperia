@@ -25,6 +25,7 @@ const props = defineProps({
 }
 #swiper {
   max-height: 90vh;
+  z-index: 40;
 }
 @media screen and (min-width: 768px) {
   .swiper-pagination {

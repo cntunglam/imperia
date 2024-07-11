@@ -20,7 +20,7 @@ import { convertSchemaToHtml } from "@thebeyondgroup/shopify-rich-text-renderer"
 </style>
 
 <template>
-  <div class="_accordion px-2">
+  <div class="_accordion px-2 z-40">
     <details class="collapse collapse-arrow uppercase">
       <summary class="collapse-title text-[12px] font-medium"> <p>PRODUCT SUSTAINABILITY</p> </summary>
       <div class="collapse-content text-[12px]"> 
