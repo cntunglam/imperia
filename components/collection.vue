@@ -17,6 +17,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="grid lg:grid-cols-3 grid-cols-2 h-screen gap-1">
+    <a :href="`/collection/${collection.handle}`">
     <div
       v-for="(collection, index) in collections.slice().reverse()"
       :key="collection.id"
@@ -35,5 +36,6 @@ onMounted(async () => {
         </a>
       </div>
     </div>
+    </a>
   </div>
 </template>
