@@ -84,7 +84,7 @@ const handleSearch = (searchValue) => {
 };
 </script>
 <template>
-  <header class="sticky top-0 w-full z-10">
+  <header class="sticky top-0 w-full z-50">
     <div class="bg-black flex align-middle justify-center">
       <p class="header-text text-sm w-full text-right text-white py-1">
         {{ topbarText }}

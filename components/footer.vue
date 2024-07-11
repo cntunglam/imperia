@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer w-full space-y-0 md:block bg-[#f2f2f2]">
+  <footer class="footer w-full space-y-0 md:block bg-[#f2f2f2] z-40">
     <div class="max-w-3xl mx-auto">
       <div class="justify-center space-y-4 mx-auto py-1 pt-14 md:pb-12">
       <div class="mx-auto pb-14 md:pb-0">
