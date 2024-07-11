@@ -7,7 +7,7 @@ const loading = ref(true);
 const products = ref([]);
 const props = defineProps({
   productIds: Array,
-})
+});
 watchEffect(() => {
   if (props.productIds.length > 0) {
     fetchProducts(props);
@@ -47,6 +47,7 @@ async function fetchProducts(props) {
           :productColor="item.variants.nodes[0]?.selectedOptions[0]?.value"
           :Image="item.images.edges[0]?.node.src"
           :price="item.variants.nodes[0]?.price.amount"
+          :isCommingSoon="item.metafields[5]?.value"
         />
       </div>
     </div>
