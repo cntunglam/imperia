@@ -5,6 +5,7 @@ const isConfirmEmail = ref(false);
 const success = ref(false);
 const email = ref("");
 const password = ref("")
+const loading = ref(false);
 
 const resetPassword = async () => {
   try {
