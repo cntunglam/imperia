@@ -4,17 +4,18 @@
     class="my-2 pt-6 space-y-4 overflow-x-hidden overflow-y-scroll h-48 text-[10px]"
   >
     <!-- Your content will go here -->
-    <slot />
+    <slot class="article" />
     <!-- Gradient blur effect at the bottom -->
   </div>
 </template>
 
-  <style scoped>
-#scrollable h2 {
-  @apply py-2;
+<style>
+#scrollable > div h2 {
+  padding: 4px 0px;
+  font-size: 12px;
 }
 
-#scrollable > div {
-  @apply space-y-2;
+#scrollable > div p {
+  padding: 4px 0px;
 }
 </style>

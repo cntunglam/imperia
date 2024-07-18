@@ -59,8 +59,7 @@ const handleSignup = async () => {
     loading.value = false;
   }
 };
-</script>
-
+</script> 
 <template>
   <main class="_body space-y-8">
     <div>
@@ -81,23 +80,27 @@ const handleSignup = async () => {
             type="text"
             v-model="signupData.firstName"
             placeholder="First Name"
+            required
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             type="text"
             v-model="signupData.lastName"
+            required
             placeholder="Last Name"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             type="email"
             v-model="signupData.email"
+            required
             placeholder="Email Address"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             v-model="signupData.password"
             type="password"
+            required
             placeholder="Password"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
