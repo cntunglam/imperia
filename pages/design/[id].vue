@@ -15,6 +15,10 @@
   @apply space-y-2
 }
 
+._body .article  p {
+  @apply py-2
+}
+
 ._body img {
   @apply mx-auto py-4 rounded-none;
 }
