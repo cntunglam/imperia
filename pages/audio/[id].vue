@@ -9,6 +9,9 @@
     @apply py-2
   }
   
+  ._body p {
+    @apply py-2
+  }
   ._body img {
     @apply mx-auto py-4
   }
