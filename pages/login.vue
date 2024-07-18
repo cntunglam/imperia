@@ -58,12 +58,14 @@ const handleLogin = async () => {
           <input
             v-model="loginInfo.email"
             type="email"
-            placeholder="Email"
+            required
+            placeholder="Email Address"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
           <input
             v-model="loginInfo.password"
             type="password"
+            required
             placeholder="Password"
             class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-600"
           />
