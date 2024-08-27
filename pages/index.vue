@@ -36,6 +36,11 @@ onMounted(async () => {
   }
 });
 
+useSeoMeta({
+  title: "Imperia",
+  description: "Luxury Ready-to-Wear Designed in Atlanta"
+})
+
 </script>
 <template>
   <main class="pb-1">

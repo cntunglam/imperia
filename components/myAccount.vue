@@ -46,6 +46,9 @@ const removeCartLine = async (lineIds) => {
     console.log(error);
   }
 };
+useSeoMeta({
+  title: "My Account - Imperia",
+})
 </script>
 <template v-if="activeTab === 'account'">
   <div class="w-full max-w-3xl mx-auto uppercase">

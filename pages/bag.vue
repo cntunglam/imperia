@@ -46,6 +46,9 @@ const removeCartLine = async (lineIds) => {
     console.log(error);
   }
 };
+useSeoMeta({
+  title: "Bag - Imperia",
+})
 </script>
 <template>
   <main class="_body">

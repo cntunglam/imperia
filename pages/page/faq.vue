@@ -19,6 +19,10 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+useSeoMeta({
+  title: "FAQ - Imperia",
+})
 </script>
 <template>
   <main class="_body space-y-12">

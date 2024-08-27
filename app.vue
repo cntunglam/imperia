@@ -31,6 +31,10 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+useSeoMeta({
+  description: "Luxury Ready-to-Wear Designed in Atlanta."
+})
 </script>
 
 <template>

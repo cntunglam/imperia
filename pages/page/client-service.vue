@@ -23,6 +23,11 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+useSeoMeta({
+  title: "Client Services - Imperia",
+})
+
 </script>
 <template>
   <div class="_body space-y-8">

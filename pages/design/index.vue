@@ -43,6 +43,10 @@ onMounted(async () => {
     console.log(error);
   } finally {
     loading.value = false;
-  }
+  } 
 });
+
+useSeoMeta({
+  title: "Design - Imperia",
+})
 </script>

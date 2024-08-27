@@ -67,4 +67,8 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+useSeoMeta({
+  title: () => product.value.title,
+  description: () => short_description.value
+})
 </script>

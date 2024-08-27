@@ -32,6 +32,10 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+useSeoMeta({
+  title: "Search - Imperia",
+})
 </script>
 <template>
   <div class="grid px-4 md:px-8 py-10 mt-10">

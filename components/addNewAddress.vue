@@ -1,3 +1,67 @@
+<script setup>
+import { GET_METAOBJECT } from "~/queries/getMetaobject";
+import { convertSchemaToHtml } from "@thebeyondgroup/shopify-rich-text-renderer";
+import { CREATE_CUSTOMER } from "~/queries/mututeCustomer";
+const loading = ref(true);
+const { $shopifyClient } = useNuxtApp();
+const bodyText = ref("");
+const content = ref([]);
+const signupData = ref({
+  email: "",
+  password: "",
+  firstName: "",
+  lastName: "",
+  acceptsMarketing: true,
+});
+const isAcceptPolicy = ref(false);
+const isAcceptMarketing = ref(false);
+const errorMessage = ref("");
+onMounted(async () => {
+  try {
+    const { data } = await $shopifyClient.request(GET_METAOBJECT, {
+      variables: {
+        handle: "terms-of-service",
+        type: "custom_page",
+      },
+    });
+    content.value = data.metaobject.fields;
+    bodyText.value = convertSchemaToHtml(
+      content.value.find((obj) => obj.key === "content").value
+    );
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+  }
+});
+
+const handleSignup = async () => {
+  try {
+    loading.value = true;
+    if (isAcceptPolicy.value) {
+      const { data } = await $shopifyClient.request(CREATE_CUSTOMER, {
+        variables: {
+          email: signupData.value.email,
+          password: signupData.value.password,
+          firstName: signupData.value.firstName,
+          lastName: signupData.value.lastName,
+          acceptsMarketing: isAcceptMarketing.value,
+        },
+      });
+      console.log(data);
+    } else {
+      errorMessage.value = "Please accept the terms of service";
+    }
+  } catch (error) {
+    console.log(error);
+    errorMessage.value = "Something went wrong. Please try again.";
+  } finally {
+    loading.value = false;
+  }
+};
+
+
+</script>
 <template>
   <div
     class="card cursor-pointer bg-current border-[1px] border-black rounded-none text-neutral-content"

@@ -29,6 +29,7 @@ const { id } = useRoute().params;
 const { $shopifyClient } = useNuxtApp();
 const loading = ref(true);
 const products = ref([]);
+const collectionInfo = ref("")
 onMounted(async () => {
   try {
     const { data } = await $shopifyClient.request(GET_COLLECTION, {
@@ -39,10 +40,15 @@ onMounted(async () => {
     products.value = data.collectionByHandle.products.edges.map(
       (edge) => edge.node
     );
+    collectionInfo.value = data.collectionByHandle.title
   } catch (error) {
     navigateTo("/collection");
   } finally {
     loading.value = false;
   }
 });
+useSeoMeta({
+  title: () => collectionInfo.value,
+  description: () => collectionInfo.value
+})
 </script>

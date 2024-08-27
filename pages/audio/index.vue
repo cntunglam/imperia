@@ -46,4 +46,9 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+useSeoMeta({
+  title: "Audio - Imperia",
+})
+
 </script>

@@ -48,7 +48,7 @@ mutation removeItem($cartId: ID!, $lineIds: [ID!]!) {
 export const BUYER_INFO_UPDATE = `
 mutation buyerInfoUpdate($cartId: ID!, $address: BuyerIdentityDeliveryAddressInput!) {
     cartBuyerIdentityUpdate(
-    buyerIdentity: {deliveryAddressPreferences: {deliveryAddress: $address}}
+    buyerIdentity: {deliveryAddressPreferences: {deliveryAddress: $address}}add
     cartId: $cartId
   )
 }

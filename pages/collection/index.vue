@@ -24,6 +24,12 @@ onMounted(async () => {
   }
 });
 
+useSeoMeta({
+  title: "Collection - Imperia",
+  description: "Collection - Imperia",
+})
+
+
 </script>
 <template>
   <div class="grid px-4 md:px-8 mt-20">
