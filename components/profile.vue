@@ -66,11 +66,6 @@ onMounted(async () => {
       <date-picker />
       <div class="flex gap-2">
         <input
-          type="number"
-          placeholder="PREFIX"
-          class="w-1/3 md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
-        />
-        <input
           type="tel"
           placeholder="Phone Number"
           class="w-full md:text-[10px] text-[12px] input uppercase input-bordered border-1 border-black focus:outline-none"
